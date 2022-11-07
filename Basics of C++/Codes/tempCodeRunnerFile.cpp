@@ -1,1 +1,1 @@
-fixed <<
+return 0;
