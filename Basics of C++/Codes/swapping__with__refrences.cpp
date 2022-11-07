@@ -6,7 +6,7 @@ using namespace std;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-void swapping(int &n, int &m)
+void swap(int &n, int &m)
 {
     int t;
     t = n;
@@ -20,7 +20,7 @@ int main()
     int a = 3;
     int b = 5;
     cout << "Before Swap : " << a << " " << b << endl;
-    swapping(a, b);
+    swap(a, b);
     cout << "After Swap : " << a << " " << b << endl;
     return 0;
 }
