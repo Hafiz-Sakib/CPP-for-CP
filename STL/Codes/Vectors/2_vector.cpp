@@ -24,10 +24,13 @@ int main()
     cin >> n;
     for (int i = 0; i < n; i++)
     {
+        printVec(v);
         int x;
         cin >> x;
         v.push_back(x);
     }
+
+    printVec(v);
 
     return 0;
 }
