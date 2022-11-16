@@ -19,7 +19,7 @@ int main()
     for (auto u : s)
     {
         char c = tolower(u);
-        if (!isvowel(c))
+        if (isvowel(c) == 0)
         {
             a = a + '.';
             a = a + c;
