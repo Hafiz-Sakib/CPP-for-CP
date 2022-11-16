@@ -8,9 +8,11 @@ using namespace std;
 int main()
 {
     Boost;
-    string s = "AabcBek";
-    sort(s.begin(), s.end());
-    sort(s.rbegin(), s.rend());
-    cout << s;
+    string s;
+    cin >> s;
+    char max = *max_element(s.begin(), s.end());
+    cout << max << endl;
+    char min = *min_element(s.begin(), s.end());
+    cout << min;
     return 0;
 }

@@ -8,9 +8,8 @@ using namespace std;
 int main()
 {
     Boost;
-    string s = "AabcBek";
-    sort(s.begin(), s.end());
-    sort(s.rbegin(), s.rend());
-    cout << s;
+    string s = "deacbAAA";
+    s.erase(s.begin() + 2);
+    cout << s << endl;
     return 0;
 }
