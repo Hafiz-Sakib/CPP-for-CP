@@ -10,7 +10,8 @@ int main()
     Boost;
     pair<int, int> p[] = {{6, 5}, {2, 3}};
     sort(p, p + 2);
-    for (int i = 0; i < sizeof(p); i++)
+
+    for (int i = 0; i < 2; i++)
     {
         cout << p[i].first << " " << p[i].second << endl;
     }
