@@ -8,21 +8,13 @@ using namespace std;
 int main()
 {
     Boost;
-    pair<int, int> p;
-    pair<int, int> q;
+    pair<int, int> p1, p2;
+    p1 = {5, 6};
+    p2 = {2, 3};
 
-    cin >> p.first;
-    cin >> p.second;
+    pair<int, int> p = max(p1, p2);
 
-    cout << p.first;
-    cout << p.second;
-
-    int a, b;
-    cin >> a >> b;
-    make_pair(a, b);
-
-    cout << q.first;
-    cout << q.second;
+    cout << p.first << " " << p.second << endl;
 
     return 0;
 }
