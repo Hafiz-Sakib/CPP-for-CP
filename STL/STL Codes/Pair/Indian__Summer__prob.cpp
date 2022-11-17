@@ -41,11 +41,5 @@ int main()
     int size = unique(v.begin(), v.end()) - v.begin();
     cout << size << endl;
 
-    for (auto u : v)
-    {
-        cout << u.first << " " << u.second << endl;
-        ;
-    }
-
     return 0;
 }
