@@ -10,9 +10,11 @@ int main()
     Boost;
     pair<int, int> p;
 
-    cin >> p.first >> p.second;
+    cin >> p.first;
+    cin >> p.second;
 
-    cout << p.first << " " << p.second;
+    cout << p.first;
+    cout << p.second;
 
     return 0;
 }
