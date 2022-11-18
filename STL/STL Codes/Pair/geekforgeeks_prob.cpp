@@ -65,3 +65,4 @@ int main()
 }
 
 // https://practice.geeksforgeeks.org/problems/count-distinct-pairs-with-difference-k1233/1
+// it's an interview ques of Facebook and Amazon
