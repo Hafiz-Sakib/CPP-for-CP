@@ -17,7 +17,7 @@ int main()
     }
     else
     {
-        cout << b << " Big\n";
+        cout << a << " samll\n";
     }
 
     return 0;
