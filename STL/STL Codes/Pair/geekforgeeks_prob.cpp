@@ -56,6 +56,8 @@ int main()
             }
         }
 
+        sort(v.begin(), v.end());
+
         int size = unique(v.begin(), v.end()) - v.begin();
 
         cout << size << endl;
