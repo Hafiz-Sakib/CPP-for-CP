@@ -1,0 +1,1 @@
+{"name":"Local: HR","url":"c:\\PU Projects\\LearnCPP\\STL\\STL Codes\\prob\\HR.cpp","tests":[{"id":1668777494710,"input":"5","output":"25"},{"id":1668777700555,"input":"1000000000000000000","output":"25"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\PU Projects\\LearnCPP\\STL\\STL Codes\\prob\\HR.cpp","group":"local","local":true}
