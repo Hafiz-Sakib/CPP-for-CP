@@ -9,6 +9,6 @@ int main()
 {
     Boost;
     cout << "Hello World";
-    cout << "From BAngladesh";
+    cout << "From Bangladesh";
     return 0;
 }
