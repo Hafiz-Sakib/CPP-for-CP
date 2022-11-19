@@ -8,6 +8,6 @@ using namespace std;
 int main()
 {
     Boost;
-    cout << "Hello";
+    cout << "Hello World";
     return 0;
 }
