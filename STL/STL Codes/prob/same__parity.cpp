@@ -9,6 +9,5 @@ int main()
 {
     Boost;
     cout << "Hello";
-    cout << "Hello";
     return 0;
 }
