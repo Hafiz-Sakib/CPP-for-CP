@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     Boost;
-    cout << "Hello World";
-    cout << "From Bangladesh";
+    cout << "Hello World\n";
+    cout << "From Bangladesh!";
     return 0;
 }
