@@ -23,7 +23,6 @@ void dbg_out(Head H, Tail... T)
     cerr << " " << H;
     dbg_out(T...);
 }
-
 #ifdef SMIE
 #define debug(args...) cerr << "(" << #args << "):", dbg_out(args)
 #else
