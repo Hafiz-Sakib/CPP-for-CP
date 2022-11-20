@@ -17,6 +17,7 @@ int main()
     {
         cnt[u]++;
     }
+
     for (int i = 0; i < 100231; i++)
     {
         if (cnt[i] > 0)
