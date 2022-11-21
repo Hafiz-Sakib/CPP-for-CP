@@ -12,6 +12,7 @@ int main()
     map<long long int, long long int> m;
 
     /* Way 01 :
+
      for (int i = 0; i < v.size(); i++)
         {
             m[v[i]]++;
