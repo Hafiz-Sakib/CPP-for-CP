@@ -29,9 +29,7 @@ int main()
         m[u]++;
     }
 
-    // Print :
-
-    for (auto u : m)
+     for (auto u : m)
     {
         cout << u.first << " " << u.second << endl;
     }
