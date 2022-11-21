@@ -11,7 +11,7 @@ int main()
     vector<long long int> v = {1564874541897, 1564874541897, 1564874541897, 658498798, 89787, -1, -2, -59, -59, -59, -59, -59, -59, -59, -59, -59, -59};
     map<long long int, long long int> m;
 
-    /*
+    /* Way 01 :
      for (int i = 0; i < v.size(); i++)
         {
             m[v[i]]++;
@@ -20,6 +20,8 @@ int main()
         cout << m[1564874541897] << endl;
 
     */
+
+    // Best & way 02 :: Foreach loop
 
     for (auto u : v)
     {
