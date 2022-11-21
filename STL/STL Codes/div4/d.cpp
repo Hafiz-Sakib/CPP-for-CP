@@ -1,43 +1,54 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-#define Boost                         \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);                    \
-    cout.tie(NULL)
-int main()
+#define ll long long int
+void solve()
 {
-    Boost;
-    int t = 1;
-    cin >> t;
-    while (t--)
+
+    ll n, ans = 0;
+    cin >> n;
+    vector<ll> v(n);
+    for (ll i = 0; i < n; i++)
     {
-        int n;
-        cin >> n;
-        int a[n];
-        int mini = INT_MAX;
-        for (int i = 0; i < n; i++)
+        cin >> v[i];
+    }
+
+    int flag = 0;
+
+    for (ll i = 0; i < n - 1; i++)
+    {
+        if (v[i] < v[i + 1])
         {
-            cin >> a[i];
-            if (a[i] < mini)
-            {
-                mini = a[i];
-            }
+            flag = 1;
+            ans = i + 1;
+            break;
         }
-        for (int i = 0; i < n; i++)
+    }
+    if (flag == 0)
+    {
+        cout << "YES" << endl;
+        return;
+    }
+    if (flag == 1)
+    {
+        for (ll i = ans; i < n - 1; i++)
         {
-            if (a[i + 1] > mini || a[i + 1] == mini)
-            {
-                cout << "YES" << endl;
-                break;
-            }
-            else
+            if (v[i] > v[i + 1])
             {
                 cout << "NO" << endl;
-                break;
+                return;
             }
         }
     }
+    cout << "YES" << endl;
+}
 
+int main()
+{
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
     return 0;
 }
