@@ -28,5 +28,14 @@ int main()
 
     cout << m[-59] << endl;
 
-    return 0;
+    for (auto u : v)
+        /* {
+            if (m[u] > 0)
+            {
+                cout << u << " is occured " << m[u] << " "
+                     << "times" << endl;
+            }
+        } */
+
+        return 0;
 }
