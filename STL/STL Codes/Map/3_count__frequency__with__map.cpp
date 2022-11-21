@@ -28,14 +28,17 @@ int main()
 
     cout << m[-59] << endl;
 
-    for (auto u : v)
-        /* {
-            if (m[u] > 0)
-            {
-                cout << u << " is occured " << m[u] << " "
-                     << "times" << endl;
-            }
-        } */
+    /*
+       for (auto u : v)
 
-        return 0;
+           {
+               if (m[u] > 0)
+               {
+                   cout << u << " is occured " << m[u] << " "
+                        << "times" << endl;
+               }
+           }
+    */
+
+    return 0;
 }
