@@ -4,6 +4,7 @@
     "functional": "cpp",
     "iostream": "cpp",
     "array": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "iomanip": "cpp"
   }
 }
