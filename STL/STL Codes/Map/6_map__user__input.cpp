@@ -16,7 +16,8 @@ int main()
         string s;
         int a;
         cin >> s >> a;
-        m[s] = a;
+        //  m[s] = a;
+        m.insert({s, a});
     }
     cout << "Your Inputed Data : " << endl;
     for (auto u : m)
