@@ -26,19 +26,10 @@ int main()
         m[u]++;
     }
 
-    cout << m[-59] << endl;
-
-    /*
-       for (auto u : v)
-
-           {
-               if (m[u] > 0)
-               {
-                   cout << u << " is occured " << m[u] << " "
-                        << "times" << endl;
-               }
-           }
-    */
+    for (auto u : m)
+    {
+        cout << u.first << " " << u.second << endl;
+    }
 
     return 0;
 }
