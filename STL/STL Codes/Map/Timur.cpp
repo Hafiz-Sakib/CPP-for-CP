@@ -14,7 +14,7 @@ int main()
         cin >> n;
         string s;
         cin >> s;
-        // sort(x.begin(), x.end());
+        sort(x.begin(), x.end());
         sort(s.begin(), s.end());
         cout << (x == s ? "YES" : "NO") << '\n';
     }
