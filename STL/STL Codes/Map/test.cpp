@@ -1,30 +1,19 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-#define Boost                         \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);                    \
-    cout.tie(NULL)
+
 int main()
 {
-    Boost;
-    vector<int> v = {2, 8, 4, 1};
-    auto c = v;
-
-    // sort(v.begin(), v.end());
-
-    //  sort(v.rbegin(), v.rend());
-
-    for (auto u : v)
+    int n, x;
+    cin >> n;
+    int fn[n];
+    for (int i = 1; i <= n; i++)
     {
-        cout << u << " ";
+        cin >> x;
+        fn[x] = i;
     }
-    cout << endl;
-
-    for (auto u : c)
+    for (int x = 1; x <= n; x++)
     {
-        cout << u << " ";
+        cout << fn[x] << " ";
     }
-    cout << endl;
     return 0;
 }
