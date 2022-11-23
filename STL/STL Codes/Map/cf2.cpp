@@ -24,13 +24,13 @@ int main()
         string s;
         cin >> s;
         m[s]++;
-        if (m[s] > 1)
+        if (m[s] == 1)
         {
-            cout << "YES" << endl;
+            cout << "OK" << endl;
         }
         else
         {
-            cout << "NO" << endl;
+            cout << s << m[s] - 1 << endl;
         }
     }
 
