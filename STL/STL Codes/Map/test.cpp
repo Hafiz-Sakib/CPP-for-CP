@@ -1,19 +1,18 @@
+/*
+string author;
+author = Hafiz_Sakib;
+*/
+#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-
+#define endl "\n"
+#define Boost                         \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL)
 int main()
 {
-    int n, x;
-    cin >> n;
-    int fn[n];
-    for (int i = 1; i <= n; i++)
-    {
-        cin >> x;
-        fn[x] = i;
-    }
-    for (int x = 1; x <= n; x++)
-    {
-        cout << fn[x] << " ";
-    }
+    Boost;
+
     return 0;
 }
