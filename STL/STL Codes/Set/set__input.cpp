@@ -17,7 +17,18 @@ int main()
 {
     Boost;
 
-    set<int> s = {1, 2, 5, 6, 9, -8, 78, 2, 10};
+    set<int> s = {1, 4, 4, 3, 2, 2};
+
+    cout << s.size() << endl;
+
+    s.clear();
+
+    for (int i = 0; i < 6; i++)
+    {
+        int a;
+        cin >> a;
+        s.insert(a);
+    }
 
     cout << s.size() << endl;
 
@@ -25,7 +36,6 @@ int main()
     {
         cout << u << " ";
     }
-
     cout << endl;
 
     return 0;
