@@ -16,6 +16,19 @@ using namespace std;
 int main()
 {
     Boost;
+    int box;
+    cin >> box;
+    map<int, int> count;
+    int maxi = 0;
+    for (int i = 0; i < box; i++)
+    {
+        int a;
+        cin >> a;
+        count[a]++;
+        maxi = max(maxi, count[a]);
+    }
+
+    cout << maxi;
 
     return 0;
 }
