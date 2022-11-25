@@ -1,1 +1,0 @@
-{"name":"Local: next__permutation","url":"c:\\PU Projects\\LearnCPP\\STL\\STL Codes\\String\\next__permutation.cpp","tests":[{"id":1668669179754,"input":"3\nabcd\nadeg\ndcba","output":"abdc\nadge\nno answer"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\PU Projects\\LearnCPP\\STL\\STL Codes\\String\\next__permutation.cpp","group":"local","local":true}
