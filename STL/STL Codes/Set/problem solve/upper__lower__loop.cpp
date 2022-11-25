@@ -8,21 +8,19 @@ using namespace std;
 int main()
 {
     Boost;
-    string s = "SaKiB", choto, boro;
-
+    string s = "SaKiB", choto, Boro;
     for (auto u : s)
     {
         char c = tolower(u);
         choto = choto + c;
     }
-
     for (auto u : s)
     {
         char c = toupper(u);
-        boro = boro + c;
+        Boro = Boro + c;
     }
 
-    cout << choto << " " << boro << endl;
+    cout << choto << " " << Boro << endl;
 
     return 0;
 }
