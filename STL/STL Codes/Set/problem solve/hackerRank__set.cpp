@@ -19,9 +19,33 @@ using namespace std;
 int main()
 {
     Boost;
-
+    set<int> s;
     int q;
     cin >> q;
+    while (q--)
+    {
+        int t, n;
+        cin >> t >> n;
+        if (t == 1)
+        {
+            s.insert(n);
+        }
+        else if (t == 2)
+        {
+            s.erase(n);
+        }
+        else
+        {
+            if (s.count(n))
+            {
+                cout << "Yes" << endl;
+            }
+            else
+            {
+                cout << "No" << endl;
+            }
+        }
+    }
 
     return 0;
 }
