@@ -20,5 +20,8 @@ int main()
 {
     Boost;
 
+    int q;
+    cin >> q;
+
     return 0;
 }
