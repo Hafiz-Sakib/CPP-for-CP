@@ -1,36 +1,55 @@
+/*
+
+string author;
+author = Hafiz_Sakib;
+
+*/
+#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long int
 #define endl "\n"
-#define optimize()                    \
+#define ignore cin.ignore(numeric_limits<streamsize>::max(), '\n')
+#define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
-    cout.tie(NULL);
+    cout.tie(NULL)
 int main()
 {
-    optimize();
-    int t = 1;
+    Boost;
+
+    long long int t;
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
-        if (n % 2 != 0)
+
+        // 1
+        // 1 2 3 2
+        // 1 1 1
+
+        long long int num;
+        cin >> num;
+        if (num == 2)
         {
-            for (int i = 0; i < n; i++)
+            cout << 1 << " " << 3 << endl;
+        }
+        else if (num & 1)
+        {
+            for (int i = 0; i < num; i++)
             {
-                cout << 7 << " ";
+                cout << 1 << " ";
             }
+            cout << endl;
         }
         else
         {
-            for (int i = 0; i < n; i++)
-            {
-                cout << 0 << " ";
-            }
-        }
-        cout << endl;
-    }
+            cout << 1 << " " << 2 << " " << 3 << " ";
 
+            for (int i = 3; i < num; i++)
+            {
+                cout << 2 << " ";
+            }
+            cout << endl;
+        }
+    }
     return 0;
 }
