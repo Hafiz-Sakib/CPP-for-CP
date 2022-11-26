@@ -29,7 +29,7 @@ int main()
 
     if (s.size() >= 2)
     {
-        // cout << *(++s.begin());
+        // cout << *(++s.begin()) <<endl;
 
         // Jodi 3 no element ta print korte bolto :
         int p, c = 0;
