@@ -27,11 +27,10 @@ int main()
     }
 
     cout << endl;
-    /*
 
+    /*
     Output :
     1 2 2 3 4 6 8 8 9
-
     */
 
     s.erase(2);
@@ -44,7 +43,6 @@ int main()
         cout << u << " ";
     }
     /*
-
     Output :
     1 3 4 6 8 8 9
 
