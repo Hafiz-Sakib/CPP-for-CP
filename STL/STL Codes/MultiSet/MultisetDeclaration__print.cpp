@@ -17,7 +17,8 @@ int main()
 {
     Boost;
 
-    // everything of multiset is like set but multiset isn't UNIQUE & it's the main difference
+    // MultiSet is Sorted But Not Unique!
+    //  everything of multiset is like set but multiset isn't UNIQUE & it's the main difference
 
     multiset<int> s;
     s.insert(4);
