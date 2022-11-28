@@ -19,6 +19,8 @@ int main()
 
     multiset<int> s = {8, 2, 3, 6, 4, 8, 9, 1, 2};
 
+    cout << "Before erasing 2 : " << endl;
+
     for (auto u : s)
     {
         cout << u << " ";
@@ -34,6 +36,8 @@ int main()
 
     s.erase(2);
     // erase function e jei number pass kora hobe sei number er sob occurance delete hoye jabe.
+
+    cout << "After erasing 2 : " << endl;
 
     for (auto u : s)
     {
