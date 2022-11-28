@@ -4,5 +4,5 @@
 </br>
 
 <p align="center"> 
-<img height="100%" width="85%" src="https://postimg.cc/nMTcnygg">
+<img height="100%" width="85%" src="https://i.postimg.cc/3JQyF7B8/mqdefault.jpg">
 </p>
