@@ -26,15 +26,14 @@ int main()
     s.insert(3);
     s.insert(3);
     s.insert(3);
+    s.insert(3);
     s.insert(2);
 
-    for (auto u : s)
-    {
-        cout << u << " ";
-    }
+    cout << endl
+         << "Tolal 3 is : " << s.count(3);
+
     /*
-        Output :
-        2 2 2 3 3 3 4
+    Output : 4
     */
 
     return 0;
