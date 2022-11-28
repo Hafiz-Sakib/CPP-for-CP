@@ -33,7 +33,9 @@ int main()
          << "Tolal 3 is : " << s.count(3);
 
     /*
+
     Output : 4
+
     */
 
     return 0;
