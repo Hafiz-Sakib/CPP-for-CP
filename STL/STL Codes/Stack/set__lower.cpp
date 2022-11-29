@@ -18,7 +18,7 @@ int main()
     Boost;
     set<int> s = {3, 4, 5, 6, 7};
 
-    auto a = s.upper_bound(2);
+    auto a = s.lower_bound(2);
     cout << *a;
 
     return 0;
