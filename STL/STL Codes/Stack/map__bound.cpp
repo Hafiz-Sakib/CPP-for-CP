@@ -16,10 +16,20 @@ using namespace std;
 int main()
 {
     Boost;
-    set<int> s = {3, 4, 5, 6, 7};
+    map<int, int> mp;
 
-    auto a = s.lower_bound(2);
-    cout << *a;
+    mp[5] = 1;
+    mp[7] = 4;
+    mp[9] = 3;
+    mp[11] = 6;
+    mp[13] = 3;
+
+    int n;
+    cin >> n;
+
+    auto it = mp.lower_bound(n);
+
+    cout << (*it).first << " " << (*it).second << endl;
 
     return 0;
 }
