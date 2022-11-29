@@ -19,6 +19,7 @@ int main()
     stack<int> s;
 
     auto p = s;
+    // p nam er variable e (jetar type automatically detect korbe), s stack er value guli copy kore rakhlam
 
     s.push(1);
     s.push(2);
