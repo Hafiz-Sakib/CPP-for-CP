@@ -9,10 +9,10 @@ bool isBalanced(char c1, char c2)
 
 int main()
 {
-    int n;
-    cin >> n;
+    int t;
+    cin >> t;
 
-    while (n--)
+    while (t--)
     {
         string s;
         cin >> s;
