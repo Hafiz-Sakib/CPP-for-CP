@@ -1,1 +1,0 @@
-{"name":"Local: test","url":"c:\\PU Projects\\LearnCPP\\STL\\STL Codes\\Map\\test.cpp","tests":[{"id":1669274086433,"input":"3\n1 2 3\n","output":"1"},{"id":1669274091484,"input":"4\n4 2 4 3\n","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\PU Projects\\LearnCPP\\STL\\STL Codes\\Map\\test.cpp","group":"local","local":true}

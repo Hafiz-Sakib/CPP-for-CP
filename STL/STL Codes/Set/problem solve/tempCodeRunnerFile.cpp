@@ -1,4 +1,0 @@
-  if (isspace(u))
-          {
-              continue;
-          }
