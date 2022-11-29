@@ -18,5 +18,10 @@ int main()
     Boost;
     set<int> s = {2, 6, 8, 1, 2, 3, 5, 4, 7, 8, 9, 8};
 
+    // 1 2 3 4 5 6 7 8 9
+
+    auto a = s.lower_bound(13);
+    cout << *a;
+
     return 0;
 }

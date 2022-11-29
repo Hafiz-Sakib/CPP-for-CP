@@ -12,18 +12,14 @@ int main()
 
     int n;
     cin >> n;
-
-    auto i = upper_bound(s.begin(), s.end(), n);
-    auto j = lower_bound(s.begin(), s.end(), n);
-
-    if (i == s.end())
+    auto it = upper_bound(s.begin(), s.end(), n);
+    if (it == s.end())
     {
         cout << "Not Found" << endl;
     }
     else
     {
-        cout << "Upper Bound of " << n << " is : " << *i << endl;
-        cout << "Lower Bound of " << n << " is : " << *j << endl;
+        cout << "Upper Bound of " << n << " is : " << *it << endl;
     }
 
     return 0;
