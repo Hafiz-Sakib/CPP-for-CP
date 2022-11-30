@@ -70,3 +70,5 @@ int main()
     }
     return 0;
 }
+
+// https://practice.geeksforgeeks.org/problems/special-stack/1
