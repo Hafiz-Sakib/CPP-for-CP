@@ -17,6 +17,17 @@ int main()
 {
     Boost;
     vector<string> vec = {"5", "2", "C", "D", "+"};
+
+    /*
+
+    Input: vec = ["5","-2","4","C","D","9","+","+"]
+    Output: 27
+
+    Input: vec = ["1","C"]
+    Output: 0
+
+    */
+
     stack<int> st;
 
     for (auto u : vec)
