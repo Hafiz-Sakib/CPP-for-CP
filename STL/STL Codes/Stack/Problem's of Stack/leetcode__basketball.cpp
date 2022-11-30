@@ -63,7 +63,7 @@ int main()
                 st.push(t1 + t2);
             }
 
-            else if (t1 != -1)
+            else if (t1 != -1 && t2 == -1)
             {
                 st.push(t1);
             }
