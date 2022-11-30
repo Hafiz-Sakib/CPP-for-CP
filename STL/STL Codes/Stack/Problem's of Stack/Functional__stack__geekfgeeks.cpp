@@ -49,7 +49,7 @@ int getMin(stack<int> &s)
 
 int main()
 {
-    // Boost;
+    Boost;
     int t;
     cin >> t;
     while (t--)
