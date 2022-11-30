@@ -20,10 +20,10 @@ int main()
 
     /*
 
-    Input: vec = ["5","-2","4","C","D","9","+","+"]
+    Input: vec = {"5","-2","4","C","D","9","+","+"};
     Output: 27
 
-    Input: vec = ["1","C"]
+    Input: vec = {"1","C"};
     Output: 0
 
     */
