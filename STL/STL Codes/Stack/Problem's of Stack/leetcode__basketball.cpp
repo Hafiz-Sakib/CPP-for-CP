@@ -56,7 +56,8 @@ int main()
                 st.pop();
             }
 
-            if (t2 != -1)
+            if (t2 != -1 && t1 != -1)
+
             {
                 st.push(t2);
                 st.push(t1);
