@@ -68,14 +68,14 @@ int main()
                 st.push(t1);
             }
         }
-        else if (u[0] == 'D')
+        else if (u[0] == 'D') // if u[0] == 'D' that means make Double the Previous round
         {
             if (!st.empty())
             {
                 st.push(2 * st.top());
             }
         }
-        else
+        else // if u[0] == 'C' that means clear the previous round
         {
             if (!st.empty())
             {
