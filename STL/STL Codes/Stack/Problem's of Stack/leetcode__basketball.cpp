@@ -78,7 +78,9 @@ int main()
         else
         {
             if (!st.empty())
+            {
                 st.pop();
+            }
         }
     }
 
