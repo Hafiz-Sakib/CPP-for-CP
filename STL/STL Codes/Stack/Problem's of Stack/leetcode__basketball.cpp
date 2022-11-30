@@ -42,30 +42,30 @@ int main()
         }
         else if (u[0] == '+')
         {
-            int a1 = -1, a2 = -1;
+            int t1 = -1, t2 = -1;
 
             if (!st.empty())
             {
-                a1 = st.top();
+                t1 = st.top();
                 st.pop();
             }
 
             if (!st.empty())
             {
-                a2 = st.top();
+                t2 = st.top();
                 st.pop();
             }
 
-            if (a2 != -1)
+            if (t2 != -1)
             {
-                st.push(a2);
-                st.push(a1);
-                st.push(a1 + a2);
+                st.push(t2);
+                st.push(t1);
+                st.push(t1 + t2);
             }
 
-            else if (a1 != -1)
+            else if (t1 != -1)
             {
-                st.push(a1);
+                st.push(t1);
             }
         }
         else if (u[0] == 'D')
