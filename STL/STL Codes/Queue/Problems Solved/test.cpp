@@ -16,9 +16,8 @@ using namespace std;
 int main()
 {
     Boost;
-    stack<long long int> s;
-    queue<long long int> q;
-    queue<long long int> r;
+    queue<int> q;
+    queue<int> r;
     int n, k;
     cin >> n;
 
@@ -28,33 +27,13 @@ int main()
         cin >> a;
         q.push(a);
     }
-    cin >> k;
-
-    while (k--)
-    {
-        s.push(q.front());
-        q.pop();
-    }
-
-    while (!s.empty())
-    {
-        r.push(s.top());
-        s.pop();
-    }
 
     while (!q.empty())
     {
-        r.push(q.front());
-        q.pop();
-    }
-
-    while (!r.empty())
-    {
-        cout << r.front() << " ";
-        r.pop();
+        cout << q.front() << " " << endl;
     }
 
     return 0;
 }
 
-// https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1
+//// https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1
