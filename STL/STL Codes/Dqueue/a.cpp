@@ -63,7 +63,7 @@ int main()
             else
             {
                 cout << abs(zero - one) + 1;
-                        }
+            }
         }
         cout << endl;
     }
