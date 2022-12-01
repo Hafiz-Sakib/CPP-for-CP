@@ -35,7 +35,7 @@ int main()
 
     while (!s.empty())
     {
-        q.push(s.top()); // we can push into q bcz q is being cleared in previous loop
+        q.push(s.top()); // we can push into "q" bcz q is being cleared in previous loop
         s.pop();
     }
 
