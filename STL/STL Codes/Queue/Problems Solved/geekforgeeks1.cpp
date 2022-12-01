@@ -56,3 +56,5 @@ int main()
 
     return 0;
 }
+
+// https: // practice.geeksforgeeks.org/problems/queue-designer/1
