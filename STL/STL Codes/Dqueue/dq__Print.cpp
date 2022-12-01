@@ -24,6 +24,7 @@ int main()
     dq.push_back(3);
     dq.push_front(5);
     dq.push_front(4);
+    // 4 5 5 4 5 3
 
     cout << "Size : " << dq.size() << endl;
 
