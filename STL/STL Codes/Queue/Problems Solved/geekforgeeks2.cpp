@@ -28,6 +28,7 @@ int main()
         cin >> a;
         q.push(a);
     }
+
     cin >> k;
 
     while (k--)
