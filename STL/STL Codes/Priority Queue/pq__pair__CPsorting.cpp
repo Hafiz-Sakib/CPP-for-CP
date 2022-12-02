@@ -17,6 +17,7 @@ int main()
 {
     Boost;
     priority_queue<pair<int, int>> q;
+    priority_queue<pair<int, int>> pq;
     int n;
     cin >> n;
     for (int i = 0; i < n; i++)
@@ -24,6 +25,7 @@ int main()
         int a, b;
         cin >> a >> b;
         q.push({a, -b});
+        pq.push(make_pair(a, -b));
     }
 
     cout << "Output : " << endl;
@@ -33,6 +35,23 @@ int main()
         cout << q.top().first << " " << q.top().second * -1 << endl;
         q.pop();
     }
+
+    /*
+5
+5 3
+4 2
+4 3
+2 1
+2 2
+Output :
+5 3
+4 2
+4 3
+2 1
+2 2
+
+
+     */
 
     return 0;
 }
