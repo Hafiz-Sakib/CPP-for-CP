@@ -1,25 +1,26 @@
-/*
-
-string author;
-author = Hafiz_Sakib;
-
-*/
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long int
 #define endl "\n"
-#define ignore cin.ignore(numeric_limits<streamsize>::max(), '\n')
-#define Boost                         \
+#define optimize()                    \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
-    cout.tie(NULL)
+    cout.tie(NULL);
 int main()
 {
-    Boost;
-    string s;
-    cin >> s;
-    s[0] = toupper(s[0]);
-    cout << s << endl;
+    optimize();
+    vector<long long int> v(4);
+    for (int i = 0; i < 4; i++)
+    {
+        cin >> v[i];
+    }
+    int size = unique(v.begin(), v.end()) - v.begin();
+    //  for(auto u:v)cout<<u<<" ";
+    for (int i = 0; i < size; i++)
+    {
+        cout << v[i] << ' ';
+    }
+    cout << endl;
 
     return 0;
 }
