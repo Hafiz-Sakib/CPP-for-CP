@@ -22,8 +22,7 @@ int main()
     {
         int n;
         cin >> n;
-        n -= 3;
-        cout << n / 3 - 1 << "\n";
+        cout << (n + 1) / 2 << endl;
     }
     return 0;
 }
