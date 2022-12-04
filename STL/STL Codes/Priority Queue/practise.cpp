@@ -59,7 +59,7 @@ using namespace std;
 const double PI = acos(-1);
 ll int hp = 1e9 + 7;
 const int mx = 1e8 + 123;
-
+int a[mx];
 void Boom()
 {
     // Let's Move
