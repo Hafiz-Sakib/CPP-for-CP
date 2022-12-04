@@ -6,22 +6,32 @@ author = Hafiz_Sakib;
 
 */
 #include <bits/stdc++.h>
+
 #define ull unsigned long long
 #define ll long long
+
+typedef vector<ll int> vi;
+typedef vector<string> vs;
+typedef pair<ll int, ll int> pii;
+typedef pair<string, ll int> psi;
+typedef pair<ll int, string> pis;
+typedef pair<double, double> pdd;
+typedef map<ll int, ll int> mii;
+typedef map<ll int, bool> mib;
+typedef map<string, ll int> msi;
+typedef map<ll int, string> mis;
+typedef string S;
+
+#define sz(x) (int)x.size()
+#define mid(l, r) ((r + l) / 2)
+#define left(node) (node * 2)
+#define right(node) (node * 2 + 1)
+#define mx_int_prime 999999937
+
 #define pb push_back
 #define mp make_pair
 #define pob pop_back
 #define in insert
-#define vi vector<ll int>
-#define vs vector<string>
-#define pii pair<ll int, ll int>
-#define psi pair<string, ll int>
-#define pis pair<ll int, string>
-#define mii map<ll int, ll int>
-#define mib map<ll int, bool>
-#define msi map<string, ll int>
-#define mis map<ll int, string>
-#define S string
 #define fi first
 #define se second
 #define space ' '
@@ -55,6 +65,9 @@ author = Hafiz_Sakib;
     cout.tie(NULL)
 #define maxx 100005
 #define EPS 1e-9
+typedef set<ll int> si;
+typedef multiset<ll int> si;
+typedef set<double> sd;
 using namespace std;
 const double PI = acos(-1);
 ll int hp = 1e9 + 7;
@@ -73,6 +86,7 @@ int main()
     cin >> t;
     while (t--)
     {
+        vi v;
         // cout<<"Case "<<t<<" : ";
         Boom();
     }
