@@ -7,42 +7,27 @@ author = Hafiz_Sakib;
 */
 #include <bits/stdc++.h>
 using namespace std;
-
-#define ll long long
 #define ull unsigned long long
-
-typedef vector<ll int> vi;
-typedef vector<string> vs;
-typedef pair<ll int, ll int> pii;
-typedef pair<string, ll int> psi;
-typedef pair<ll int, string> pis;
-typedef pair<double, double> pdd;
-typedef map<ll int, ll int> mii;
-typedef map<ll int, bool> mib;
-typedef map<string, ll int> msi;
-typedef map<ll int, string> mis;
-typedef set<ll int> si;
-typedef set<string> ss;
-typedef set<double> sd;
-typedef string S;
-
-typedef vector<int>::iterator vit;
-typedef set<int>::iterator sit;
-
-#define pb push_back
-#define mp make_pair
-#define pob pop_back
-#define in insert
+#define ll long long
+#define vi vector<ll int>
+#define vs vector<string>
+#define pii pair<ll int, ll int>
+#define psi pair<string, ll int>
+#define pis pair<ll int, string>
+#define mii map<ll int, ll int>
+#define mib map<ll int, bool>
+#define msi map<string, ll int>
+#define mis map<ll int, string>
+#define S string
 #define fi first
 #define se second
 #define space ' '
 #define endl "\n"
 
-#define sz(x) (int)x.size()
-#define mid(l, r) ((r + l) / 2)
-#define left(node) (node * 2)
-#define right(node) (node * 2 + 1)
-#define mx_int_prime 999999937
+#define pb push_back
+#define mp make_pair
+#define pob pop_back
+#define in insert
 
 #define b() begin()
 #define e() end()
@@ -71,18 +56,12 @@ typedef set<int>::iterator sit;
 #define here fprintf(stderr, "====I am Here====\n");
 #define FOR(data) for (auto it = data.begin(); it != data.end(); it++)
 
-#define gcd(a, b) __gcd(a, b)
-#define sqr(a) ((a) * (a))
-#define EPS 1e-9
-#define MOD 1000000007
 #define maxx 100005
-ll int hp = 1e9 + 7;
-
+#define EPS 1e-9
+using namespace std;
 const double PI = acos(-1);
+ll int hp = 1e9 + 7;
 const int mx = 1e8 + 123;
-const double eps = 1e-9;
-const int inf = 2000000000;
-const ll infLL = 9000000000000000000;
 
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
@@ -97,11 +76,13 @@ void Boom()
 int main()
 {
     Boost;
-    vi v = {1, 7, 4, 3};
-    sort(all(v));
-    for (int i = 0; i < sz(v); i++)
+
+    int t = 1;
+    cin >> t;
+    while (t--)
     {
-        cout << v[i] << ' ';
+        // cout<<"Case "<<t<<" : ";
+        Boom();
     }
 
     return 0;
