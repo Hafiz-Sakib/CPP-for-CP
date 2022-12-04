@@ -34,6 +34,8 @@ int main()
     cout << Count << endl;
 
     string s = "AabcBek";
+    sort(s.rbegin(), s.rend());
+    cout << s << endl;
     Reverse(s);
     cout << s;
 
