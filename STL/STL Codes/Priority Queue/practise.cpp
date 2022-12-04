@@ -44,6 +44,8 @@ typedef set<int>::iterator sit;
 #define right(node) (node * 2 + 1)
 #define mx_int_prime 999999937
 
+#define b() begin()
+#define e() end()
 #define all(data) data.begin(), data.end()
 #define rall(data) data.rbegin(), data.rend()
 #define vecMax(data) *max_element(data.begin(), data.end())
@@ -51,8 +53,6 @@ typedef set<int>::iterator sit;
 #define vecSum(data) accumulate(data.begin(), data.end(), 0)
 #define vecCount(data, key) count(data.begin(), data.end(), key)
 #define Reverse(data) reverse(data.begin(), data.end())
-#define b() begin()
-#define e() end()
 
 #define YES cout << "YES\n"
 #define NO cout << "NO\n"
@@ -97,13 +97,11 @@ void Boom()
 int main()
 {
     Boost;
-
-    int t = 1;
-    cin >> t;
-    while (t--)
+    vi v = {1, 7, 4, 3};
+    sort(all(v));
+    for (int i = 0; i < sz(v); i++)
     {
-        // cout<<"Case "<<t<<" : ";
-        Boom();
+        cout << v[i] << ' ';
     }
 
     return 0;
