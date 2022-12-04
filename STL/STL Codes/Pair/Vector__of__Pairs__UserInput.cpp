@@ -20,7 +20,5 @@ int main()
         cout << v[i].first << " " << v[i].second << endl;
     }
 
-    dbg(v);
-
     return 0;
 }
