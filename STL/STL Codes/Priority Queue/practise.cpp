@@ -88,6 +88,7 @@ const ll infLL = 9000000000000000000;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
+
 void Boom()
 {
     // Let's Move
