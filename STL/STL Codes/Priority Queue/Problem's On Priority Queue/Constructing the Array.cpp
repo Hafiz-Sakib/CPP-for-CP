@@ -44,11 +44,11 @@ int main()
 
             if (len % 2)
             {
-                mid = (1 + r) / 2;
+                mid = (l + r) / 2;
             }
             else
             {
-                mid = (1 + r - 1) / 2;
+                mid = (l + r - 1) / 2;
             }
 
             a[mid] = cnt;
