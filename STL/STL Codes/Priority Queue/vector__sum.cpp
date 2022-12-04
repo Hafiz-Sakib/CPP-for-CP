@@ -7,13 +7,13 @@ using namespace std;
 #define vecSum(data) accumulate(data.begin(), data.end(), 0)
 #define vecCount(data, key) count(data.begin(), data.end(), key)
 #define Reverse(data) reverse(data.begin(), data.end())
-#define optimize()                    \
+#define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL);
 int main()
 {
-    optimize();
+    Boost;
 
     vector<long long int> v(4);
     for (int i = 0; i < 4; i++)
