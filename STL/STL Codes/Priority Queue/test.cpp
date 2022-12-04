@@ -14,8 +14,11 @@ int main()
     {
         cin >> v[i];
     }
+
+    sort(v.begin(), v.end());
+
     int size = unique(v.begin(), v.end()) - v.begin();
-    //  for(auto u:v)cout<<u<<" ";
+
     for (int i = 0; i < size; i++)
     {
         cout << v[i] << ' ';
