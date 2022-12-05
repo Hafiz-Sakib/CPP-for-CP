@@ -11,22 +11,22 @@ using namespace std;
 #define ll long long
 #define ull unsigned long long
 
-typedef vector<ll int> vi;
-typedef vector<string> vs;
-typedef pair<ll int, ll int> pii;
-typedef pair<string, ll int> psi;
-typedef pair<ll int, string> pis;
-typedef pair<double, double> pdd;
-typedef map<ll int, ll int> mii;
-typedef map<ll int, bool> mib;
-typedef map<string, ll int> msi;
-typedef map<ll int, string> mis;
-typedef set<ll int> si;
-typedef set<string> ss;
-typedef set<double> sd;
+#define vi vector<ll int>
+#define vs vector<string>
+#define pii pair<ll int, ll int>
+#define psi pair<string, ll int>
+#define pis pair<ll int, string>
+#define mii map<ll int, ll int>
+#define mib map<ll int, bool>
+#define msi map<string, ll int>
+#define mis map<ll int, string>
+#define pdd pair<double, double>
+#define si set<ll int>
+#define si set<string>
+#define sd set<double>
 
-typedef vector<int>::iterator vit;
-typedef set<int>::iterator sit;
+#define vit vector<int>::iterator
+#define sit set<int>::iterator
 
 #define pb push_back
 #define mp make_pair
@@ -67,6 +67,9 @@ typedef set<int>::iterator sit;
 #define mem(arr, val) memset(arr, val, sizeof(arr));
 #define ignore cin.ignore(numeric_limits<streamsize>::max(), '\n')
 
+#define debug(x) cerr << x << endl;
+#define here fprintf(stderr, "====I am Here====\n");
+
 #define gcd(a, b) __gcd(a, b)
 #define sqr(a) ((a) * (a))
 #define MOD 1000000007
@@ -82,94 +85,6 @@ const ll infLL = 9000000000000000000;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-// Debugger Started
-#define here fprintf(stderr, "====I am Here====\n");
-template <typename F, typename S>
-ostream &operator<<(ostream &os, const pair<F, S> &p)
-{
-    return os << "(" << p.first << ", " << p.second << ")";
-}
-
-template <typename T>
-ostream &operator<<(ostream &os, const vector<T> &v)
-{
-    os << "{";
-    for (auto it = v.begin(); it != v.end(); ++it)
-    {
-        if (it != v.begin())
-            os << ", ";
-        os << *it;
-    }
-    return os << "}";
-}
-
-template <typename T>
-ostream &operator<<(ostream &os, const set<T> &v)
-{
-    os << "[";
-    for (auto it = v.begin(); it != v.end(); ++it)
-    {
-        if (it != v.begin())
-            os << ", ";
-        os << *it;
-    }
-    return os << "]";
-}
-
-template <typename T>
-ostream &operator<<(ostream &os, const multiset<T> &v)
-{
-    os << "[";
-    for (auto it = v.begin(); it != v.end(); ++it)
-    {
-        if (it != v.begin())
-            os << ", ";
-        os << *it;
-    }
-    return os << "]";
-}
-
-template <typename F, typename S>
-ostream &operator<<(ostream &os, const map<F, S> &v)
-{
-    os << "[";
-    for (auto it = v.begin(); it != v.end(); ++it)
-    {
-        if (it != v.begin())
-            os << ", ";
-        os << it->first << " = " << it->second;
-    }
-    return os << "]";
-}
-
-#define debug(args...)          \
-    do                          \
-    {                           \
-        cerr << #args << " : "; \
-        faltu(args);            \
-    } while (0)
-
-void faltu()
-{
-    cerr << endl;
-}
-
-template <typename T>
-void faltu(T a[], int n)
-{
-    for (int i = 0; i < n; ++i)
-        cerr << a[i] << ' ';
-    cerr << endl;
-}
-
-template <typename T, typename... hello>
-void faltu(T arg, const hello &...rest)
-{
-    cerr << arg << ' ';
-    faltu(rest...);
-}
-// Debugger Ends
-
 void Boom()
 {
     // Let's Move
@@ -179,17 +94,13 @@ int main()
 {
     Boost;
 
-    vector<pair<int, string>> v(2);
-    for (int i = 0; i < 2; i++)
+    int t = 1;
+    cin >> t;
+    while (t--)
     {
-        cin >> v[i].first >> v[i].second;
+        // cout<<"Case "<<t<<" : ";
+        Boom();
     }
-    for (int i = 0; i < 2; i++)
-    {
-        cout << v[i].first << " " << v[i].second << endl;
-    }
-
-    debug(v);
 
     return 0;
 }
