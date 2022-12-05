@@ -22,7 +22,7 @@ using namespace std;
 #define mis map<ll int, string>
 #define pdd pair<double, double>
 #define si set<ll int>
-#define si set<string>
+#define ss set<string>
 #define sd set<double>
 
 #define vit vector<int>::iterator
@@ -99,6 +99,7 @@ int main()
     while (t--)
     {
         // cout<<"Case "<<t<<" : ";
+        here
         Boom();
     }
 
