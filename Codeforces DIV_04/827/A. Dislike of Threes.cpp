@@ -23,7 +23,7 @@ void Boom()
     vector<int> v;
     int k;
     cin >> k;
-    for (int i = 1; i <= 50000; i++)
+    for (int i = 1; i <= 3000; i++)
     {
         if (i % 3 == 0 || i % 10 == 3)
         {
