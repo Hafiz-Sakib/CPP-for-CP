@@ -22,18 +22,20 @@ void Boom()
 {
     ll n, cnt = 0, sum = 0;
     cin >> n;
-    set<ll> s;
     for (ll i = 1; i * i <= n; i++)
     {
         if (n % i == 0)
         {
-            s.insert({i, n / i});
+            cnt += 1;
+            sum += i;
+            if (i != (n / i))
+            {
+                sum += n / i;
+                cnt++;
+            }
         }
     }
-    for (auto u : s)
-    {
-        cout << u << " ";
-    }
+    cout << cnt << " " << sum << endl;
 }
 
 int main()
