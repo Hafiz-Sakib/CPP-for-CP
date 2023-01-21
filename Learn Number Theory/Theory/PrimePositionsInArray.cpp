@@ -57,9 +57,6 @@ void Boom()
     }
 }
 
-// 10
-// 2 5 7 -1 5 6 8 10 0 10
-
 int main()
 {
     Boost;
