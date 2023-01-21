@@ -46,19 +46,15 @@ void Boom()
     int a[n];
     for (int i = 0; i < n; i++)
     {
-        // cin >> a[i];
+        cin >> a[i];
     }
     // Sample Input :
     // 10
     // 2 5 7 -1 5 6 8 10 0 10
-    /*  for (int i = 0; i < n; i++)
-     {
-         if (1)
-         {
-             cout << i + 1 << ' ';
-         }
-     } */
-    SieveOfEratosthenes(n);
+    for (int i = 0; p[i] - 1 < n; i++)
+    {
+        cout << a[p[i] - 1] << ' ';
+    }
 }
 
 // 10
