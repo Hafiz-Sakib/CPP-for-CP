@@ -17,7 +17,27 @@ using namespace std;
 
 #define debug(x) cerr << x << endl;
 #define here fprintf(stderr, "====I am Here====\n");
+void SieveOfEratosthenes(int n)
+{
+    bool prime[n + 1];
+    memset(prime, true, sizeof(prime));
 
+    for (int p = 2; p * p <= n; p++)
+    {
+        if (prime[p] == true)
+        {
+            for (int i = p * p; i <= n; i += p)
+            {
+                prime[i] = false;
+            }
+        }
+    }
+    for (int p = 2; p <= n; p++)
+        if (prime[p])
+        {
+            cout << p << " ";
+        }
+}
 void Boom()
 {
     int p[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
@@ -26,18 +46,19 @@ void Boom()
     int a[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> a[i];
+        // cin >> a[i];
     }
     // Sample Input :
     // 10
     // 2 5 7 -1 5 6 8 10 0 10
-    for (int i = 0; i < n; i++)
-    {
-        if (1)
-        {
-            cout << i + 1 << ' ';
-        }
-    }
+    /*  for (int i = 0; i < n; i++)
+     {
+         if (1)
+         {
+             cout << i + 1 << ' ';
+         }
+     } */
+    SieveOfEratosthenes(n);
 }
 
 // 10
