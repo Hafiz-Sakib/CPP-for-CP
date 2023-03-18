@@ -53,50 +53,11 @@ typedef set<string> ss;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
-vi primes;
-
-void sieveOfEratosthenes(int m, int n)
-{
-    vector<bool> prime(n + 1, true);
-    prime[0] = false;
-    prime[1] = false;
-
-    for (int p = 2; p <= sqrt(n); p++)
-    {
-        if (prime[p])
-        {
-            for (int i = p * p; i <= n; i += p)
-            {
-                prime[i] = false;
-            }
-        }
-    }
-
-    for (int i = m; i <= n; i++)
-    {
-        if (prime[i])
-        {
-            // cout << i << " ";
-            primes.pb(i);
-        }
-    }
-}
 
 void Boom()
 {
-
-    ll a, b;
-    cin >> a >> b;
-    sieveOfEratosthenes(a, b);
-    if (primes.size() > 0)
-    {
-        cout << primes[primes.size() - 1] << endl;
-    }
-    else
-    {
-        cout << -1 << endl;
-    }
 }
+
 int main()
 {
     Boost;
