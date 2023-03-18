@@ -48,7 +48,6 @@ typedef set<string> ss;
 
 #define debug(x) cerr << x << endl;
 #define here fprintf(stderr, "====I am Here====\n");
-#define pi acos(-1)
 
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
@@ -57,20 +56,17 @@ typedef set<string> ss;
 
 void Boom()
 {
-    double d, n;
-    cin >> n >> d;
-    double p = pi / 180;
-    double q = 360 / n;
-    double theta = p * q;
-    double area = n * (0.5 * d * d * sin(theta));
-    printf("%.8f\n", area);
+    double a, b;
+    cin >> a >> b;
+    double ans = (a + b) / 2;
+    printf("%.2lf", ans);
 }
 
 int main()
 {
     Boost;
-    int t;
-    cin >> t;
+
+    int t = 1;
     while (t--)
     {
         Boom();
