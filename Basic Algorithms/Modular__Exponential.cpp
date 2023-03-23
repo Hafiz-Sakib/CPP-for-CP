@@ -63,12 +63,12 @@ int mod(int a, int b, int m)
     while (b > 0)
     {
         if (b & 1)
+        {
             res = (res * a) % m;
-
+        }
         b = b >> 1;
         a = (a * a) % m;
     }
-
     return res;
 }
 
@@ -77,6 +77,8 @@ int main()
     int a = 26;
     int b = 4;
     int m = 32;
+
+    cin >> a >> b >> m;
 
     int result = mod(a, b, m);
     cout << a << "^" << b << " mod " << m << " = " << result << endl;
