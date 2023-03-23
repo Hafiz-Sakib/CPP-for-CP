@@ -56,18 +56,33 @@ typedef set<string> ss;
 
 void Boom()
 {
+    ll n;
+    cin >> n;
+    vi v;
+    v.push_back(n);
+    while (n != 1)
+    {
+        if (n & 1)
+        {
+            n *= 3;
+            n++;
+            v.push_back(n);
+        }
+        else
+        {
+            n /= 2;
+            v.push_back(n);
+        }
+    }
+    for (auto u : v)
+    {
+        cout << u << " ";
+    }
 }
 
 int main()
 {
     Boost;
-
-    int t = 1;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
-
+    Boom();
     return 0;
 }
