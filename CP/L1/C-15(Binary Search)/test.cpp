@@ -22,8 +22,10 @@ void Boom()
     {
         int first = 0;
         int last = n - 1;
+
         int q;
         cin >> q;
+
         while (first <= last)
         {
             int mid = (first + last) / 2;
