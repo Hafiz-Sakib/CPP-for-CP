@@ -12,7 +12,7 @@ void Boom()
 {
     vector<int> v = {1, 2, 3, 4, 5};
 
-    // To Use the built in function.The Vector must be sorted!
+    // To Use the built in function.The Vector must be Sorted.
 
     int result = binary_search(v.begin(), v.end(), 2);
 
