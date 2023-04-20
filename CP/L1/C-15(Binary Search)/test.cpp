@@ -38,7 +38,7 @@ void Boom()
             {
                 first = mid + 1;
             }
-            else if (q < v[mid])
+            else
             {
                 last = mid - 1;
             }
