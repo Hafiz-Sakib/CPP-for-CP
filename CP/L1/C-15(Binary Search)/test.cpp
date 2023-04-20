@@ -18,16 +18,15 @@ void Boom()
 
     sort(v.begin(), v.end());
 
-    int first = v[0];
-    int last = v[n - 1];
-
     while (t--)
     {
+        int first = v[0];
+        int last = v[n - 1];
         int q;
         cin >> q;
         while (first <= last)
         {
-            int mid = last + first / 2;
+            int mid = (first + last) / 2;
             if (q == v[mid])
             {
                 cout << "found" << endl;

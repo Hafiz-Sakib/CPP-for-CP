@@ -26,7 +26,7 @@ void Boom()
 
     while (first <= last)
     {
-        int mid = last - first / 2;
+        int mid = (first + last) / 2;
         if (q == v[mid])
         {
             cout << "Found" << endl;
