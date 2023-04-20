@@ -30,6 +30,12 @@ void Boom()
         if (q == v[mid])
         {
             cout << "Found" << endl;
+            break;
+        }
+        else if (first > last)
+        {
+            cout << "Not Found" << endl;
+            break;
         }
         else if (q > v[mid])
         {
