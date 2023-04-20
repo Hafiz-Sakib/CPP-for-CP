@@ -8,8 +8,8 @@ using namespace std;
 
 void Boom()
 {
-    int n;
-    cin >> n;
+    int n, t;
+    cin >> n >> t;
     vector<int> v(n);
     for (int i = 0; i < n; i++)
     {
@@ -21,15 +21,15 @@ void Boom()
     int q;
     cin >> q;
 
-    int first = 0;
-    int last = n - 1;
+    int first = v[0];
+    int last = v[n - 1];
 
     while (first <= last)
     {
         int mid = last - first / 2;
         if (q == v[mid])
         {
-            cout << "Found" << endl;
+            cout << "found" << endl;
             break;
         }
         else if (q > v[mid])
@@ -44,13 +44,15 @@ void Boom()
 
     if (first > last)
     {
-        cout << "Not Found" << endl;
+        cout << "not found" << endl;
     }
 }
 
 int main()
 {
     Boost;
+
     Boom();
+
     return 0;
 }
