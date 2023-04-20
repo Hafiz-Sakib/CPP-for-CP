@@ -20,8 +20,8 @@ void Boom()
 
     while (t--)
     {
-        int first = v[0];
-        int last = v[n - 1];
+        int first = 0;
+        int last = n - 1;
         int q;
         cin >> q;
         while (first <= last)
