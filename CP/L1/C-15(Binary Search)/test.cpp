@@ -11,40 +11,15 @@ using namespace std;
 typedef long long int ll;
 typedef unsigned long long ull;
 
-typedef vector<ll> vi;
-typedef vector<double> vd;
-typedef vector<string> vs;
-typedef vector<char> vc;
-typedef vector<vector<ll>> vvi;
-typedef vector<pair<ll, ll>> vpii;
-typedef vector<pair<string, ll>> vpsi;
-typedef pair<ll, ll> pii;
-typedef map<ll, ll> mii;
-typedef map<string, ll> msi;
-typedef set<ll> si;
-typedef set<string> ss;
+typedef vector<int> vi;
 
-#define pb push_back
-#define mp make_pair
-#define in insert
-#define fi first
-#define se second
 #define space ' '
 #define endl "\n"
 #define yes cout << "YES\n"
 #define no cout << "NO\n"
 
-#define b() begin()
-#define e() end()
 #define all(data) data.begin(), data.end()
 #define rall(data) data.rbegin(), data.rend()
-#define vecMax(data) *max_element(data.begin(), data.end())
-#define vecMin(data) *min_element(data.begin(), data.end())
-#define vecSum(data) accumulate(data.begin(), data.end(), 0)
-
-#define stringLower(data) transform(data.begin(), data.end(), data.begin(), ::tolower)
-#define stringUpper(data) transform(data.begin(), data.end(), data.begin(), ::toupper)
-#define ignore cin.ignore(numeric_limits<streamsize>::max(), '\n')
 
 #define debug(x) cerr << x << endl;
 #define here fprintf(stderr, "====I am Here====\n");
@@ -56,15 +31,92 @@ typedef set<string> ss;
 
 void Boom()
 {
-    vector<int> v = {1, 2, 3};
-    cout << v.size() << endl;
+    int n, mini = INT_MAX, maxi = -1;
+    cin >> n;
+    vi a(n), b(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cin >> b[i];
+    }
+    int l = -1, r = -1;
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] != b[i])
+        {
+            l = i;
+            break;
+        }
+        else
+        {
+            continue;
+        }
+    }
+    for (int i = n - 1; i >= 0; i--)
+    {
+        if (a[i] != b[i])
+        {
+            r = i;
+            break;
+        }
+        else if (a[i] == b[i])
+        {
+            continue;
+        }
+    }
+    for (int i = l; i <= r; i++)
+    {
+        maxi = max(maxi, a[i]);
+        mini = min(mini, a[i]);
+    }
+
+    if (l > 0)
+    {
+        for (int i = (l - 1); i >= 0; i--)
+        {
+            if (a[i] <= mini)
+            {
+                l--;
+                mini = a[i];
+            }
+            else if (a[i] > mini)
+            {
+                break;
+            }
+        }
+    }
+
+    if (r < (n - 1))
+    {
+        for (ll i = r + 1; i < n; i++)
+        {
+            if (a[i] < maxi)
+            {
+                break;
+            }
+            else if (a[i] >= maxi)
+            {
+                r++;
+                maxi = a[i];
+            }
+        }
+    }
+    cout << l + 1 << ' ' << r + 1 << endl;
 }
 
 int main()
 {
     Boost;
 
-    Boom();
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
 
     return 0;
 }
