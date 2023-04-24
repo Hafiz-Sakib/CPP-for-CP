@@ -40,7 +40,7 @@ typedef set<string> ss;
 #define rall(data) data.rbegin(), data.rend()
 #define vecMax(data) *max_element(data.begin(), data.end())
 #define vecMin(data) *min_element(data.begin(), data.end())
-#define vecSum(data) accumulate(data.begin(), data.end(), 0)
+#define veansum(data) accumulate(data.begin(), data.end(), 0)
 
 #define stringLower(data) transform(data.begin(), data.end(), data.begin(), ::tolower)
 #define stringUpper(data) transform(data.begin(), data.end(), data.begin(), ::toupper)
@@ -56,6 +56,39 @@ typedef set<string> ss;
 
 void Boom()
 {
+    ll n = 0, ans = 0;
+    cin >> n;
+
+    if (n == 1)
+    {
+        cout << 1 << endl;
+        return;
+    }
+
+    if (n % 2 != 0)
+    {
+        cout << -1 << endl;
+        return;
+    }
+
+    vi v;
+
+    for (ll i = 0; i < (n / 2); i++)
+
+    {
+        v.push_back(i);
+        v.push_back(n - i - 1);
+    }
+
+    cout << n << space;
+
+    for (ll i = 0; i < n - 1; i++)
+    {
+        ans += i;
+        cout << (v[i + 1] - v[i] + n) % n << space;
+    }
+
+    cout << endl;
 }
 
 int main()

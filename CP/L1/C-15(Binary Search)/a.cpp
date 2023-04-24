@@ -34,7 +34,6 @@ typedef set<string> ss;
 #define yes cout << "YES\n"
 #define no cout << "NO\n"
 
-#define b() begin()
 #define e() end()
 #define all(data) data.begin(), data.end()
 #define rall(data) data.rbegin(), data.rend()
@@ -56,6 +55,30 @@ typedef set<string> ss;
 
 void Boom()
 {
+    ll n, time;
+    cin >> n >> time;
+    vi a(n), b(n);
+    for (auto &nn : a)
+    {
+        cin >> nn;
+    }
+    for (auto &nn : b)
+    {
+        cin >> nn;
+    }
+    ll ans = -1;
+    for (ll i = 0; i < n; i++)
+    {
+        if (a[i] <= time - i)
+        {
+            if (ans == -1 || b[i] > b[ans - 1])
+            {
+                ans = i + 1;
+            }
+        }
+    }
+
+    cout << ans << endl;
 }
 
 int main()

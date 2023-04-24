@@ -56,6 +56,9 @@ typedef set<string> ss;
 
 void Boom()
 {
+    ll n;
+    cin >> n;
+    cout << n * 4 + n * (n - 2) + 2 << endl;
 }
 
 int main()

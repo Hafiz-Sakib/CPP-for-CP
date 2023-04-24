@@ -34,7 +34,6 @@ typedef set<string> ss;
 #define yes cout << "YES\n"
 #define no cout << "NO\n"
 
-#define b() begin()
 #define e() end()
 #define all(data) data.begin(), data.end()
 #define rall(data) data.rbegin(), data.rend()
@@ -56,6 +55,45 @@ typedef set<string> ss;
 
 void Boom()
 {
+    ll n;
+    cin >> n;
+    vi v(n), r;
+    for (ll i = 0; i < n; i++)
+    {
+        cin >> v[i];
+    }
+
+    ll max1 = LLONG_MIN, max2 = LLONG_MIN, mini1 = LLONG_MAX, mini2 = LLONG_MAX;
+
+    for (ll i = 0; i < n; i++)
+    {
+        if (v[i] >= max1)
+        {
+            max2 = max1;
+            max1 = v[i];
+        }
+        else if (v[i] > max2)
+        {
+            max2 = v[i];
+        }
+    }
+    for (ll i = 0; i < n; i++)
+    {
+        if (v[i] <= mini1)
+        {
+            mini2 = mini1;
+            mini1 = v[i];
+        }
+        else if (v[i] < mini2)
+        {
+            mini2 = v[i];
+        }
+    }
+
+    ll p = max1 * max2;
+    ll q = mini1 * mini2;
+
+    cout << max(q, p) << endl;
 }
 
 int main()
