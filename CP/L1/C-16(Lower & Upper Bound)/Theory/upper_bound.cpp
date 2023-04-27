@@ -24,6 +24,7 @@ void Boom()
             r = mid - 1;
         }
     }
+
     cout << ans << endl;
 }
 
