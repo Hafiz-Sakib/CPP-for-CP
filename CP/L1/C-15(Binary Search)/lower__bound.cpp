@@ -9,7 +9,7 @@ using namespace std;
 void Boom()
 {
 
-    vector<int> v = {1, 2, 2, 3, 3, 3, 4};
+    vector<int> v = {1, 2, 2, 3, 3, 3, 3, 3, 4};
     int l = 0, r = v.size() - 1, target = 3, ans = 1e5;
     while (l <= r)
     {
