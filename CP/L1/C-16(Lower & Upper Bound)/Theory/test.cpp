@@ -1,3 +1,10 @@
+// Bismillahir Rahmanir Rahim
+/*
+
+string author;
+author = Hafiz_Sakib;
+
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -6,13 +13,30 @@ using namespace std;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-void Boom()
+vector<int> v;
+int n;
+
+void subset(int k)
 {
+    if (k > n)
+    {
+        for (auto i : v)
+        {
+            cout << i << " ";
+        }
+        cout << endl;
+        return;
+    }
+    v.push_back(k);
+    subset(k + 1);
+    v.pop_back();
+    subset(k + 1);
 }
 
 int main()
 {
     Boost;
-    Boom();
+    cin >> n;
+    subset(1);
     return 0;
 }

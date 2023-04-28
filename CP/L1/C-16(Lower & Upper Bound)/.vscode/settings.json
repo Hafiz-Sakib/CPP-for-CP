@@ -12,6 +12,7 @@
     "regex": "cpp",
     "valarray": "cpp",
     "iostream": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "limits": "cpp"
   }
 }
