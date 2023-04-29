@@ -59,25 +59,25 @@ void Boom()
     int n;
     cin >> n;
     vi v(n);
-    for (auto &x : v)
+    for (int i = 0; i < n; i++)
     {
-        cin >> x;
+        cin >> v[i];
     }
     sort(all(v));
-    int ans = 1;
-    for (int i = 1; i < n; i++)
-    {
-        if (v[i] != v[i - 1])
-        {
-            ans++;
-        }
-    }
+    int ans = unique(all(v)) - v.begin();
     cout << ans << endl;
 }
 
 int main()
 {
     Boost;
-    Boom();
+
+    int t = 1;
+
+    while (t--)
+    {
+        Boom();
+    }
+
     return 0;
 }
