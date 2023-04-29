@@ -28,17 +28,13 @@ void Boom()
         cin >> x;
         int lb = lower_bound(all(v), x) - v.b();
 
-        if (lb == v.size())
+        if (binary_search(all(v), x))
         {
-            cout << -1 << endl;
-        }
-        else if (v[lb] != x)
-        {
-            cout << -1 << endl;
+            cout << lb << endl;
         }
         else
         {
-            cout << lb << endl;
+            cout << -1 << endl;
         }
     }
 }
