@@ -1,4 +1,5 @@
 // https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/0
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -42,7 +43,7 @@ void Boom()
     }
     int ff = lower_bound(v.begin(), v.end(), x) - v.begin();
     int ll = upper_bound(v.begin(), v.end(), x) - v.begin();
-    cout << ff << ' ' << ll - 1;
+    cout << ff << ' ' << (ll - 1);
 }
 
 int main()
