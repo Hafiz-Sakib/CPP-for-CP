@@ -8,7 +8,7 @@ using namespace std;
     cout.tie(NULL)
 int lowerbound(vector<int> v, int q)
 {
-    int l = 0, r = v.size() - 1, ans = 1e5;
+    int l = 0, r = v.size() - 1, ans = v.size();
     while (l <= r)
     {
         int mid = (l + r) >> 1;
@@ -27,18 +27,27 @@ int lowerbound(vector<int> v, int q)
 
 void Boom()
 {
+    int n, x;
+    cin >> n >> x;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i];
+    }
+    int chk = binary_search(v.begin(), v.end(), x);
+    if (!chk)
+    {
+        cout << -1 << ' ' << -1 << endl;
+        return;
+    }
+    int ff = lower_bound(v.begin(), v.end(), x) - v.begin();
+    int ll = upper_bound(v.begin(), v.end(), x) - v.begin();
+    cout << ff << ' ' << ll - 1;
 }
 
 int main()
 {
     Boost;
-
-    int t = 1;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
-
+    Boom();
     return 0;
 }
