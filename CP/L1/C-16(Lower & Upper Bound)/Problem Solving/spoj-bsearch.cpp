@@ -5,8 +5,8 @@ using namespace std;
 
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);                    \
-    cout.tie(NULL)
+    cin.tie(0);                       \
+    cout.tie(0)
 
 #define all(data) data.begin(), data.end()
 #define b() begin()
