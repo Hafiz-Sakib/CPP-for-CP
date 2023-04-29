@@ -13,24 +13,29 @@ using namespace std;
 void Boom()
 {
     int n, q;
-    cin >> n >> q;
+    scanf("%d", &n, &q);
     vector<int> v(n);
     for (int i = 0; i < n; i++)
     {
-        cin >> v[i];
+        scanf("%d", &v[i]);
     }
     while (q--)
     {
         int x;
         cin >> x;
         int lb = lower_bound(all(v), x) - v.b();
-        if (v[lb] != x)
+
+        if (lb == v.size())
         {
-            cout << -1 << endl;
+            printf("-1\n");
+        }
+        else if (v[lb] != x)
+        {
+            printf("-1\n");
         }
         else
         {
-            cout << lb << endl;
+            printf("%d\n", lb);
         }
     }
 }
