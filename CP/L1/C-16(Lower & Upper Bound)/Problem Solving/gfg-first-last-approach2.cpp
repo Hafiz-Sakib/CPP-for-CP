@@ -7,25 +7,6 @@ using namespace std;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
-int lowerbound(vector<int> v, int q)
-{
-    int l = 0, r = v.size() - 1, ans = v.size();
-    while (l <= r)
-    {
-        int mid = (l + r) >> 1;
-        if (v[mid] >= q)
-        {
-            ans = min(ans, mid);
-            r = mid - 1;
-        }
-        else
-        {
-            l = mid + 1;
-        }
-    }
-    return ans;
-}
-
 void Boom()
 {
     int n, x;
@@ -36,18 +17,18 @@ void Boom()
         cin >> v[i];
     }
 
-    int ff = lower_bound(v.begin(), v.end(), x) - v.begin();
-    int ll = upper_bound(v.begin(), v.end(), x) - v.begin();
+    int lo = lower_bound(v.begin(), v.end(), x) - v.begin();
+    int up = upper_bound(v.begin(), v.end(), x) - v.begin();
 
-    if (ff == v.size())
+    if (lo == v.size())
     {
         cout << -1 << ' ' << -1 << endl;
     }
-    else if (v[ff] != x)
+    else if (v[lo] != x)
     {
         cout << -1 << ' ' << -1 << endl;
     }
-    cout << ff << ' ' << (ll - 1);
+    cout << lo << ' ' << (up - 1);
 }
 
 int main()
