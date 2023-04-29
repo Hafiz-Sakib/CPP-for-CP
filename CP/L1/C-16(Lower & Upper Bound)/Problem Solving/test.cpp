@@ -12,29 +12,11 @@ using namespace std;
 #define b() begin()
 void Boom()
 {
-    int n, q;
-    cin >> n >> q;
-    vector<int> v(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> v[i];
-    }
-    while (q--)
-    {
-        int x;
-        cin >> x;
-        int lb = lower_bound(all(v), x) - v.b();
-        if (v[lb] != x)
-        {
-            cout << -1 << endl;
-        }
-        else
-        {
-            cout << lb << endl;
-        }
-    }
-}
 
+    vector<int> v = {1, 2, 3, 4, 5};
+
+    cout << v[0] << " -_- " << v.size();
+}
 int main()
 {
     Boost;
