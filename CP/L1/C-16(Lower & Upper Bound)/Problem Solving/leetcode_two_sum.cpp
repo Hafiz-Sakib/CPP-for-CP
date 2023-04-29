@@ -38,6 +38,7 @@ void Boom()
         if (lb != v.size() && v[lb] == d)
         {
             cout << lb << ' ' << i << endl;
+            return;
         }
     }
 }
