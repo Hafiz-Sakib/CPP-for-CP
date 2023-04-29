@@ -12,6 +12,8 @@ void Boom()
     vector<int> v = {1, 2, 2, 2, 2, 2, 3, 3, 4};
     int x = lower_bound(v.begin(), v.end(), 3) - v.begin();
     cout << x << endl;
+
+    // Lower Bound STL Function returns a memory adress that's why I've minused v.begin() to get the index Value!.
 }
 
 int main()
