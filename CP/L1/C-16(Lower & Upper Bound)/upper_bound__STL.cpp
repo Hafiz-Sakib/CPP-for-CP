@@ -10,8 +10,7 @@ using namespace std;
 void Boom()
 {
     vector<int> v = {1, 2, 2, 2, 2, 2, 3, 3, 4};
-    int x = lower_bound(v.begin(), v.end(), 3) - v.begin();
-    cout << x << endl;
+    int x = upper_bound(v.begin(), v.end(), 3) - v.begin();
 }
 
 int main()
