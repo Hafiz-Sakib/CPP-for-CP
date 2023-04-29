@@ -23,7 +23,7 @@ void Boom()
     if (lo == v.size())
     {
         cout << -1 << ' ' << -1 << endl;
-        // first of all check this condition.because jodi shudu erporer index ta check kori tahole size er cheye boro index check korte giye out of bound hoye TLE dibe!
+        // first of all check this condition.because jodi shudu erporer condition ta check kori tahole size er cheye boro index check korte giye out of bound hoye TLE dibe!
     }
     else if (v[lo] != x)
     {
