@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"c:\\PU Projects\\LearnCPP\\CP\\L1\\C-17(Integer Bisection)\\Problem Solving\\b.cpp","tests":[{"id":1682780624693,"input":"3\n1\n2\n3","output":"1\n2 1\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\PU Projects\\LearnCPP\\CP\\L1\\C-17(Integer Bisection)\\Problem Solving\\b.cpp","group":"local","local":true}
