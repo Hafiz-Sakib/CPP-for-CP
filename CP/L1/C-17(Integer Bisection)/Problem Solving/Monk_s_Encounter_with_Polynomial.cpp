@@ -56,7 +56,9 @@ typedef set<string> ss;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-ll chk(ll a, ll b, ll c, ll x)
+ll a, b, c;
+
+ll chk(ll x)
 {
     return ((a * x * x) + (b * x) + c);
 }
@@ -68,12 +70,12 @@ void Boom()
     while (l <= r)
     {
         mid = (l + r) >> 1;
-        if (chk(a, b, c, mid) >= k)
+        if (chk(mid) >= k)
         {
             ans = mid;
             r = mid - 1;
         }
-        else if (chk(a, b, c, mid) < k)
+        else if (chk(mid) < k)
         {
             l = mid + 1;
         }
