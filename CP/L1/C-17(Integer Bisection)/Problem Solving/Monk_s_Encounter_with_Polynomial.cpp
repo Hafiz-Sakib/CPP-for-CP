@@ -87,7 +87,7 @@ int main()
 {
     Boost;
 
-    int t = 1;
+    int t;
     cin >> t;
     while (t--)
     {
