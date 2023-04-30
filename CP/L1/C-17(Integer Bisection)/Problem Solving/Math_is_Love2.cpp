@@ -80,7 +80,7 @@ void Boom()
             return;
         }
     }
-    cout << " NAI" << endl;
+    cout << "NAI" << endl;
 }
 
 int main()
