@@ -56,63 +56,18 @@ typedef set<string> ss;
 
 void Boom()
 {
-    ll n, q;
-    cin >> n >> q;
-    vi v(n);
-    for (auto &u : v)
-    {
-        cin >> u;
-    }
-
-    vi sub(n);
-    ll l = 1;
-    sub[0] = 1;
-
-    for (int i = 1; i < n; i++)
-    {
-        if (v[i] <= v[i - 1])
-        {
-            l++;
-        }
-        else
-        {
-            l = 1;
-        }
-        sub[i] = l;
-    }
-
-    vi preSum(n + 1, 0);
-
-    for (int i = 1; i <= n; i++)
-    {
-        preSum[i] = preSum[i - 1] + (sub[i - 1] > 2);
-    }
-
-    while (q--)
-    {
-        ll r;
-        cin >> l >> r;
-        l--;
-        r--;
-        ll d = l - r - 1;
-        ll c = 0;
-        if (l < 1)
-        {
-            c = preSum[r];
-        }
-        else
-        {
-            c = preSum[r] - preSum[l + 1];
-        }
-        ll m = r - l + 1, n = preSum[r] - preSum[l - 1];
-        // cout << m - n << endl;
-        cout << abs(d - c) << endl;
-    }
 }
 
 int main()
 {
     Boost;
-    Boom();
+
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
+
     return 0;
 }
