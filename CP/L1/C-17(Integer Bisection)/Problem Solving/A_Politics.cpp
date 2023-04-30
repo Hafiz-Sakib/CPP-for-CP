@@ -68,10 +68,6 @@ void Boom()
         {
             ok++;
         }
-        else
-        {
-            continue;
-        }
     }
     cout << ok << endl;
 }
