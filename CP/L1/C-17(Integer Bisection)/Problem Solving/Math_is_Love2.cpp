@@ -55,9 +55,32 @@ typedef set<string> ss;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
+ll y;
+bool ok(ll n)
+{
+    if ((n * (n + 1) >> 1) == y)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
 void Boom()
 {
+    ll n = 1e5;
+    cin >> y;
+    for (ll i = 1; i <= n; i++)
+    {
+        if (ok(i))
+        {
+            cout << i << endl;
+            return;
+        }
+    }
+    cout << " NAI" << endl;
 }
 
 int main()
