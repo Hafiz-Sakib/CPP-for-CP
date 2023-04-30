@@ -65,7 +65,7 @@ ll chk(ll x)
 
 void Boom()
 {
-    ll a, b, c, k, l = 0, r = 1e6, mid, ans;
+    ll k, l = 0, r = 1e6, mid, ans;
     cin >> a >> b >> c >> k;
     while (l <= r)
     {
