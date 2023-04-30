@@ -8,6 +8,7 @@
 *.so
 *.bin
 *.prob
+*.cph
 
 # Packages #
 ############
