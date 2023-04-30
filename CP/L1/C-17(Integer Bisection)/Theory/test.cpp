@@ -56,9 +56,15 @@ typedef set<string> ss;
 
 void Boom()
 {
-    vi v = {1, 4, 5};
-    int i = max_element(all(v)) - v.b();
-    cout << i;
+    int a = 4;
+    if (!(a & 1))
+    {
+        yes;
+    }
+    else
+    {
+        no;
+    }
 }
 
 int main()
