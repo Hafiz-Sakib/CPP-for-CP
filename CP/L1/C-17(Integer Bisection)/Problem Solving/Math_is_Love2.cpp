@@ -1,4 +1,5 @@
 // https://www.spoj.com/problems/MATHLOVE/
+
 // Bismillahir Rahmanir Rahim
 /*
 
