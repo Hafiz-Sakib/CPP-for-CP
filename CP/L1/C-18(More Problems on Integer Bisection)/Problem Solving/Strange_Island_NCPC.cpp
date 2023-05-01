@@ -42,7 +42,6 @@ bool chk(int m, int k, int d)
             }
         }
     }
-
     return true;
 }
 
@@ -75,7 +74,7 @@ int main()
 {
     Boost;
 
-    int t = 1;
+    int t;
     cin >> t;
     while (t--)
     {
