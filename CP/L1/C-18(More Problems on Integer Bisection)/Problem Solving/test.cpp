@@ -56,21 +56,10 @@ typedef set<string> ss;
 
 void Boom()
 {
-    char type, q;
-    cin >> type;
+    char q;
     string s = "qwertyuiopasdfghjkl;zxcvbnm,./";
-    int x = 0, y = 0, z = 0;
-    while (cin >> q)
-    {
-        if (type == 'R')
-        {
-            cout << s[s.find(q) - 1];
-        }
-        else
-        {
-            cout << s[s.find(q) + 1];
-        }
-    }
+    cin >> q;
+    cout << s.find(q);
 }
 
 int main()
