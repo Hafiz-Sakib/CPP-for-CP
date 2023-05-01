@@ -27,18 +27,16 @@ void Boom()
     ll n, ans = LLONG_MIN, ok = 0;
     cin >> n;
 
-    vi a(n);
+    vi v(n);
 
     for (int i = 0; i < n; i++)
     {
-        cin >> a[i];
+        cin >> v[i];
     }
 
-    sort(all(a));
+    sort(rall(v));
 
-    ans = max(a[0] * a[1] * a[n - 1], a[n - 3] * a[n - 2] * a[n - 1]);
-
-    cout << ans << endl;
+    cout << max(1LL * v[0] * v[1] * v[2], 1LL * v[0] * v[n - 2] * v[n - 1]) << endl;
 }
 int main()
 {
