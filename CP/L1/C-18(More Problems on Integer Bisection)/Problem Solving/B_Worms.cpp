@@ -1,12 +1,3 @@
-// https://codeforces.com/contest/474/problem/B
-
-// Bismillahir Rahmanir Rahim
-/*
-
-string author;
-author = Hafiz_Sakib;
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 
