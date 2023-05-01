@@ -29,14 +29,16 @@ void Boom()
 
     vi a(n);
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 0; i < n; i++)
     {
         cin >> a[i];
     }
 
     sort(all(a));
 
-    cout << a[n] * a[n - 1] * a[n - 2] << endl;
+    ans = max(a[0] * a[1] * a[n - 1], a[n - 3] * a[n - 2] * a[n - 1]);
+
+    cout << ans << endl;
 }
 int main()
 {
