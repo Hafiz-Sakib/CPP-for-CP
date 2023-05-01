@@ -57,9 +57,9 @@ typedef set<string> ss;
 void Boom()
 {
     char q;
-    string s = "qwertyuiopasdfghjkl;zxcvbnm,./";
+    string s = "iloveBangladesh", p = "Bangladesh";
     cin >> q;
-    int x = s.find(q);
+    int x = s.find(p);
     cout << x;
 }
 
