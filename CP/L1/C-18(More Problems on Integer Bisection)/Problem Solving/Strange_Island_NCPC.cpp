@@ -20,8 +20,8 @@ typedef vector<ll> vi;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
-
-vi a(1e4 + 123, 0);
+const int mx = 1e4 + 123;
+vi a(mx, 0);
 
 bool chk(int m, int k, int d)
 {
@@ -45,11 +45,11 @@ bool chk(int m, int k, int d)
     return true;
 }
 
-void Boom()
+void Boom(int i)
 {
     int n, m, k;
     cin >> n >> m >> k;
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= m; i++)
     {
         cin >> a[i];
     }
@@ -67,7 +67,7 @@ void Boom()
             l = mid + 1;
         }
     }
-    cout << ans << endl;
+    cout << "Case " << i << ": " << ans << endl;
 }
 
 int main()
@@ -76,9 +76,9 @@ int main()
 
     int t;
     cin >> t;
-    while (t--)
+    for (int i = 1; i <= t; i++)
     {
-        Boom();
+        Boom(i);
     }
 
     return 0;
