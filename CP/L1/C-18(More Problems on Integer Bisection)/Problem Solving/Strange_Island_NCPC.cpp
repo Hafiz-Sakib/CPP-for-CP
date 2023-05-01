@@ -49,10 +49,12 @@ void Boom(int i)
 {
     int n, m, k;
     cin >> n >> m >> k;
+
     for (int i = 1; i <= m; i++)
     {
         cin >> a[i];
     }
+
     int l = 0, r = n, ans, mid;
     while (l <= r)
     {
@@ -67,6 +69,7 @@ void Boom(int i)
             l = mid + 1;
         }
     }
+
     cout << "Case " << i << ": " << ans << endl;
 }
 
