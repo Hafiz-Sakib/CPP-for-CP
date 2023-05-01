@@ -67,7 +67,7 @@ void Boom()
         psum[i] = psum[i - 1] + a;
     }
 
-    int l = 1, r = n, m, ans = 0, q, ask;
+    int l, r, m, ans = 0, q, ask;
     cin >> q;
     while (q--)
     {
