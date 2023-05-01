@@ -15,53 +15,49 @@ const int MOD = 1e9 + 7;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
-
+const int mod = 1000000007;
 void Boom()
 {
     int n;
     cin >> n;
-
-    vector<int> a(n), b(n);
-    for (int i = 0; i < n; i++)
+    std::vector<int> v1(30);
+    ll mark = 1, ans = 0;
+    for (int i = 1; i < n; i++)
     {
-        cin >> a[i];
+        mark = (mark * i) % mod;
     }
     for (int i = 0; i < n; i++)
     {
-        cin >> b[i];
-    }
-
-    vector<int> cnt(20, 0);
-    for (int i = 0; i < n; i++)
-    {
+        int a;
+        cin >> a;
         for (int j = 0; j < 20; j++)
         {
-            if (b[i] & (1 << j))
+            int a1 = (a >> j) & 1;
+            if (a1)
             {
-                cnt[j]++;
+                v1[j]++;
             }
         }
     }
-
-    long long ans = 0;
     for (int i = 0; i < n; i++)
     {
-        long long res = 0;
+        int a;
+        cin >> a;
         for (int j = 0; j < 20; j++)
         {
-            if (a[i] & (1 << j))
+            int a1 = (a >> j) & 1;
+            ll b1 = mark * (1 << j) % mod;
+            if (a1)
             {
-                res += (1LL << j) * cnt[j];
+                ans += (n - v1[j]) * b1 % mod;
             }
             else
             {
-                res += (1LL << j) * (n - cnt[j]);
+                ans += v1[j] * b1 % mod;
             }
         }
-        ans += res;
     }
-
-    cout << ans % MOD << endl;
+    cout << ans % mod << "\n";
 }
 
 int main()
