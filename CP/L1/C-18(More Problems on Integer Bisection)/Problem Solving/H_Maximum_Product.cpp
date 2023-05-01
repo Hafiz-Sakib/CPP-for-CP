@@ -8,6 +8,7 @@ author = Hafiz_Sakib;
 #include <bits/stdc++.h>
 using namespace std;
 
+typedef long long int ll;
 typedef vector<int> vi;
 #define space ' '
 #define endl "\n"
@@ -23,23 +24,24 @@ typedef vector<int> vi;
 
 void Boom()
 {
-    int n;
+    ll n, ans = LLONG_MIN, ok = 0;
     cin >> n;
-    vi a(n);
-    for (int i = 0; i < n; i++)
+
+    ll a[n + 1];
+
+    for (int i = 1; i <= n; i++)
     {
         cin >> a[i];
     }
 
-    sort(all(a));
+    for (int i = 1; i <= n - 2; i++)
+    {
+        ok = a[i] * a[i + 1] * a[i + 2];
+        ans = max(ans, ok);
+    }
 
-    int p = (a[n - 1] * a[n - 2] * a[n - 3]);
-
-    int q = (a[0] * a[1] * a[2]);
-
-    cout << max(p, q) << endl;
+    cout << ans << endl;
 }
-
 int main()
 {
     Boost;
