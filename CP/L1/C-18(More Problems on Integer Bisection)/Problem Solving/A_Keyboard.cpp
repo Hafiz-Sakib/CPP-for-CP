@@ -1,9 +1,7 @@
 // Bismillahir Rahmanir Rahim
 /*
-
 string author;
 author = Hafiz_Sakib;
-
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -56,12 +54,13 @@ typedef set<string> ss;
 
 void Boom()
 {
-    char t, q;
-    cin >> t;
+    char type, q;
+    cin >> type;
     string s = "qwertyuiopasdfghjkl;zxcvbnm,./";
+    int x = 0, y = 0, z = 0;
     while (cin >> q)
     {
-        if (t == 'R')
+        if (type == 'R')
         {
             cout << s[s.find(q) - 1];
         }
