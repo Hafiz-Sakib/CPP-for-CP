@@ -20,7 +20,7 @@ using namespace std;
 
 const double eps = 1e-12;
 
-double sqroot(int n)
+double root(int n)
 {
     double l = 0, r = n, mid;
     while (r - l > eps)
@@ -41,6 +41,6 @@ double sqroot(int n)
 int main()
 {
     Boost;
-    cout << sqroot(10) << endl;
+    cout << root(10) << endl;
     return 0;
 }
