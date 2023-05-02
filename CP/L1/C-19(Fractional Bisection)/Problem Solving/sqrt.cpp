@@ -18,25 +18,29 @@ using namespace std;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-const double eps = 1e12;
+const double eps = 1e-12;
 
 double sqroot(int n)
 {
-    int l = 0, r = n, mid;
-    while (r - l < eps)
+    double l = 0, r = n, mid;
+    while (r - l > eps)
     {
+        mid = (l + r) / 2.0;
+        if (mid * mid > n)
+        {
+            r = mid;
+        }
+        else
+        {
+            l = mid;
+        }
     }
-}
-
-void Boom()
-{
+    return floor(l);
 }
 
 int main()
 {
     Boost;
-
-    Boom();
-
+    cout << sqroot(10) << endl;
     return 0;
 }
