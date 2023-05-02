@@ -54,21 +54,18 @@ typedef set<string> ss;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
+const double eps = 1e12;
 
 void Boom()
 {
+    cout << sqrt(10);
 }
 
 int main()
 {
     Boost;
 
-    int t = 1;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
+    Boom();
 
     return 0;
 }
