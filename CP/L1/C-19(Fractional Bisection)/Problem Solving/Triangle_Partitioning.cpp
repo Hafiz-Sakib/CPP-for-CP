@@ -37,12 +37,12 @@ void Boom(int t)
         double periADE = (AD + AE + DE) / 2.0;
         double periABC = (AB + AC + BC) / 2.0;
 
-        double areADE = sqrt(periADE * (periADE - AD) * (periADE - AE) * (periADE - DE));
-        double areABC = sqrt(periABC * (periABC - AB) * (periABC - AC) * (periABC - BC));
+        double areaADE = sqrt(periADE * (periADE - AD) * (periADE - AE) * (periADE - DE));
+        double areaABC = sqrt(periABC * (periABC - AB) * (periABC - AC) * (periABC - BC));
 
-        double areaTrapezium = areABC - areADE;
+        double areaTrapezium = areaABC - areaADE;
 
-        if ((areADE / areaTrapezium) > R)
+        if ((areaADE / areaTrapezium) > R)
         {
             r = AD;
         }
