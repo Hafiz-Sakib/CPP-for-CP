@@ -52,7 +52,7 @@ void Boom(int t)
         }
     }
 
-    cout << "Case " << t << ": " << setp(11) << l << endl;
+    cout << "Case " << t << ": " << setp(10) << l << endl;
 }
 
 int main()
