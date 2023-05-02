@@ -48,6 +48,7 @@ typedef set<string> ss;
 
 #define debug(x) cerr << x << endl;
 #define here fprintf(stderr, "====I am Here====\n");
+const double eps = 1e-12;
 
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
@@ -56,14 +57,18 @@ typedef set<string> ss;
 
 void Boom()
 {
-    string s;
-    getline(cin, s);
-    cout << s;
 }
 
 int main()
 {
     Boost;
-    Boom();
+
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
+
     return 0;
 }
