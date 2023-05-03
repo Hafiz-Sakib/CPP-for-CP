@@ -1,51 +1,40 @@
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
 using namespace std;
 
-#define here fprintf(stderr, "====I am Here====\n");
+typedef tree<int, null_type, less<int>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    ordered_set;
+typedef tree<int, null_type, greater<int>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    desending_set;
+typedef tree<int, null_type, less_equal<int>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    multi_set;
+
+typedef long long int ll;
+const double eps = 1e-12;
+const int mx = 1e8 + 123;
 
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
-int lowerbound(vector<int> v, int q)
-{
-    int l = 0, r = v.size() - 1, ans = v.size() + 10;
-    while (l <= r)
-    {
-        int mid = (l + r) >> 1;
-        if (v[mid] >= q)
-        {
-            ans = min(ans, mid);
-            r = mid - 1;
-        }
-        else
-        {
-            l = mid + 1;
-        }
-        return ans;
-    }
-}
-int upperbound(vector<int> v, int q)
-{
-    int l = 0, r = v.size() - 1, ans = v.size() + 10;
-    while (l <= r)
-    {
-        int mid = (l + r) >> 1;
-        if (v[mid] <= q)
-        {
-            l = mid + 1;
-        }
-        else
-        {
-            ans = min(ans, mid);
-            r = mid - 1;
-        }
-    }
-    return ans;
-}
 
 void Boom()
 {
+    ordered_set s;
+    s.insert(4);
+    s.insert(3);
+    s.insert(4);
+    s.insert(2);
+    s.insert(2);
+    for (auto u : s)
+    {
+        cout << u << " ";
+    }
 }
 
 int main()
