@@ -16,6 +16,8 @@ void Boom()
 
     int result = binary_search(v.begin(), v.end(), 2);
 
+    // This Funciton  returns boolean value (0 or 1) according to the existance of the element
+
     cout << result << endl;
 }
 

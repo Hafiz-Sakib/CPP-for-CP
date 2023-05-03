@@ -9,7 +9,7 @@ using namespace std;
     cout.tie(NULL)
 int lowerbound(vector<int> v, int q)
 {
-    int l = 0, r = v.size() - 1, ans = v.size() + 10;
+    int l = 0, r = v.size() - 1, ans = 1e5;
     while (l <= r)
     {
         int mid = (l + r) >> 1;
@@ -22,9 +22,10 @@ int lowerbound(vector<int> v, int q)
         {
             l = mid + 1;
         }
-        return ans;
     }
+    return ans;
 }
+
 int upperbound(vector<int> v, int q)
 {
     int l = 0, r = v.size() - 1, ans = v.size() + 10;
@@ -43,9 +44,13 @@ int upperbound(vector<int> v, int q)
     }
     return ans;
 }
-
 void Boom()
 {
+    vector<int> v = {1, 2, 2, 2, 2, 2, 3, 3, 4};
+    int lb = lowerbound(v, 3);
+    int ub = upperbound(v, 3);
+
+    cout << lb << ' ' << ub << endl;
 }
 
 int main()
