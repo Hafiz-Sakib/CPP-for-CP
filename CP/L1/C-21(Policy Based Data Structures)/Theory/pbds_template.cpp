@@ -4,9 +4,19 @@
 using namespace __gnu_pbds;
 using namespace std;
 
-typedef tree<int, null_type, less<int>, rb_tree_tag,
+typedef long long int ll;
+typedef tree<ll, null_type, less<ll>, rb_tree_tag,
              tree_order_statistics_node_update>
     ordered_set;
+typedef tree<ll, null_type, greater<ll>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    greater_set;
+typedef tree<ll, null_type, less_equal<ll>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    multi_set;
+typedef tree<ll, null_type, greater_equal<ll>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    greater_multi_set;
 
 typedef long long int ll;
 const double eps = 1e-12;
