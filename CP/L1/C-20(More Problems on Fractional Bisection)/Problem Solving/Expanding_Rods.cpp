@@ -1,4 +1,4 @@
-// https://lightoj.com/problem/crossed-ladders
+// https://lightoj.com/problem/expanding-rods
 
 // Bismillahir Rahmanir Rahim
 /*
