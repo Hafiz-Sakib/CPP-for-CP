@@ -35,6 +35,9 @@ void Boom()
     s.insert(4);
     s.insert(2);
     s.insert(2);
+
+    cout << s.size() << endl;
+
     for (auto u : s)
     {
         cout << u << " ";
