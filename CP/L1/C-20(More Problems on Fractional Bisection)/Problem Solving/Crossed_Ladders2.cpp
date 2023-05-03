@@ -30,7 +30,7 @@ void Boom(int t)
 
     double l = 0, r = min(x, y), d, h1, h2, h;
 
-    while (r - l > eps)
+    for (int i = 0; i < 100; i++)
     {
         d = (l + r) / 2.0;
 
@@ -48,7 +48,7 @@ void Boom(int t)
             r = d;
         }
     }
-    cout << setp(10) << "Case :" << t << ": " << l << endl;
+    cout << setp(10) << "Case :" << t << l << endl;
 }
 
 int main()
