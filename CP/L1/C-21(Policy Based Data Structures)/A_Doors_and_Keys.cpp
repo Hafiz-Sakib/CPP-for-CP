@@ -36,43 +36,17 @@ const int mx = 1e8 + 123;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
+string s;
+
+int pos(char c)
+{
+    return s.find(c);
+}
+
 void Boom()
 {
-    string s;
     cin >> s;
-    int ok = 1, r = 0, g = 0, b = 0;
-    for (int i = 0; i < 6; i++)
-    {
-        char c = s[i];
-        if (c == 'r')
-        {
-            r = 1;
-        }
-        else if (c == 'b')
-        {
-            b = 1;
-        }
-        else
-        {
-            g = 1;
-        }
-        if (c == 'R' && r == 0)
-        {
-            ok = 0;
-            break;
-        }
-        else if (c == 'B' && b == 0)
-        {
-            ok = 0;
-            break;
-        }
-        else if (c == 'G' && g == 0)
-        {
-            ok = 0;
-            break;
-        }
-    }
-    ok ? yes : no;
+    (pos('r') < pos('R')) && pos('g') < pos('G') && pos('b') < pos('B') ? yes : no;
 }
 
 int main()
