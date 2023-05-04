@@ -136,12 +136,11 @@ int main()
     for (int i = 0; i < n; i++)
     {
         ans += pb.order_of_key({t + pre, 0});
-        debug(pb);
         pb.erase({a[i], i});
         pre = a[i];
     }
 
-    //   cout << ans << endl;
+    cout << ans << endl;
 
     return 0;
 }
