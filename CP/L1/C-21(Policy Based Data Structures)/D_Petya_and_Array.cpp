@@ -33,13 +33,6 @@ typedef tree<ll, null_type, less_equal<ll>, rb_tree_tag,
 #define all(data) data.begin(), data.end()
 #define rall(data) data.rbegin(), data.rend()
 
-#define debug(x) cerr << x << endl;
-#define here fprintf(stderr, "====I am Here====\n");
-#define setp(n) fixed << setprecision(n)
-
-const double eps = 1e-12;
-const int mx = 1e8 + 123;
-
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -47,19 +40,30 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
-    ll n, t, x, c = 0;
+    ll n, t, ans = 0;
     cin >> n >> t;
 
-    vi v(n + 1, 0);
+    vi v(n + 1, 0), sum(n + 1, 0);
+    map<ll, int> cnt;
     ordered_set s;
 
     for (int i = 1; i <= n; i++)
     {
-        cin >> x;
-        v[i] = v[i - 1] + x;
-        s.insert(v[i]);
+        cin >> v[i];
+        sum[i] = sum[i - 1] + v[i];
     }
-    cout << c << endl;
+
+    s.insert(0);
+    cnt[0]++;
+
+    for (int i = 1; i <= n; i++)
+    {
+        ans += (i - s.order_of_key(sum[i] - t) - cnt[sum[i] - t]);
+        s.insert(sum[i]);
+        cnt[sum[i]]++;
+    }
+
+    cout << ans << endl;
 }
 
 int main()
