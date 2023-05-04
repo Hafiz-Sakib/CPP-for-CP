@@ -47,7 +47,7 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
-    ll n, t, x;
+    ll n, t, x, c = 0;
     cin >> n >> t;
 
     vi v(n + 1, 0);
@@ -58,16 +58,12 @@ void Boom()
         cin >> x;
         v[i] = v[i - 1] + x;
         s.insert(v[i]);
+        if (s.order_of_key(t) < t)
+        {
+            c++;
+        }
     }
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     cout << v[i] << ' ';
-    // }
-    // cout << endl;
-    // for (auto u : s)
-    // {
-    //     cout << u << ' ';
-    // }
+    cout << c << endl;
 }
 
 int main()
