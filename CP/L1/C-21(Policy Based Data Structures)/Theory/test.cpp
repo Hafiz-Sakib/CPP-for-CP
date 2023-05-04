@@ -190,7 +190,8 @@ void faltu(T arg, const hello &...rest)
 
 void Boom()
 {
-    // Let's Move
+    vi v(80, 2);
+    debug(v);
 }
 
 int main()
