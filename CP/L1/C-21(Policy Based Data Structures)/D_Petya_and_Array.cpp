@@ -58,10 +58,6 @@ void Boom()
         cin >> x;
         v[i] = v[i - 1] + x;
         s.insert(v[i]);
-        if (s.order_of_key(t) < t)
-        {
-            c++;
-        }
     }
     cout << c << endl;
 }

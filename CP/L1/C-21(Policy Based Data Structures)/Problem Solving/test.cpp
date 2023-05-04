@@ -190,8 +190,8 @@ void faltu(T arg, const hello &...rest)
 
 void Boom()
 {
-    vi v(80, 2);
-    debug(v);
+    set<pii> s = {{1, 2}, {4, 5}, {2, 2}};
+    debug(s);
 }
 
 int main()
