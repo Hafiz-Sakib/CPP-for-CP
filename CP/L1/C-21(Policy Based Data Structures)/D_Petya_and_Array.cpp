@@ -19,7 +19,7 @@ typedef unsigned long long ull;
 typedef vector<ll> vi;
 typedef vector<string> vs;
 
-typedef tree<ll, null_type, less<ll>, rb_tree_tag,
+typedef tree<ll, null_type, less_equal<ll>, rb_tree_tag,
              tree_order_statistics_node_update>
     ordered_set;
 
@@ -47,18 +47,32 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
+    ll n, t, x;
+    cin >> n >> t;
+
+    vi v(n + 1, 0);
+    ordered_set s;
+
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> x;
+        v[i] = v[i - 1] + x;
+        s.insert(v[i]);
+    }
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     cout << v[i] << ' ';
+    // }
+    // cout << endl;
+    // for (auto u : s)
+    // {
+    //     cout << u << ' ';
+    // }
 }
 
 int main()
 {
     Boost;
-
-    int t = 1;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
-
+    Boom();
     return 0;
 }
