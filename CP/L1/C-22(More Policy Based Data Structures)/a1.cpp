@@ -36,24 +36,46 @@ const int mx = 1e8 + 123;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
+int f(int a)
+{
+    return a ^ 6 + 1;
+}
+
 void Boom()
 {
-    string s;
-    cin >> s;
-    set<char> diff;
-    for (auto c : s)
+    ll n;
+    cin >> n;
+    vi v(n);
+    for (auto &u : v)
     {
-        diff.insert(c);
+        cin >> u;
     }
-    int ok = 1;
-    for (int i = 0; i < s.size(); i++)
+    for (int i = 0; i <= n; i++)
     {
-        if (s[i] != s[i % diff.size()])
+        int numLiars = i;
+        int truthTlrs = n - i;
+        int liarsCount = 0;
+
+        for (int j = 0; j < n; j++)
         {
-            ok = 0;
+            if (v[j] <= numLiars)
+            {
+                liarsCount++;
+            }
+        }
+
+        if (liarsCount > truthTlrs)
+        {
+            continue;
+        }
+
+        if (liarsCount + numLiars >= n)
+        {
+            cout << numLiars << endl;
         }
     }
-    ok ? yes : no;
+
+    cout << "-1" << endl;
 }
 
 int main()
