@@ -36,7 +36,7 @@ const int mx = 1e8 + 123;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-ll sum(string s)
+int sum(string s)
 {
     ll ans = 0;
     for (auto u : s)
@@ -48,8 +48,35 @@ ll sum(string s)
 
 void Boom()
 {
-    string s = "ab";
-    cout << sum(s);
+    string s;
+    cin >> s;
+
+    int n = s.size(), ans;
+
+    if (n == 1)
+    {
+        cout << "Bob " << sum(s) << endl;
+    }
+    else
+    {
+        if (!(n & 1))
+        {
+            cout << "Alice " << sum(s) << endl;
+        }
+        else
+        {
+            if (s[0] > s[n - 1])
+            {
+                ans = sum(s.substr(0, n - 1)) - (s[n - 1] - 'a' + 1);
+                cout << "Alice " << ans << endl;
+            }
+            else
+            {
+                ans = sum(s.substr(1)) - (s[0] - 'a' + 1);
+                cout << "Alice " << ans << endl;
+            }
+        }
+    }
 }
 
 int main()
@@ -57,7 +84,7 @@ int main()
     Boost;
 
     int t = 1;
-    //  cin >> t;
+    cin >> t;
     while (t--)
     {
         Boom();
