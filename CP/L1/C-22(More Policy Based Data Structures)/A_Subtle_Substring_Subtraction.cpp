@@ -72,7 +72,7 @@ void Boom()
             }
             else
             {
-                ans = sum(s.substr(1)) - (s[0] - 'a' + 1);
+                ans = sum(s.substr(1, n - 1)) - (s[0] - 'a' + 1);
                 cout << "Alice " << ans << endl;
             }
         }
