@@ -190,13 +190,21 @@ void faltu(T arg, const hello &...rest)
 
 void Boom()
 {
-    set<pii> s = {{1, 2}, {4, 5}, {2, 2}};
-    debug(s);
+    vi v(80, 2);
+    debug(v);
+
+    // cout << fixed << setprecision(10);
+    // cerr << "Time:" << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
 }
 
 int main()
 {
     Boost;
-    Boom();
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
     return 0;
 }
