@@ -38,27 +38,32 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
-    ll n;
+    ll n, c = 0, ans = 0, k;
     cin >> n;
-
-    map<ll, ll> m;
-
+    vi v(n);
     for (int i = 0; i < n; i++)
     {
-        ll u;
-        cin >> u;
-        m[u]++;
+        cin >> v[i];
     }
 
-    ll maxi = LLONG_MIN;
+    ll got = 0, maxi = 0;
 
-    for (auto u : m)
+    for (auto u : v)
     {
-        maxi = max(maxi, u.second);
+        if (u == 0)
+        {
+            got++;
+        }
+        else
+        {
+            got = 0;
+        }
+        maxi = max(maxi, got);
     }
 
-    cout << n - maxi << endl;
+    cout << maxi << endl;
 }
+
 int main()
 {
     Boost;
