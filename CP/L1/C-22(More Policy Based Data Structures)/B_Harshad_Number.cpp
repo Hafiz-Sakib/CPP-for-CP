@@ -51,15 +51,7 @@ void Boom()
     string s;
     cin >> s;
     ll num = stoi(s);
-    // cout << num << ' ' << sum(s) << endl;
-    if (num % sum(s) == 0)
-    {
-        yes;
-    }
-    else
-    {
-        no;
-    }
+    !(num % sum(s)) ? yes : no;
 }
 
 int main()
