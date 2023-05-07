@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
+#include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
+using namespace __gnu_pbds;
 
 typedef long long int ll;
 typedef tree<ll, null_type, less<ll>, rb_tree_tag,
@@ -17,6 +17,9 @@ typedef tree<ll, null_type, less_equal<ll>, rb_tree_tag,
 typedef tree<ll, null_type, greater_equal<ll>, rb_tree_tag,
              tree_order_statistics_node_update>
     greater_multi_set;
+
+// cout<<*X.find_by_order(1)<<endl; // iterator to the k-th largest element
+// cout<<X.order_of_key(-5)<<endl;  // number of items in a set that are strictly smaller than our item
 
 typedef long long int ll;
 const double eps = 1e-12;
