@@ -18,7 +18,7 @@ void Boom()
     int x = lower_bound(v.begin(), v.end(), 3) - v.begin();
     cout << x << endl;
 
-    // Lower Bound STL Function returns a memory adress that's why I've minused v.begin() to get the index Value!.
+    // *** লোয়ার আর আপার বাউন্ডের বিল্ড-ইন ফাংশন নরমালি পয়েন্টার রিটার্ন করে থাকে।আমরা ইন্ডেক্স টা পাবার জন্যই মূলত  v.begin() টা বিয়োগ করে দি।
 }
 
 int main()
