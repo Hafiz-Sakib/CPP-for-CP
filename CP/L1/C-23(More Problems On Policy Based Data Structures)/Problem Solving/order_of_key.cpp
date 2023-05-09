@@ -72,6 +72,8 @@ void Boom()
 
     // অথবা,x এর চাইতে কয়টি ছোট এলিমেন্ট আছে সেটা  বলে দেয়।
 
+    // Works For Both Set and Multiset!
+
     // set_name.order_of_key(x)
 
     cout << s.order_of_key(3) << endl;
