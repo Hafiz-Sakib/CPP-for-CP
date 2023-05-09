@@ -58,7 +58,7 @@ typedef tree<ll, null_type, greater_equal<ll>, rb_tree_tag,
 
 void Boom()
 {
-    ordered_set s;
+    multi_set s;
 
     s.insert(2);
     s.insert(4);
@@ -68,6 +68,8 @@ void Boom()
     s.insert(3);
 
     // find_by_order(k) – ফাংশনটি kth ordered element এর একটা পয়েন্টার রিটার্ন করে। অর্থাৎ তুমি চাইলেই kth ইন্ডেক্সে কি আছে, সেটা জেনে ফেলতে পারছো!
+
+    // Works For Both Set and Multiset!
 
     // set_name.find_by_order(index)
 
