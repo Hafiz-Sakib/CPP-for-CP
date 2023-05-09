@@ -14,10 +14,7 @@ using namespace __gnu_pbds;
 using namespace std;
 
 typedef long long int ll;
-
-typedef tree<ll, null_type, less<ll>, rb_tree_tag,
-             tree_order_statistics_node_update>
-    orderedSet;
+typedef tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update> orderedSet;
 
 #define space ' '
 #define endl "\n"
