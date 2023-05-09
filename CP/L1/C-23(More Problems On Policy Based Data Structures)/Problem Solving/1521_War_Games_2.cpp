@@ -48,15 +48,20 @@ void Boom()
         s.insert(i);
     }
 
-    int cur = 0;
+    int p = 0;
 
-    while (n)
+    while (s.size() > 0)
     {
-        cur = (cur + k - 1) % n;
-        it = s.find_by_order(cur);
-        cout << *it << space;
-        s.erase(it);
-        n--;
+        p += (k - 1);
+        p %= s.size();
+
+        int val = *s.find_by_order(p);
+
+        cout << val << space;
+
+        s.erase(val);
+
+        p = s.order_of_key(val);
     }
 }
 
