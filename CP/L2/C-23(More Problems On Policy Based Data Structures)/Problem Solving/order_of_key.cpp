@@ -68,9 +68,11 @@ void Boom()
     s.insert(7);
     s.insert(3);
 
-    // order_of_key(x) – ফাংশনটি x এলিমেন্টটা কোন পজিশনে আছে সেটা বলে দেয়।
+    // order_of_key(x) – ফাংশনটি x এলিমেন্টটা কোন ইন্ডেক্সে আছে সেটা বলে দেয়।
 
     // অথবা,x এর চাইতে কয়টি ছোট এলিমেন্ট আছে সেটা  বলে দেয়।
+
+    // Works For Both Set and Multiset!
 
     // set_name.order_of_key(x)
 

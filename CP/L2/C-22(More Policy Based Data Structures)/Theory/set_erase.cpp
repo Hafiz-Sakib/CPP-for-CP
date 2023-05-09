@@ -49,8 +49,6 @@ typedef tree<ll, null_type, greater_equal<ll>, rb_tree_tag,
 #define YES cout << "Yes\n"
 #define NO cout << "No\n"
 
-#
-
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -62,23 +60,27 @@ void Boom()
 
     s.insert(2);
     s.insert(4);
-    s.insert(2);
-    s.insert(1);
     s.insert(8);
+    s.insert(2);
     s.insert(7);
     s.insert(3);
 
-    // order_of_key(x) – ফাংশনটি x এলিমেন্টটা কোন ইন্ডেক্সে আছে সেটা বলে দেয়।
+    for (auto u : s)
+    {
+        cout << u << space;
+    }
 
-    // অথবা,x এর চাইতে কয়টি ছোট এলিমেন্ট আছে সেটা  বলে দেয়।
+    cout << endl;
 
-    // Works For Both Set and Multiset!
+    // পলিসি বেইসড ডেটা স্ট্রাকচারে সেটের ইরেজ নরমাল STL  এর সেটের মতই।
+    //  তবে মাল্টিসেটে ইরেজের ক্ষেত্রে কিছুটা ভিন্নতা আছে !
 
-    // set_name.order_of_key(x)
+    s.erase(2);
 
-    cout << s.order_of_key(3) << endl;
-
-    // ৩ এর চাইতে কয়টা ছোট ভ্যালু আছে অথবা ৩ এর ইন্ডেক্স কত সেটা রিটার্ন করবে এই ফাংশন !
+    for (auto u : s)
+    {
+        cout << u << space;
+    }
 }
 
 int main()
