@@ -59,6 +59,7 @@ typedef tree<ll, null_type, greater_equal<ll>, rb_tree_tag,
 void Boom()
 {
     ordered_set s;
+
     s.insert(2);
     s.insert(4);
     s.insert(8);
