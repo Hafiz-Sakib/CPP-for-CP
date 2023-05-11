@@ -44,8 +44,9 @@ void Boom()
 
     for (int i = 1; i <= n; i++)
     {
-        for (int j = i; j <= n; j++)
+        for (int j = i; j <= n; j += i)
         {
+            divisors[j].push_back(i);
         }
     }
 
