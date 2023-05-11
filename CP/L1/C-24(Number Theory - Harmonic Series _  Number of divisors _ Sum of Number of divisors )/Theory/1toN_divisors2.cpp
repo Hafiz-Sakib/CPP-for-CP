@@ -50,7 +50,7 @@ void Boom()
         }
     }
 
-    // Time Complexity : O(n*sqtr(n))
+    // Time Complexity :  O ( n * ln(n))  => From Harmonic Series
 
     for (int i = 1; i <= n; i++)
     {
