@@ -38,21 +38,18 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
-    vi v;
-    for (int i = 1; i <= 10; i++)
-    {
-        v.push_back(i);
-    }
-
-    for (auto u : v)
-    {
-        cout << u << space;
-    }
 }
 
 int main()
 {
     Boost;
-    Boom();
+
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
+
     return 0;
 }
