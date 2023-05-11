@@ -38,18 +38,26 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
+    int n;
+    cin >> n;
+    vector<int> v(n + 1);
+
+    for (int i = 1; i * i <= n; i++)
+    {
+        if (n % i)
+        {
+            v.push_back(i);
+            if (n / i != i)
+            {
+                v.push_back(n / i);
+            }
+        }
+    }
 }
 
 int main()
 {
     Boost;
-
-    int t = 1;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
-
+    Boom();
     return 0;
 }
