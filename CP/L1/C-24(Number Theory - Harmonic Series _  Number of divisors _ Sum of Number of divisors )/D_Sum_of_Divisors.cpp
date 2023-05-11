@@ -38,15 +38,24 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
-    vi v;
-    for (int i = 1; i <= 10; i++)
-    {
-        v.push_back(i);
-    }
+    int n;
+    cin >> n;
+    vector<vector<int>> v(n + 1);
 
-    for (auto u : v)
+    for (int i = 1; i <= n; i++)
     {
-        cout << u << space;
+        for (int j = i; j <= n; j += i)
+        {
+            v[j].push_back(i);
+        }
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        for (auto u : v[i])
+        {
+            cout << u << ' ';
+        }
+        cout << endl;
     }
 }
 
