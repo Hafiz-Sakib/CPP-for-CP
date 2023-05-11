@@ -40,7 +40,7 @@ void Boom()
 {
     int n;
     cin >> n;
-    vector<vector<int>> v(n + 1);
+    vector<vector<int>> divisors(n + 1);
 
     for (int i = 1; i <= n; i++)
     {
@@ -48,14 +48,14 @@ void Boom()
         {
             if (i % j == 0)
             {
-                v[i].push_back(j);
+                divisors[i].push_back(j);
                 if (i / j != j)
                 {
-                    v[i].push_back(i / j);
+                    divisors[i].push_back(i / j);
                 }
             }
         }
-        sort(all(v[i]));
+        sort(all(divisors[i]));
     }
 
     // Time Complexity : O(n*sqtr(n))
@@ -64,7 +64,7 @@ void Boom()
     {
         cout << i << " : ";
 
-        for (auto u : v[i])
+        for (auto u : divisors[i])
         {
             cout << u << ' ';
         }
