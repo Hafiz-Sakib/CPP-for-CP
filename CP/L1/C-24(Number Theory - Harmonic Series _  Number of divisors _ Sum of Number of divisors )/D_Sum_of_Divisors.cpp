@@ -49,14 +49,15 @@ void Boom()
             v[j].push_back(i);
         }
     }
+
+    ll sum = 0;
+
     for (int i = 1; i <= n; i++)
     {
-        for (auto u : v[i])
-        {
-            cout << u << ' ';
-        }
-        cout << endl;
+        sum += (1LL * (v[i].size() * i));
     }
+
+    cout << sum << endl;
 }
 
 int main()
