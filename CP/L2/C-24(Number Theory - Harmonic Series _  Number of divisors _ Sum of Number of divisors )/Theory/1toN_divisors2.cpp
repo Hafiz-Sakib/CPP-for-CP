@@ -38,15 +38,30 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
-    vi v;
-    for (int i = 1; i <= 10; i++)
+    int n;
+    cin >> n;
+    vector<vector<int>> divisors(n + 1);
+
+    for (int i = 1; i <= n; i++)
     {
-        v.push_back(i);
+        for (int j = i; j <= n; j += i)
+        {
+            divisors[j].push_back(i);
+        }
     }
 
-    for (auto u : v)
+    // Time Complexity :  O ( n * ln(n))  => From Harmonic Series
+
+    for (int i = 1; i <= n; i++)
     {
-        cout << u << space;
+        cout << i << " : ";
+
+        for (auto u : divisors[i])
+        {
+            cout << u << ' ';
+        }
+
+        cout << endl;
     }
 }
 

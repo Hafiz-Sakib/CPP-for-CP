@@ -38,16 +38,30 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
-    vi v;
-    for (int i = 1; i <= 10; i++)
+    int n;
+    cin >> n;
+    vector<int> divisors;
+
+    for (int i = 1; i * i <= n; i++)
     {
-        v.push_back(i);
+        if (n % i == 0)
+        {
+            divisors.push_back(i);
+            if (n / i != i)
+            {
+                divisors.push_back(n / i);
+            }
+        }
     }
 
-    for (auto u : v)
+    sort(all(divisors));
+
+    for (auto u : divisors)
     {
-        cout << u << space;
+        cout << u << " ";
     }
+
+    cout << endl;
 }
 
 int main()

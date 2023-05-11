@@ -1,3 +1,5 @@
+// https://atcoder.jp/contests/abc172/tasks/abc172_d
+
 // Bismillahir Rahmanir Rahim
 /*
 
@@ -28,26 +30,35 @@ typedef vector<string> vs;
 #define here fprintf(stderr, "====I am Here====\n");
 #define setp(n) fixed << setprecision(n)
 
-const double eps = 1e-12;
-const int mx = 1e8 + 123;
-
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
+const int mx = 1e8 + 123;
+int cnt[mx];
+
 void Boom()
 {
-    vi v;
-    for (int i = 1; i <= 10; i++)
+    int n;
+    cin >> n;
+
+    for (int i = 1; i <= n; i++)
     {
-        v.push_back(i);
+        for (int j = i; j <= n; j += i)
+        {
+            cnt[j]++;
+        }
     }
 
-    for (auto u : v)
+    ll sum = 0;
+
+    for (int i = 1; i <= n; i++)
     {
-        cout << u << space;
+        sum += (1LL * cnt[i] * i);
     }
+
+    cout << sum << endl;
 }
 
 int main()
