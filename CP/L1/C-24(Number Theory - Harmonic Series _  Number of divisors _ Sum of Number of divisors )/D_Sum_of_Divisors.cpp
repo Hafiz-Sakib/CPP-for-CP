@@ -28,25 +28,24 @@ typedef vector<string> vs;
 #define here fprintf(stderr, "====I am Here====\n");
 #define setp(n) fixed << setprecision(n)
 
-const double eps = 1e-12;
-const int mx = 1e8 + 123;
-
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
+const int mx = 1e8 + 123;
+int cnt[mx];
+
 void Boom()
 {
     int n;
     cin >> n;
-    vector<vector<int>> v(n + 1);
 
     for (int i = 1; i <= n; i++)
     {
         for (int j = i; j <= n; j += i)
         {
-            v[j].push_back(i);
+            cnt[j]++;
         }
     }
 
@@ -54,7 +53,7 @@ void Boom()
 
     for (int i = 1; i <= n; i++)
     {
-        sum += (1LL * (v[i].size() * i));
+        sum += (1LL * cnt[i] * i);
     }
 
     cout << sum << endl;
