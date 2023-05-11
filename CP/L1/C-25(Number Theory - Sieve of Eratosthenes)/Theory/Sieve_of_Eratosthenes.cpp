@@ -28,6 +28,8 @@ void primegen(int n)
 int main()
 {
 
+    // Time Complexity : O(n log n)
+
     primegen(20);
 
     for (auto u : prime)
