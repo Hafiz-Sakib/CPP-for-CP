@@ -1,10 +1,3 @@
-// Bismillahir Rahmanir Rahim
-/*
-
-string author;
-author = Hafiz_Sakib;
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -26,6 +19,7 @@ void primeGen(int n)
     }
 
     int sq = sqrt(n);
+
     for (int i = 3; i <= sq; i += 2)
     {
         if (is_prime[i] == 1)
