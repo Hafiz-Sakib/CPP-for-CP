@@ -1,13 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+const int mx = 1e8 + 123;
+
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-const int MX = 1e7 + 123;
-bitset<MX> is_prime;
+vector<bool> is_prime(mx);
 vector<int> prime;
 
 void sieve(int n)
