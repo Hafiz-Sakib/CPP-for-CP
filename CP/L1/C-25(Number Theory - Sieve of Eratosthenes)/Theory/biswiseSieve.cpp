@@ -10,7 +10,7 @@ const int MX = 1e7 + 123;
 bitset<MX> is_prime;
 vector<int> prime;
 
-void primeGen(int n)
+void sieve(int n)
 {
     n += 100;
     for (int i = 3; i <= n; i += 2)
@@ -18,13 +18,11 @@ void primeGen(int n)
         is_prime[i] = 1;
     }
 
-    int sq = sqrt(n);
-
-    for (int i = 3; i <= sq; i += 2)
+       for (int i = 3; (i * i) <= n; i += 2)
     {
-        if (is_prime[i] == 1)
+        if (is_prime[i])
         {
-            for (int j = i * i; j <= n; j += (i + i))
+            for (int j = (i * i); j <= n; j += (i + i))
             {
                 is_prime[j] = 0;
             }
@@ -46,5 +44,12 @@ void primeGen(int n)
 int main()
 {
     Boost;
+    sieve(25);
+    for (auto u : prime)
+    {
+        cout << u << ' ';
+    }
+
+    cout << endl;
     return 0;
 }
