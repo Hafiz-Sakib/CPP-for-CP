@@ -44,11 +44,13 @@ int main()
 {
     Boost;
     sieve(25);
+
     for (auto u : prime)
     {
         cout << u << ' ';
     }
 
     cout << endl;
+
     return 0;
 }
