@@ -47,7 +47,7 @@ int main()
 
     // Time Complexity is : O (n log(log n))
 
-    sieve(12345);
+    sieve(1234);
 
     for (auto u : prime)
     {

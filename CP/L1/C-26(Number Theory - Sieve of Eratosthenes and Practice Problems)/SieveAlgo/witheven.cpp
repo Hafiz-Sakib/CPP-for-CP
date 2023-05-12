@@ -32,7 +32,7 @@ void sieve(int n)
 
 int main()
 {
-    sieve(15000);
+    sieve(1234);
     for (auto p : prime)
     {
         cout << p << endl;
