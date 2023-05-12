@@ -64,6 +64,7 @@ int main()
                     diff = abs(tp1 - tp2);
                     p1 = tp1;
                     p2 = tp2;
+                    break;
                 }
             }
         }
