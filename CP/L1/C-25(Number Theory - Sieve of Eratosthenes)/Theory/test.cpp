@@ -32,7 +32,7 @@ void sieve(int n)
     {
         if (is_prime[i])
         {
-            for (int j = (i * i); i <= n; j += (i + i))
+            for (int j = (i * i); j <= n; j += (i + i))
             {
                 is_prime[j] = 0;
             }
