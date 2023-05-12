@@ -28,7 +28,7 @@ void sieve(int n)
             isPrime[j] = 0;
         }
     }
-    for (int i = 1; i <= n; i++)
+    for (int i = 3; i <= n; i++)
     {
         if (isPrime[i])
         {
@@ -45,7 +45,7 @@ int main()
     while (1)
     {
         cin >> n;
-        if (!n)
+        if (n == 0)
         {
             break;
         }
@@ -66,6 +66,15 @@ int main()
                     p2 = tp2;
                 }
             }
+        }
+
+        if (p1 == -1)
+        {
+            cout << "Goldbach's conjecture is wrong." << endl;
+        }
+        else
+        {
+            cout << n << " = " << min(p1, p2) << " + " << max(p1, p2) << endl;
         }
     }
 
