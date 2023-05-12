@@ -1,5 +1,3 @@
-// https://www.spoj.com/problems/TDPRIMES/
-
 #include <bits/stdc++.h>
 using namespace std;
 const int mx = 1e8;
@@ -8,14 +6,14 @@ const int mx = 1e8;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<bool> is_prime(mx, 0);
+vector<bool> is_prime(mx, 1);
 vector<int> primes;
 
 void sieve(int n)
 {
-    for (int i = 3; i <= n; i += 2)
+    for (int i = 4; i <= n; i += 2)
     {
-        is_prime[i] = 1;
+        is_prime[i] = 0;
     }
 
     for (int i = 3; (i * i) <= n; i += 2)
@@ -29,12 +27,11 @@ void sieve(int n)
         }
     }
 
-    is_prime[2] = 1;
     primes.push_back(2);
 
     for (int i = 3; i <= n; i += 2)
     {
-        if (is_prime[i] == 1)
+        if (is_prime[i])
         {
             primes.push_back(i);
         }
@@ -46,17 +43,14 @@ int main()
     Boost;
     int n = 1e8, count = 0;
     sieve(n);
-    for (int i = 0; i <= n; i++)
+    for (int i = 0; i < primes.size(); i++)
     {
-        if (primes[i])
+        count++;
+        if (count % 100 == 1)
         {
-            count++;
-            if (count % 100 == 1)
-            {
-                cout << i << endl;
-            }
+            cout << primes[i] << endl;
         }
     }
 
-     return 0;
+    return 0;
 }
