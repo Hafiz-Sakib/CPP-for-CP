@@ -12,8 +12,6 @@ vector<int> prime;
 
 void sieve(int n)
 {
-    n += 100;
-
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
