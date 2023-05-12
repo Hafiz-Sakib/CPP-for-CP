@@ -8,26 +8,33 @@ const int mx = 1e8;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<bool> is_prime(mx, 1);
-vector<bool> primes;
+vector<bool> is_prime(mx, 0);
+vector<int> primes;
 
 void sieve(int n)
 {
-    is_prime[1] = 0;
-    for (int i = 2; i * i <= n; i++)
+    for (int i = 3; i <= n; i += 2)
+    {
+        is_prime[i] = 1;
+    }
+
+    for (int i = 3; (i * i) <= n; i += 2)
     {
         if (is_prime[i])
         {
-            for (int j = i * i; j <= n; j += i)
+            for (int j = (i * i); j <= n; j += (i + i))
             {
                 is_prime[j] = 0;
             }
         }
     }
 
-    for (int i = 2; i <= n; i++)
+    is_prime[2] = 1;
+    primes.push_back(2);
+
+    for (int i = 3; i <= n; i += 2)
     {
-        if (is_prime[i])
+        if (is_prime[i] == 1)
         {
             primes.push_back(i);
         }
@@ -37,10 +44,9 @@ void sieve(int n)
 int main()
 {
     Boost;
-
-    int n = 1e8;
-    int count = 0;
-    for (int i = 2; i <= n; i++)
+    int n = 1e8, count = 0;
+    sieve(n);
+    for (int i = 0; i <= n; i++)
     {
         if (primes[i])
         {
@@ -51,5 +57,6 @@ int main()
             }
         }
     }
-    return 0;
+
+     return 0;
 }
