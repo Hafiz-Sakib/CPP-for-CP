@@ -20,7 +20,6 @@ vector<int> Prime;
 void sieve(int n)
 {
     isPrime[1] = 0;
-    isPrime[2] = 0;
     for (int i = 2; i <= n; i++)
     {
         for (int j = i + i; j <= n; j += i)
@@ -28,6 +27,7 @@ void sieve(int n)
             isPrime[j] = 0;
         }
     }
+    isPrime[2] = 0;
     for (int i = 3; i <= n; i++)
     {
         if (isPrime[i])
@@ -56,7 +56,7 @@ int main()
             {
                 break;
             }
-            int tp1 = u, tp2 = n - p1;
+            int tp1 = u, tp2 = n - tp1;
             if (tp2 > 2 && isPrime[tp2])
             {
                 if (abs(tp1 - tp1) > diff)
@@ -74,7 +74,7 @@ int main()
         }
         else
         {
-            cout << n << " = " << min(p1, p2) << " + " << max(p1, p2) << endl;
+            cout << n << " = " << p1 << " + " << p2 << endl;
         }
     }
 
