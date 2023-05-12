@@ -14,7 +14,6 @@ bitset<mx> is_prime;
 vector<int> primes;
 void sieve(int n)
 {
-    is_prime[1] = 0;
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
@@ -22,13 +21,15 @@ void sieve(int n)
 
     for (int i = 3; (i * i) <= n; i += 2)
     {
-        for (int j = (i * i); j <= n; (j += (i * 2)))
+        if (is_prime[i])
         {
-            is_prime[j] = 0;
+            for (int j = (i * i); j <= n; j += (i + i))
+            {
+                is_prime[j] = 0;
+            }
         }
     }
 
-    is_prime[2] = 1;
     primes.push_back(2);
 
     for (int i = 3; i <= n; i += 2)
@@ -43,12 +44,12 @@ void sieve(int n)
 int main()
 {
     Boost;
-    int c = 0;
     sieve(mx);
+    int c = 0;
     for (int i = 0; i < primes.size(); i++)
     {
-        ++c;
-        if (c == 1 || c % 100 == 1)
+        c++;
+        if (c % 100 == 1)
         {
             cout << primes[i] << endl;
         }
