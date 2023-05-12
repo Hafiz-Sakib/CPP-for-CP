@@ -66,7 +66,7 @@ void sieve(int n)
     isPrime[2] = 0;
     for (int i = 2; i <= n; i++)
     {
-        for (int j = i + i; j <= n; j += 2)
+        for (int j = i + i; j <= n; j += i)
         {
             isPrime[j] = 0;
         }
@@ -102,6 +102,12 @@ int main()
             int tp1 = u, tp2 = n - p1;
             if (tp2 > 2 && isPrime[tp2])
             {
+                if (abs(tp1 - tp1) > diff)
+                {
+                    diff = abs(tp1 - tp2);
+                    p1 = tp1;
+                    p2 = tp2;
+                }
             }
         }
     }
