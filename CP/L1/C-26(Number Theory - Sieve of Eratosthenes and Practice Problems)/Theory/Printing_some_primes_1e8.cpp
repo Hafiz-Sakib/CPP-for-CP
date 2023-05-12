@@ -6,6 +6,7 @@ const int mx = 1e8;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
+// bitset<mx> is_prime;
 vector<bool> is_prime(mx, 0);
 vector<int> primes;
 
