@@ -39,10 +39,10 @@ void sieve(int n)
         }
     }
 
-    is_prime[1] = 0;
     is_prime[2] = 1;
+    is_prime.push_back(2);
 
-    for (int i = 1; i <= n; i += 2)
+    for (int i = 3; i <= n; i += 2)
     {
         if (is_prime[i])
         {
