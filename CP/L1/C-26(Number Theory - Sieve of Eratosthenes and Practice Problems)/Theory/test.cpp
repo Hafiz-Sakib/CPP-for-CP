@@ -9,13 +9,12 @@ const int mx = 1e8 + 123;
     cout.tie(NULL)
 
 const int MX = 1e8;
-// bitset<MX> is_prime;
-vector<bool> is_prime(mx);
+bitset<MX> is_prime;
+// vector<bool> is_prime(mx);
 vector<int> prime;
 
 void sieve(int n)
 {
-
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
@@ -33,7 +32,7 @@ void sieve(int n)
     }
 
     is_prime[2] = 1;
-    is_prime.push_back(2);
+    prime.push_back(2);
 
     for (int i = 3; i <= n; i += 2)
     {
@@ -46,13 +45,10 @@ void sieve(int n)
 int main()
 {
     Boost;
-    sieve(25);
-    for (auto u : prime)
+    for (int i = 0; i < 1e8; i++)
     {
-        cout << u << ' ';
+        cout << is_prime[i] << endl;
     }
-
-    cout << endl;
 
     return 0;
 }
