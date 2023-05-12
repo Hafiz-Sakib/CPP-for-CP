@@ -44,6 +44,9 @@ void sieve(int n)
 int main()
 {
     Boost;
+
+    // Time Complexity is : O (n log(log n))
+
     sieve(25);
 
     for (auto u : prime)
