@@ -6,14 +6,14 @@ const int mx = 1e8;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<bool> is_prime(mx, 1);
+vector<bool> is_prime(mx, 0);
 vector<int> primes;
 
 void sieve(int n)
 {
-    for (int i = 4; i <= n; i += 2)
+    for (int i = 3; i <= n; i += 2)
     {
-        is_prime[i] = 0;
+        is_prime[i] = 1;
     }
 
     for (int i = 3; (i * i) <= n; i += 2)
