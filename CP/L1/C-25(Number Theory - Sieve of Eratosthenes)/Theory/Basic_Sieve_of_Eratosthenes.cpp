@@ -5,7 +5,7 @@ const int mx = 1e6 + 123;
 vector<bool> is_prime(mx, 1);
 vector<int> prime;
 
-void primegen(int n)
+void Sieve(int n)
 {
     is_prime[1] = 0;
 
@@ -30,7 +30,7 @@ int main()
 
     // Time Complexity : O(n log n)
 
-    primegen(20);
+    Sieve(20);
 
     for (auto u : prime)
     {
