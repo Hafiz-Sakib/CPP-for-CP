@@ -1,3 +1,5 @@
+// https://www.spoj.com/problems/TDPRIMES/
+
 #include <bits/stdc++.h>
 using namespace std;
 const int mx = 1e8 + 123;
@@ -52,10 +54,10 @@ int main()
         count++;
         if (count % 100 == 1)
         {
-            //     cout << primes[i] << endl;
+            cout << primes[i] << endl;
         }
     }
-    cout << primes.size() << ' ' << primes[124545] << endl;
+
     // cout << fixed << setprecision(10);
     // cerr << "Time:" << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
 

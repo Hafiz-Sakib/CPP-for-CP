@@ -9,10 +9,12 @@ const int mx = 1e8 + 123;
     cout.tie(NULL)
 
 bitset<mx> is_prime;
-vector<int> prime;
+vector<int> primes;
 
 void sieve(int n)
 {
+    n += 100;
+
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
@@ -29,14 +31,15 @@ void sieve(int n)
         }
     }
 
+    is_prime[1] = 0;
     is_prime[2] = 1;
-    prime.push_back(2);
+    primes.push_back(2);
 
     for (int i = 3; i <= n; i += 2)
     {
-        if (is_prime[i] == 1)
+        if (is_prime[i])
         {
-            prime.push_back(i);
+            primes.push_back(i);
         }
     }
 }
@@ -49,7 +52,7 @@ int main()
 
     sieve(1e8);
 
-    for (auto u : prime)
+    for (auto u : primes)
     {
         cout << u << ' ';
     }
