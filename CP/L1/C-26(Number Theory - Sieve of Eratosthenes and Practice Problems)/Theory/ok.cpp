@@ -62,6 +62,9 @@ vector<int> primes;
 
 void sieve(int n)
 {
+
+    n += 100;
+
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
@@ -78,8 +81,8 @@ void sieve(int n)
         }
     }
 
-    primes[1] = 0;
-    primes[2] = 1;
+    is_prime[1] = 0;
+    is_prime[2] = 1;
     primes.push_back(2);
 
     for (int i = 3; i <= n; i += 2)
@@ -96,6 +99,6 @@ int main()
     Boost;
 
     sieve(1e8);
-    cout << primes.size() << ' ' << primes[14562] << endl;
+    cout << primes.size() << ' ' << primes[124545] << endl;
     return 0;
 }
