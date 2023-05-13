@@ -12,6 +12,7 @@ vector<int> primes;
 void sieve(int n)
 {
     n += 100;
+
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
@@ -51,9 +52,10 @@ int main()
         count++;
         if (count % 100 == 1)
         {
-            cout << primes[i] << endl;
+            //     cout << primes[i] << endl;
         }
     }
+    cout << primes.size() << ' ' << primes[124545] << endl;
     // cout << fixed << setprecision(10);
     // cerr << "Time:" << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
 
