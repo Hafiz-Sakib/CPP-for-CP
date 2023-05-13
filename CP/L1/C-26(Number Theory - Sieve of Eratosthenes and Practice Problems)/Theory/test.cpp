@@ -52,13 +52,16 @@ int main()
         c++;
         if (c % 100 == 1)
         {
-            cout << primes[i] << endl;
+            // cout << primes[i] << endl;
         }
         else
         {
             continue;
         }
     }
+    cout << primes.size() << endl;
+    cout << fixed << setprecision(10);
+    cerr << "Time:" << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
 
     return 0;
 }
