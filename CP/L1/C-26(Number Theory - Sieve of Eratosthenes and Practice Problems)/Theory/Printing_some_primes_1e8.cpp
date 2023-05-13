@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int mx = 1e8;
+const int mx = 1e8 + 123;
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -26,7 +26,7 @@ void sieve(int n)
             }
         }
     }
-
+    primes[2] = 1;
     primes.push_back(2);
 
     for (int i = 3; i <= n; i += 2)

@@ -57,20 +57,45 @@ const int mx = 1e8 + 123;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-void Boom()
+bitset<mx> is_prime;
+vector<int> primes;
+
+void sieve(int n)
 {
+    for (int i = 3; i <= n; i += 2)
+    {
+        is_prime[i] = 1;
+    }
+
+    for (int i = 3; (i * i) <= n; i += 2)
+    {
+        if (is_prime[i])
+        {
+            for (int j = (i * i); j <= n; j += (i + i))
+            {
+                is_prime[j] = 0;
+            }
+        }
+    }
+
+    primes[1] = 0;
+    primes[2] = 1;
+    primes.push_back(2);
+
+    for (int i = 3; i <= n; i += 2)
+    {
+        if (is_prime[i])
+        {
+            primes.push_back(i);
+        }
+    }
 }
 
 int main()
 {
     Boost;
 
-    int t = 1;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
-
+    sieve(1e8);
+    cout << primes.size() << ' ' << primes[14562] << endl;
     return 0;
 }
