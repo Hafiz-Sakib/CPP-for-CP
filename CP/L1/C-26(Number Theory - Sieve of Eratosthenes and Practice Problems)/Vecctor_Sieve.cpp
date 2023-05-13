@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int mx = 1e8;
+
+const int mx = 1e8 + 123;
+
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -11,6 +13,8 @@ vector<int> primes;
 
 void sieve(int n)
 {
+    n += 100;
+
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
@@ -27,6 +31,8 @@ void sieve(int n)
         }
     }
 
+    is_prime[1] = 0;
+    is_prime[2] = 1;
     primes.push_back(2);
 
     for (int i = 3; i <= n; i += 2)
@@ -41,16 +47,17 @@ void sieve(int n)
 int main()
 {
     Boost;
-    int n = 1e8, count = 0;
-    sieve(n);
-    for (int i = 0; i < primes.size(); i++)
+
+    // Time Complexity is : O (n log(log n))
+
+    sieve(1e8);
+
+    for (auto u : primes)
     {
-        count++;
-        if (count % 100 == 1)
-        {
-            cout << primes[i] << endl;
-        }
+        cout << u << ' ';
     }
+
+    cout << endl;
 
     return 0;
 }
