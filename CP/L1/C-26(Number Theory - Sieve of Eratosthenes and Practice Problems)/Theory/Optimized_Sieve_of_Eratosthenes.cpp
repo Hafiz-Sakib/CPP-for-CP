@@ -8,7 +8,7 @@ const int mx = 1e8 + 123;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<bool> is_prime(mx);
+bitset<mx> is_prime;
 vector<int> prime;
 
 void sieve(int n)
