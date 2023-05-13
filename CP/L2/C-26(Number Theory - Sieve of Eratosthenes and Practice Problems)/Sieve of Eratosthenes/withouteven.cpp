@@ -8,7 +8,7 @@ const int mx = 1e8 + 123;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<bool> is_prime(mx);
+bitset<mx> is_prime(mx);
 vector<int> prime;
 
 void sieve(int n)
@@ -47,14 +47,12 @@ int main()
 
     // Time Complexity is : O (n log(log n))
 
-    sieve(25);
+    sieve(1234);
 
     for (auto u : prime)
     {
-        cout << u << ' ';
+        cout << u << endl;
     }
-
-    cout << endl;
 
     return 0;
 }
