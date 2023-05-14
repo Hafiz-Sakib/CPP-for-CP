@@ -13,7 +13,6 @@ using namespace std;
 typedef long long int ll;
 
 const int mx = 1e8 + 123;
-#define pb push_back
 #define endl "\n"
 #define Boost                         \
     ios_base::sync_with_stdio(false); \

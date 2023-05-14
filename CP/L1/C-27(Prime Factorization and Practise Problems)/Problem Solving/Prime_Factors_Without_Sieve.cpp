@@ -13,7 +13,6 @@ using namespace std;
 typedef long long int ll;
 
 const int mx = 1e8 + 123;
-#define pb push_back
 #define endl "\n"
 
 #define Boost                         \
@@ -29,20 +28,20 @@ void PrimeFactorization(int n)
 
     while (n % 2 == 0)
     {
-        PrimeFactors.pb(2);
+        PrimeFactors.push_back(2);
         n = n / 2;
     }
     for (int i = 3; i <= sqrt(n); i = i + 2)
     {
         while (n % i == 0)
         {
-            PrimeFactors.pb(i);
+            PrimeFactors.push_back(i);
             n = n / i;
         }
     }
     if (n > 2)
     {
-        PrimeFactors.pb(n);
+        PrimeFactors.push_back(n);
     }
 }
 void Boom()
