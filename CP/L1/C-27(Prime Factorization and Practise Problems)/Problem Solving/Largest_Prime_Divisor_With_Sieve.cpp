@@ -81,9 +81,14 @@ void PrimeFactorization(int n)
         PrimeFactors.push_back(n);
     }
 }
-
+bool isPowerOFTwo(int x)
+{
+    return (x && (!(x & (x - 1))));
+    // Time Complexity O(1)!
+}
 void Boom()
 {
+    sieve(1e7);
     int n;
     while (1)
     {
@@ -92,23 +97,23 @@ void Boom()
         {
             break;
         }
+
         PrimeFactorization(abs(n));
-        int sz = unique(PrimeFactors.begin(), PrimeFactors.end()) - PrimeFactors.begin();
-        int vs = PrimeFactors.size();
-        if (sz == 1)
+        int sz = PrimeFactors.size();
+
+        if (isPowerOFTwo(n))
         {
             cout << -1 << endl;
         }
         else
         {
-            cout << PrimeFactors[vs - 1] << endl;
+            cout << PrimeFactors[sz - 1] << endl;
         }
     }
 }
 int main()
 {
     Boost;
-    sieve(1e7);
     Boom();
     return 0;
 }
