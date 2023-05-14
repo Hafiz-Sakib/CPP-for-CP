@@ -3,6 +3,7 @@
 
 string author;
 author = Hafiz_Sakib;
+author = Hafiz_Sakib;
 
 */
 #include <bits/stdc++.h>
