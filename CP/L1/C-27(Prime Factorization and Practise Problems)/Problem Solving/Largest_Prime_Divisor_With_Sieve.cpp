@@ -93,15 +93,15 @@ void Boom()
             break;
         }
         PrimeFactorization(abs(n));
-        int sz = PrimeFactors.size();
-
+        int sz = unique(PrimeFactors.begin(), PrimeFactors.end()) - PrimeFactors.begin();
+        int vs = PrimeFactors.size();
         if (sz == 1)
         {
             cout << -1 << endl;
         }
         else
         {
-            cout << PrimeFactors[sz - 1] << endl;
+            cout << PrimeFactors[vs - 1] << endl;
         }
     }
 }
