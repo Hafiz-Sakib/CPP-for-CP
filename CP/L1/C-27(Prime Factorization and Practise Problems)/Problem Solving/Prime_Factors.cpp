@@ -59,6 +59,7 @@ vector<int> PrimeFactors;
 void PrimeFactorization(int n)
 {
     PrimeFactors.clear();
+
     for (auto p : primes)
     {
         if (1LL * p * p > n)

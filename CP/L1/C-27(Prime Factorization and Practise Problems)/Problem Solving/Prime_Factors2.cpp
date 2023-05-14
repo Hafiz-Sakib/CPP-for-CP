@@ -20,8 +20,11 @@ const int mx = 1e8 + 123;
     cout.tie(NULL)
 
 vector<int> PrimeFactors;
+
 void PrimeFactorization(int n)
 {
+    PrimeFactors.clear();
+
     while (n % 2 == 0)
     {
         PrimeFactors.pb(2);
