@@ -42,5 +42,13 @@ void PrimeFactorization(int n)
 int main()
 {
     Boost;
+    int n;
+    cin >> n;
+    PrimeFactorization(n);
+    for (auto u : PrimeFactors)
+    {
+        cout << u << ' ';
+    }
+    cout << endl;
     return 0;
 }

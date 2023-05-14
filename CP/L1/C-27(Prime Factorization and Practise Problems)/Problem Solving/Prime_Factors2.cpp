@@ -51,6 +51,7 @@ void Boom()
         {
             break;
         }
+
         PrimeFactorization(abs(n));
 
         cout << n << " = ";
