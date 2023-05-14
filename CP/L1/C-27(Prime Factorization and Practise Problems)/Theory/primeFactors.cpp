@@ -54,18 +54,48 @@ void sieve(int n)
 }
 
 vector<int> primefactor;
+
+void factorization(int n)
+{
+    primefactor.clear();
+    for (auto p : primes)
+    {
+        if (1LL * p * p > n)
+        {
+            break;
+        }
+        else if (n % p == 0)
+        {
+            while (n % p == 0)
+            {
+                primefactor.push_back(p);
+                n /= p;
+            }
+        }
+    }
+    if (n > 1)
+    {
+        primefactor.push_back(n);
+    }
+}
+
 void Boom()
 {
+    int n;
+    cin >> n;
+    factorization(n);
+    for (auto u : primefactor)
+    {
+        cout << u << ' ';
+    }
+    cout << endl;
 }
 int main()
 {
     Boost;
+
     sieve(1e7);
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
+    Boom();
+
     return 0;
 }
