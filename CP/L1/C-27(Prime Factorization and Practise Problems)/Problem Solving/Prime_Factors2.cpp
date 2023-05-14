@@ -12,6 +12,7 @@ typedef long long int ll;
 typedef vector<ll> vi;
 const int mx = 1e8 + 123;
 #define pb push_back
+#define endl "\n"
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -49,7 +50,6 @@ void Boom()
         {
             break;
         }
-
         PrimeFactorization(abs(n));
 
         cout << n << " = ";
