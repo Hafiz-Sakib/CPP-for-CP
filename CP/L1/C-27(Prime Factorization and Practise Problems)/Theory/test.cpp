@@ -51,6 +51,11 @@ void Boom()
 int main()
 {
     Boost;
-    Boom();
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
     return 0;
 }
