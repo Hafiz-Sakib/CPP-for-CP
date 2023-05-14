@@ -58,39 +58,20 @@ const int mx = 1e8 + 123;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<int> primefactor;
 void Boom()
 {
-    int n;
-    cin >> n;
-    while (n % 2 == 0)
-    {
-        primefactor.push_back(2);
-        n = n / 2;
-    }
-    for (int i = 3; i <= sqrt(n); i = i + 2)
-    {
-        while (n % i == 0)
-        {
-            primefactor.push_back(i);
-            n = n / i;
-        }
-    }
-    if (n > 2)
-    {
-        primefactor.push_back(n);
-    }
-    sort(all(primefactor));
-    for (auto u : primefactor)
-    {
-        cout << u << ' ';
-    }
-    cout << primefactor.size() << endl;
 }
 
 int main()
 {
     Boost;
-    Boom();
+
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
+
     return 0;
 }

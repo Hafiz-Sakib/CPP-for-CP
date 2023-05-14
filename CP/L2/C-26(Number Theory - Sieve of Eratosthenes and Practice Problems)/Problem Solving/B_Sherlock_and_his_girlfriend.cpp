@@ -1,4 +1,4 @@
-// https://www.spoj.com/problems/HS08PAUL/
+// https://codeforces.com/contest/776/problem/B
 
 // Bismillahir Rahmanir Rahim
 /*
@@ -10,9 +10,8 @@ author = Hafiz_Sakib;
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef long long int ll;
-typedef vector<ll> vi;
-const int mx = 1e7 + 123;
+#define endl "\n"
+const int mx = 1e5 + 123;
 
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
@@ -20,16 +19,10 @@ const int mx = 1e7 + 123;
     cout.tie(NULL)
 
 bitset<mx> is_prime;
-vector<int> primes;
-vector<int> ans(mx, 0);
-
 void sieve(int n)
 {
     n += 100;
-
-    is_prime[1] = 0;
     is_prime[2] = 1;
-    primes.push_back(2);
 
     for (int i = 3; i <= n; i += 2)
     {
@@ -52,43 +45,38 @@ void Boom()
 {
     int n;
     cin >> n;
-    cout << ans[n] << endl;
+    if (n == 1)
+    {
+        cout << 1 << endl;
+        cout << 1 << endl;
+    }
+    else if (n == 2)
+    {
+        cout << 1 << endl;
+        cout << 1 << ' ' << 1 << endl;
+    }
+    else
+    {
+        sieve(n);
+        cout << 2 << endl;
+        for (int i = 2; i <= (n + 1); i++)
+        {
+            if (is_prime[i])
+            {
+                cout << 1 << ' ';
+            }
+            else
+            {
+                cout << 2 << ' ';
+            }
+        }
+        cout << endl;
+    }
 }
 
 int main()
 {
     Boost;
-    sieve(1e7);
-    for (int x = 1; x <= 3200; x++)
-    {
-        for (int y = 1; y < 60; y++)
-        {
-            int func = (x * x) + (y * y * y * y);
-            if (func > 1e7)
-            {
-                continue;
-            }
-            else
-            {
-                if (is_prime[func])
-                {
-                    ans[func] = 1;
-                }
-            }
-        }
-    }
-
-    for (int i = 1; i <= 1e7; i++)
-    {
-        ans[i] += ans[i - 1];
-    }
-
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
-
+    Boom();
     return 0;
 }
