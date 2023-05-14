@@ -12,74 +12,32 @@ typedef long long int ll;
 typedef vector<ll> vi;
 const int mx = 1e8 + 123;
 #define pb push_back
-#define endl "\n"
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-bitset<mx> is_prime;
-vector<int> primes;
-
-void sieve(int n)
-{
-    n += 100;
-
-    for (int i = 3; i <= n; i += 2)
-    {
-        is_prime[i] = 1;
-    }
-
-    for (int i = 3; (i * i) <= n; i += 2)
-    {
-        if (is_prime[i])
-        {
-            for (int j = (i * i); j <= n; j += (i + i))
-            {
-                is_prime[j] = 0;
-            }
-        }
-    }
-
-    is_prime[1] = 0;
-    is_prime[2] = 1;
-    primes.push_back(2);
-
-    for (int i = 3; i <= n; i += 2)
-    {
-        if (is_prime[i])
-        {
-            primes.push_back(i);
-        }
-    }
-}
-
 vector<int> PrimeFactors;
-
 void PrimeFactorization(int n)
 {
-    PrimeFactors.clear();
-    for (auto p : primes)
+    while (n % 2 == 0)
     {
-        if (1LL * p * p > n)
+        PrimeFactors.pb(2);
+        n = n / 2;
+    }
+    for (int i = 3; i <= sqrt(n); i = i + 2)
+    {
+        while (n % i == 0)
         {
-            break;
-        }
-        else if (n % p == 0)
-        {
-            while (n % p == 0)
-            {
-                PrimeFactors.push_back(p);
-                n /= p;
-            }
+            PrimeFactors.pb(i);
+            n = n / i;
         }
     }
-    if (n > 1)
+    if (n > 2)
     {
-        PrimeFactors.push_back(n);
+        PrimeFactors.pb(n);
     }
 }
-
 void Boom()
 {
     ll n;
@@ -91,6 +49,7 @@ void Boom()
         {
             break;
         }
+
         PrimeFactorization(abs(n));
 
         cout << n << " = ";
@@ -114,7 +73,6 @@ void Boom()
 int main()
 {
     Boost;
-    sieve(1e5);
     Boom();
     return 0;
 }
