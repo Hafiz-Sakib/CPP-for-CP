@@ -50,31 +50,26 @@ void Boom()
     ll n;
     while (1)
     {
-        int c = 0;
-        cin >> n;
-        if (!n)
+        int n;
+        while (1)
         {
-            break;
-        }
-
-        PrimeFactorization(abs(n));
-
-        cout << n << " = ";
-
-        if (n < 0)
-        {
-            cout << "-1 x ";
-        }
-        for (auto u : PrimeFactors)
-        {
-            c++;
-            cout << u;
-            if (c < PrimeFactors.size())
+            cin >> n;
+            if (!n)
             {
-                cout << " x ";
+                break;
+            }
+            PrimeFactorization(abs(n));
+            int sz = PrimeFactors.size();
+
+            if (sz == 1)
+            {
+                cout << -1 << endl;
+            }
+            else
+            {
+                cout << PrimeFactors[sz - 1] << endl;
             }
         }
-        cout << endl;
     }
 }
 int main()
