@@ -53,11 +53,11 @@ void sieve(int n)
     }
 }
 
-vector<int> primefactor;
+vector<int> PrimeFactors;
 
-void factorization(int n)
+void PrimeFactorization(int n)
 {
-    primefactor.clear();
+    PrimeFactors.clear();
     for (auto p : primes)
     {
         if (1LL * p * p > n)
@@ -68,14 +68,14 @@ void factorization(int n)
         {
             while (n % p == 0)
             {
-                primefactor.push_back(p);
+                PrimeFactors.push_back(p);
                 n /= p;
             }
         }
     }
     if (n > 1)
     {
-        primefactor.push_back(n);
+        PrimeFactors.push_back(n);
     }
 }
 
@@ -83,8 +83,8 @@ void Boom()
 {
     int n;
     cin >> n;
-    factorization(n);
-    for (auto u : primefactor)
+    PrimeFactorization(n);
+    for (auto u : PrimeFactors)
     {
         cout << u << ' ';
     }
