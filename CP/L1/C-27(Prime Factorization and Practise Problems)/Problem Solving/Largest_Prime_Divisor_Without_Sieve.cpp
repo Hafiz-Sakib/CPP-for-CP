@@ -58,6 +58,7 @@ void Boom()
             {
                 break;
             }
+
             PrimeFactorization(abs(n));
             int sz = PrimeFactors.size();
 
