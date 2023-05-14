@@ -85,40 +85,31 @@ void PrimeFactorization(int n)
 
 void Boom()
 {
-    ll n;
+    int n;
     while (1)
     {
-        int c = 0;
         cin >> n;
         if (!n)
         {
             break;
         }
-
         PrimeFactorization(abs(n));
+        int sz = PrimeFactors.size();
 
-        cout << n << " = ";
-
-        if (n < 0)
+        if (sz == 1)
         {
-            cout << "-1 x ";
+            cout << -1 << endl;
         }
-        for (auto u : PrimeFactors)
+        else
         {
-            c++;
-            cout << u;
-            if (c < PrimeFactors.size())
-            {
-                cout << " x ";
-            }
+            cout << PrimeFactors[sz - 1] << endl;
         }
-        cout << endl;
     }
 }
 int main()
 {
     Boost;
-    sieve(1e5);
+    sieve(1e7);
     Boom();
     return 0;
 }
