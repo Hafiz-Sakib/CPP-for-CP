@@ -55,12 +55,12 @@ void sieve(int n)
     }
 }
 
-vector<int> PrimeFactors;
-
-void PrimeFactorization(int n)
+vector<ll> PrimeFactors;
+ll c = 0;
+void PrimeFactorization(ll n)
 {
     PrimeFactors.clear();
-
+    c = 0;
     for (auto p : primes)
     {
         if (1LL * p * p > n)
@@ -69,6 +69,7 @@ void PrimeFactorization(int n)
         }
         else if (n % p == 0)
         {
+            c++;
             while (n % p == 0)
             {
                 PrimeFactors.push_back(p);
@@ -78,20 +79,15 @@ void PrimeFactorization(int n)
     }
     if (n > 1)
     {
+        c++;
         PrimeFactors.push_back(n);
     }
 }
-bool isPowerOFTwo(int x)
-{
-    return (x && (!(x & (x - 1))));
-    // Time Complexity O(1)!
-}
 void Boom()
 {
-    sieve(1e7);
-    int n;
     while (1)
     {
+        ll n = 0;
         cin >> n;
         if (!n)
         {
@@ -99,20 +95,21 @@ void Boom()
         }
 
         PrimeFactorization(abs(n));
-        int sz = PrimeFactors.size();
 
-        if (isPowerOFTwo(n))
+        if (c <= 1)
         {
             cout << -1 << endl;
         }
         else
         {
-            cout << PrimeFactors[sz - 1] << endl;
+            reverse(PrimeFactors.begin(), PrimeFactors.end());
+            cout << PrimeFactors[0] << endl;
         }
     }
 }
 int main()
 {
+    sieve(1e7);
     Boost;
     Boom();
     return 0;
