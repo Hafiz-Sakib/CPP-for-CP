@@ -1,4 +1,4 @@
-// https://vjudge.net/problem/UVA-11466
+// https://vjudge.net/problem/UVA-583
 
 // Bismillahir Rahmanir Rahim
 /*
@@ -13,6 +13,7 @@ using namespace std;
 typedef long long int ll;
 
 const int mx = 1e8 + 123;
+#define pb push_back
 #define endl "\n"
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
@@ -55,12 +56,12 @@ void sieve(int n)
     }
 }
 
-vector<ll> PrimeFactors;
-ll c = 0;
-void PrimeFactorization(ll n)
+vector<int> PrimeFactors;
+
+void PrimeFactorization(int n)
 {
     PrimeFactors.clear();
-    c = 0;
+
     for (auto p : primes)
     {
         if (1LL * p * p > n)
@@ -69,7 +70,6 @@ void PrimeFactorization(ll n)
         }
         else if (n % p == 0)
         {
-            c++;
             while (n % p == 0)
             {
                 PrimeFactors.push_back(p);
@@ -79,15 +79,16 @@ void PrimeFactorization(ll n)
     }
     if (n > 1)
     {
-        c++;
         PrimeFactors.push_back(n);
     }
 }
+
 void Boom()
 {
+    ll n;
     while (1)
     {
-        ll n = 0;
+        int c = 0;
         cin >> n;
         if (!n)
         {
@@ -96,21 +97,28 @@ void Boom()
 
         PrimeFactorization(abs(n));
 
-        if (c <= 1)
+        cout << n << " = ";
+
+        if (n < 0)
         {
-            cout << -1 << endl;
+            cout << "-1 x ";
         }
-        else
+        for (auto u : PrimeFactors)
         {
-            reverse(PrimeFactors.begin(), PrimeFactors.end());
-            cout << PrimeFactors[0] << endl;
+            c++;
+            cout << u;
+            if (c < PrimeFactors.size())
+            {
+                cout << " x ";
+            }
         }
+        cout << endl;
     }
 }
 int main()
 {
-    sieve(1e7);
     Boost;
+    sieve(1e5); // Call Seieve with (sqrt(limit))
     Boom();
     return 0;
 }

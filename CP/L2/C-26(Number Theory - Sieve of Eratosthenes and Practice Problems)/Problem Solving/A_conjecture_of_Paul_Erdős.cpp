@@ -61,7 +61,7 @@ int main()
     sieve(1e7);
     for (int x = 1; x <= 3200; x++)
     {
-        for (int y = 1; y < 60; y++)
+        for (int y = 1; y <= 60; y++)
         {
             int func = (x * x) + (y * y * y * y);
             if (func > 1e7)

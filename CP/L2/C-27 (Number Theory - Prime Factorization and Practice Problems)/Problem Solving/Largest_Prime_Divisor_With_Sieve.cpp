@@ -1,3 +1,5 @@
+// https://vjudge.net/problem/UVA-11466
+
 // Bismillahir Rahmanir Rahim
 /*
 
@@ -9,9 +11,9 @@ author = Hafiz_Sakib;
 using namespace std;
 
 typedef long long int ll;
-typedef vector<ll> vi;
+
 const int mx = 1e8 + 123;
-#define pb push_back
+#define endl "\n"
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -53,12 +55,12 @@ void sieve(int n)
     }
 }
 
-vector<int> PrimeFactors;
-
-void PrimeFactorization(int n)
+vector<ll> PrimeFactors;
+ll c = 0;
+void PrimeFactorization(ll n)
 {
     PrimeFactors.clear();
-
+    c = 0;
     for (auto p : primes)
     {
         if (1LL * p * p > n)
@@ -67,6 +69,7 @@ void PrimeFactorization(int n)
         }
         else if (n % p == 0)
         {
+            c++;
             while (n % p == 0)
             {
                 PrimeFactors.push_back(p);
@@ -76,27 +79,38 @@ void PrimeFactorization(int n)
     }
     if (n > 1)
     {
+        c++;
         PrimeFactors.push_back(n);
     }
 }
-
 void Boom()
 {
-    int n;
-    cin >> n;
-    PrimeFactorization(n);
-    for (auto u : PrimeFactors)
+    while (1)
     {
-        cout << u << ' ';
+        ll n = 0;
+        cin >> n;
+        if (!n)
+        {
+            break;
+        }
+
+        PrimeFactorization(abs(n));
+
+        if (c <= 1)
+        {
+            cout << -1 << endl;
+        }
+        else
+        {
+            reverse(PrimeFactors.begin(), PrimeFactors.end());
+            cout << PrimeFactors[0] << endl;
+        }
     }
-    cout << endl;
 }
 int main()
 {
+    sieve(1e7); // Call Seieve with (sqrt(limit))
     Boost;
-
-    sieve(1e7);
     Boom();
-
     return 0;
 }

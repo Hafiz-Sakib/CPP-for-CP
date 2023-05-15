@@ -1,10 +1,5 @@
-// Bismillahir Rahmanir Rahim
-/*
+// Prime Factors Without Sieve Approach
 
-string author;
-author = Hafiz_Sakib;
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 

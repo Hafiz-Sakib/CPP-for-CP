@@ -1,20 +1,12 @@
-// https://vjudge.net/problem/UVA-583
+// Prime Factorization Sieve Method
 
-// Bismillahir Rahmanir Rahim
-/*
-
-string author;
-author = Hafiz_Sakib;
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 
 typedef long long int ll;
-
+typedef vector<ll> vi;
 const int mx = 1e8 + 123;
 #define pb push_back
-#define endl "\n"
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -85,40 +77,19 @@ void PrimeFactorization(int n)
 
 void Boom()
 {
-    ll n;
-    while (1)
+    int n;
+    cin >> n;
+    PrimeFactorization(n);
+    for (auto u : PrimeFactors)
     {
-        int c = 0;
-        cin >> n;
-        if (!n)
-        {
-            break;
-        }
-
-        PrimeFactorization(abs(n));
-
-        cout << n << " = ";
-
-        if (n < 0)
-        {
-            cout << "-1 x ";
-        }
-        for (auto u : PrimeFactors)
-        {
-            c++;
-            cout << u;
-            if (c < PrimeFactors.size())
-            {
-                cout << " x ";
-            }
-        }
-        cout << endl;
+        cout << u << ' ';
     }
+    cout << endl;
 }
 int main()
 {
     Boost;
-    sieve(1e5);
+    sieve(1e7); // Call Seieve with (sqrt(limit))
     Boom();
     return 0;
 }
