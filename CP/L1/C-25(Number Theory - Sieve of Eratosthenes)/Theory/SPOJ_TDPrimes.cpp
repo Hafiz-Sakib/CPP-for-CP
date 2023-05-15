@@ -1,4 +1,6 @@
-// https://www.spoj.com/problems/TDPRIMES/
+// SPOJ_TDPrimes (Printing Primes till 1e8)
+
+// Problem link :  https://www.spoj.com/problems/TDPRIMES/
 
 #include <bits/stdc++.h>
 using namespace std;
