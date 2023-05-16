@@ -60,6 +60,7 @@ const int mx = 1e8 + 123;
 
 void Boom()
 {
+
     vi s = {1, 2, 4, 5, 5, 6};
     int x = lower_bound(all(s), 3) - s.begin();
     int y = *lower_bound(all(s), 3);
