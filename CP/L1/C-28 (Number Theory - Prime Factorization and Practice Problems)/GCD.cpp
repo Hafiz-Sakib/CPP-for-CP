@@ -7,7 +7,6 @@ using namespace std;
     cout.tie(NULL)
 
 #define gcd(a, b) __gcd(a, b)
-#define lcm(a, b) ((a) / gcd(a, b) * (b))
 
 int GCD(int a, int b)
 {
@@ -23,17 +22,10 @@ int GCD(int a, int b)
     return GCD(b, r);
 }
 
-int LCM(int a, int b)
-{
-    int m = abs(a * b);
-    return m / GCD(a, b);
-}
-
 void Boom()
 {
     int a = 12, b = 6;
     cout << gcd(a, b) << endl;
-    cout << lcm(a, b) << endl;
 }
 
 int main()
