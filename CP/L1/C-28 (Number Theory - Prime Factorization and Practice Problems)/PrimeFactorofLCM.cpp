@@ -7,6 +7,9 @@ typedef long long int ll;
 typedef set<ll> si;
 const int mx = 1e6 + 123;
 
+#define debug(x) cerr << x << endl;
+#define here fprintf(stderr, "====I am Here====\n");
+
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -91,8 +94,7 @@ void Boom(int t)
         }
     }
 
-    cout << "Case "
-         << "#" << t << ": " << ans.size() << endl;
+    cout << "Case #" << t << ": " << ans.size() << endl;
 
     for (auto u : ans)
     {
