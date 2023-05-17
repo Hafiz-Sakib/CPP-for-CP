@@ -16,6 +16,7 @@ const double eps = 1e-12;
 double root(int n)
 {
     double l = 0, r = n, mid;
+    // while( (r - l) > eps )
     for (int i = 1; i <= 100; i++)
     {
         mid = (l + r) / 2.0;
