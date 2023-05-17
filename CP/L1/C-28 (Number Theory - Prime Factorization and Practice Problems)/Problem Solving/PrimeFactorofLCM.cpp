@@ -105,7 +105,7 @@ void Boom(int t)
 int main()
 {
     Boost;
-    sieve(mx);
+    sieve(1e6);
     int t;
     cin >> t;
     for (int i = 1; i <= t; i++)
