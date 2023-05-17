@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/binary-search/submissions/936742103/
+
 #include <bits/stdc++.h>
 using namespace std;
 
