@@ -1,3 +1,5 @@
+// Manual Lower Bound Function
+
 #include <bits/stdc++.h>
 using namespace std;
 
