@@ -13,7 +13,6 @@ vector<int> primes;
 
 void sieve(int n)
 {
-    n += 100;
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
@@ -55,17 +54,17 @@ void PrimeFactorization(int n)
             PrimeFactors[i].push_back(p);
         }
     }
-
+    int c = 0;
     for (int i = 1; i <= n; i++)
     {
-        cout << i << " : ";
-        for (auto u : PrimeFactors[i])
+        if (PrimeFactors[i].size() == 2)
         {
-            cout << u << ' ';
+            c++;
         }
-        cout << endl;
     }
+    cout << c << endl;
 }
+
 int main()
 {
     Boost;
