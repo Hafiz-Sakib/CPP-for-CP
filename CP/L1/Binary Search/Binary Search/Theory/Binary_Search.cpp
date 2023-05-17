@@ -1,3 +1,5 @@
+// Binary Search of a Number
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,7 +10,7 @@ using namespace std;
 
 void Boom()
 {
-    int n;
+    int n, ok = 0;
     cin >> n;
     vector<int> v(n);
     for (int i = 0; i < n; i++)
@@ -30,6 +32,7 @@ void Boom()
         if (q == v[mid])
         {
             cout << "Found" << endl;
+            ok = 1;
             break;
         }
         else if (q > v[mid])
@@ -42,7 +45,7 @@ void Boom()
         }
     }
 
-    if (first > last)
+    if (!ok)
     {
         cout << "Not Found" << endl;
     }
