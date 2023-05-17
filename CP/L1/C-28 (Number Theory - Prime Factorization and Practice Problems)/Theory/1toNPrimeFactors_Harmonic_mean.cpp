@@ -1,3 +1,5 @@
+// Finding  1 to N PrimeFactors Using HarmonicMean
+
 #include <bits/stdc++.h>
 using namespace std;
 
