@@ -6,36 +6,52 @@ author = Hafiz_Sakib;
 
 */
 #include <bits/stdc++.h>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
+using namespace __gnu_pbds;
 
-#define ll long long int
-#define ull unsigned long long int
+typedef long long int ll;
+typedef unsigned long long ull;
 
-#define vi vector<ll>
-#define vd vector<double>
-#define vs vector<string>
-#define vc vector<char>
-#define vvi vector<vector<ll>>
-#define vpii vector<pair<ll, ll>>
-#define vpsi vector<pair<string, ll>>
-#define pii pair<ll, ll>
-#define psi pair<string, ll>
-#define pis pair<ll, string>
-#define mii map<ll, ll>
-#define mib map<ll, bool>
-#define msi map<string, ll>
-#define mis map<ll, string>
-#define pdd pair<double, double>
-#define si set<ll>
-#define sc set<char>
-#define ss set<string>
-#define sd set<double>
-#define pq priority_queue<ll>
-#define pqs priority_queue<string>
-#define pqg priority_queue<ll, vi, greater<ll>>
+typedef vector<ll> vi;
+typedef vector<double> vd;
+typedef vector<string> vs;
+typedef vector<char> vc;
+typedef vector<vector<ll>> vvi;
+typedef vector<pair<ll, ll>> vpii;
+typedef vector<pair<string, ll>> vpsi;
+typedef pair<ll, ll> pii;
+typedef pair<string, ll> psi;
+typedef pair<ll, string> pis;
+typedef pair<double, double> pdd;
+typedef map<ll, ll> mii;
+typedef map<ll, bool> mib;
+typedef map<string, ll> msi;
+typedef map<ll, string> mis;
+typedef set<ll> si;
+typedef set<char> sc;
+typedef set<string> ss;
+typedef set<double> sd;
+typedef priority_queue<ll> pq;
+typedef priority_queue<string> pqs;
+typedef priority_queue<ll, vi, greater<ll>> pqg;
 
-#define vit vector<int>::iterator
-#define sit set<int>::iterator
+typedef vector<int>::iterator vit;
+typedef set<int>::iterator sit;
+
+typedef tree<ll, null_type, less<ll>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    ordered_set;
+typedef tree<ll, null_type, greater<ll>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    greater_set;
+typedef tree<ll, null_type, less_equal<ll>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    multi_set;
+typedef tree<ll, null_type, greater_equal<ll>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    greater_multi_set;
 
 #define pb push_back
 #define mp make_pair
@@ -77,6 +93,12 @@ using namespace std;
 #define stringLower(data) transform(data.begin(), data.end(), data.begin(), ::tolower)
 #define stringUpper(data) transform(data.begin(), data.end(), data.begin(), ::toupper)
 
+#define gcd(a, b) __gcd(a, b)
+#define lcm(a, b) ((a) / gcd(a, b) * (b))
+#define sqr(a) ((a) * (a))
+#define MOD 1000000007
+#define mx_int_prime 999999937
+
 #define debug(x) cerr << x << endl;
 #define here fprintf(stderr, "====I am Here====\n");
 
@@ -84,7 +106,6 @@ using namespace std;
 #define lcm(a, b) ((a) / gcd(a, b) * (b))
 #define sqr(a) ((a) * (a))
 #define MOD 1000000007
-#define mx_int_prime 999999937
 
 const double PI = acos(-1);
 const int mx = 1e8 + 123;
@@ -96,6 +117,25 @@ const ll infLL = 9000000000000000000;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
+
+void Boom()
+{
+    // Let's Move
+}
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+    if (n <= 3)
+        return true;
+    if (n % 2 == 0 || n % 3 == 0)
+        return false;
+    for (int i = 5; i * i <= n; i = i + 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return false;
+
+    return true;
+}
 
 bitset<mx> is_prime;
 vector<int> primes;
@@ -130,7 +170,6 @@ void sieve(int n)
         }
     }
 }
-
 vector<ll> PrimeFactors;
 
 void PrimeFactorization(ll n)
@@ -157,26 +196,6 @@ void PrimeFactorization(ll n)
         PrimeFactors.push_back(n);
     }
 }
-bool isPrime(int n)
-{
-    if (n <= 1)
-        return false;
-    if (n <= 3)
-        return true;
-    if (n % 2 == 0 || n % 3 == 0)
-        return false;
-    for (int i = 5; i * i <= n; i = i + 6)
-        if (n % i == 0 || n % (i + 2) == 0)
-            return false;
-
-    return true;
-}
-
-void Boom()
-{
-    // Let's Move
-}
-
 int main()
 {
     Boost;
