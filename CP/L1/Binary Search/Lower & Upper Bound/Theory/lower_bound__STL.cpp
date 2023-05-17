@@ -1,3 +1,5 @@
+// Lower Bound STL Function
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,10 +17,15 @@ void Boom()
     // অপর কথায়,লোয়ার বাউন্ড - প্রথম অকারেন্স এর ইন্ডেক্স টা।
 
     vector<int> v = {1, 2, 2, 2, 2, 2, 3, 3, 4};
+
     int x = lower_bound(v.begin(), v.end(), 3) - v.begin();
-    cout << x << endl;
+    auto y = *lower_bound(v.begin(), v.end(), 3);
+
+    cout << x << " " << y << endl;
 
     // *** লোয়ার আর আপার বাউন্ডের বিল্ড-ইন ফাংশন নরমালি পয়েন্টার রিটার্ন করে থাকে।আমরা ইন্ডেক্স টা পাবার জন্যই মূলত  v.begin() টা বিয়োগ করে দি।
+
+    // এখানে অটো তে যে পয়েন্টার/ইটেরেটর রিটার্ন করছে তার মিনিং হলো ৩ এর লোয়ার বাউন্ডে কোন ভ্যালু আছে?
 }
 
 int main()
