@@ -1,3 +1,5 @@
+// Binary Search Custom Function
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -6,31 +8,17 @@ using namespace std;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-void Boom()
+int binarysrc(vector<int> v, int q)
 {
-    int n;
-    cin >> n;
-    vector<int> v(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> v[i];
-    }
-
-    sort(v.begin(), v.end());
-
-    int q;
-    cin >> q;
-
     int first = 0;
-    int last = n - 1;
+    int last = v.size() - 1;
 
     while (first <= last)
     {
         int mid = (first + last) / 2;
         if (q == v[mid])
         {
-            cout << "Found" << endl;
-            break;
+            return mid;
         }
         else if (v[mid] < q)
         {
@@ -41,16 +29,16 @@ void Boom()
             last = mid - 1;
         }
     }
-
-    if (first > last)
-    {
-        cout << "Not Found" << endl;
-    }
+    return -1;
 }
 
 int main()
 {
     Boost;
-    Boom();
+
+    vector<int> v = {1, 2, 2, 2, 2, 2, 3, 3, 4};
+    int r = binarysrc(v, 3);
+    cout << r << endl;
+
     return 0;
 }
