@@ -1,12 +1,5 @@
-// https://www.geeksforgeeks.org/square-root-of-an-integer/
+// Squre Root of a Number Using Fractional Bisection
 
-// Bismillahir Rahmanir Rahim
-/*
-
-string author;
-author = Hafiz_Sakib;
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -35,7 +28,7 @@ double root(int n)
             l = mid;
         }
     }
-    return floor(l);
+    return l;
 }
 
 int main()
