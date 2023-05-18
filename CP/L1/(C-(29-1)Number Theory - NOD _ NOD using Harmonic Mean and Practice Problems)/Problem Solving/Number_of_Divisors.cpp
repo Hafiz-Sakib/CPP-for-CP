@@ -1,3 +1,5 @@
+// https://www.hackerearth.com/problem/algorithm/number-of-divisors-5/?purpose=login&source=problem-page&update=google
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,6 +11,7 @@ vector<int> primes;
 
 void sieve(int n)
 {
+    n += 100;
     for (int i = 3; i <= n; i += 2)
     {
         is_prime[i] = 1;
@@ -40,9 +43,7 @@ void sieve(int n)
 
 int NOD(ll n)
 {
-    // This function will return how many divisors in (n) using Prime Factorization
     int ans = 1;
-    // Call Sieve Function First
     for (auto p : primes)
     {
         if (1LL * p * p > n)
@@ -69,18 +70,15 @@ int NOD(ll n)
 
 int main()
 {
-    sieve(1000000);
-    int n = 6345, cnt = 0;
-
-    cout << NOD(n) << endl;
-
-    for (int i = 1; i <= n; i++)
+    sieve(1e6);
+    int t;
+    cin >> t;
+    while (t--)
     {
-        if (n % i == 0)
-        {
-            cnt++;
-        }
+        ll n;
+        cin >> n;
+        cout << NOD(n) << endl;
     }
-    cout << cnt << endl;
+
     return 0;
 }
