@@ -83,7 +83,7 @@ vpii v;
 
 void Boom(int t)
 {
-    int n, lim = 1e3;
+    int n;
     cin >> n;
     cout << "Case " << t << ": " << -1 * v[n - 1].second << endl;
 }

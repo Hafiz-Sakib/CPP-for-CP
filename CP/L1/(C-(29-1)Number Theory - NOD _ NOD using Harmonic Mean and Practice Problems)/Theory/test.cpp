@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define here fprintf(stderr, "====I am Here====\n");
 
+#define ll long long
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -41,18 +41,52 @@ void sieve(int n)
     }
 }
 
-vector<vector<int>> v(1123);
-vector<int> NOD(1123);
+vector<vector<ll>> PrimePower(1123);
+vector<ll> NOD(1123);
+vector<pair<ll, ll>> v;
 
 void Boom(int t)
 {
+    ll n;
+    cin >> n;
+    cout << "Case " << t << ": " << -1 * v[n - 1].second << endl;
 }
 
 int main()
 {
+    Boost;
     int lim = 1e3;
     sieve(lim);
-    Boost;
+
+    for (auto p : primes)
+    {
+        for (int i = p; i <= lim; i += p)
+        {
+            int cnt = 1, tmp = i;
+            while (tmp % p == 0)
+            {
+                tmp /= p;
+                cnt++;
+            }
+            PrimePower[i].push_back(cnt);
+        }
+    }
+
+    for (int i = 1; i <= lim; i++)
+    {
+        NOD[i] = 1;
+        for (auto u : PrimePower[i])
+        {
+            NOD[i] *= u;
+        }
+    }
+    for (int i = 1; i <= lim; i++)
+    {
+        v.push_back({NOD[i], -i});
+    }
+
+    sort(v.begin(), v.end());
+
     int t;
     cin >> t;
     for (int i = 1; i <= t; i++)
