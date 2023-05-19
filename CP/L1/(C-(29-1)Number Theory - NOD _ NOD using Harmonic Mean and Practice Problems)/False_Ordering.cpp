@@ -11,6 +11,7 @@ typedef pair<ll, ll> pii;
 #define b() begin()
 #define e() end()
 #define all(data) data.begin(), data.end()
+#define endl "\n"
 
 const int mx = 1e8 + 123;
 const double eps = 1e-12;
