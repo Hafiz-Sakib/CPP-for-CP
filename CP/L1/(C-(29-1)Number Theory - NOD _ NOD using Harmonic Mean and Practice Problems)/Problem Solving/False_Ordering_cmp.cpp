@@ -1,10 +1,5 @@
-// Bismillahir Rahmanir Rahim
-/*
+// https://lightoj.com/problem/false-ordering
 
-string author;
-author = Hafiz_Sakib;
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 
