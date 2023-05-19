@@ -1,26 +1,25 @@
-// https://lightoj.com/problem/false-ordering
+// Bismillahir Rahmanir Rahim
+/*
 
+string author;
+author = Hafiz_Sakib;
+
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
 typedef long long int ll;
-typedef vector<ll> vi;
-typedef pair<ll, ll> pii;
 typedef vector<pair<ll, ll>> vpii;
 typedef pair<ll, ll> pii;
-
-#define b() begin()
-#define e() end()
-#define all(data) data.begin(), data.end()
 #define endl "\n"
+#define all(data) data.begin(), data.end()
 
 const int mx = 1e8 + 123;
-const double eps = 1e-12;
 
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
-    cout.tie(NULL);
+    cout.tie(NULL)
 
 bitset<mx> is_prime;
 vector<int> primes;
@@ -56,6 +55,35 @@ void sieve(int n)
     }
 }
 
+int NOD(ll n)
+{
+    // This function will return how many divisors in (n) using Prime Factorization
+    int ans = 1;
+    // Call Sieve Function First
+    for (auto p : primes)
+    {
+        if (1LL * p * p > n)
+        {
+            break;
+        }
+        else if (n % p == 0)
+        {
+            int cnt = 1;
+            while (n % p == 0)
+            {
+                n /= p;
+                cnt++;
+            }
+            ans *= cnt;
+        }
+    }
+    if (n > 1)
+    {
+        ans *= 2;
+    }
+    return ans;
+}
+
 bool cmp(pii a, pii b)
 {
     if (a.first == b.first)
@@ -69,54 +97,34 @@ bool cmp(pii a, pii b)
     return 0;
 }
 
-vector<vector<int>> PrimePower(1123);
-vector<int> NOD(1123);
+vpii v;
+
+void Boom(int t)
+{
+    int n, lim = 1e3;
+    cin >> n;
+    cout << "Case " << t << ": " << v[n - 1].second << endl;
+}
 
 int main()
 {
     Boost;
-    int lim = 1000;
-    sieve(1000);
+    int lim = 1e3;
 
-    for (auto p : primes)
-    {
-        for (int i = p; i <= lim; i += p)
-        {
-            int cnt = 1, tmp = i;
-            while (tmp % p == 0)
-            {
-                tmp /= p;
-                cnt++;
-            }
-            PrimePower[i].push_back(cnt);
-        }
-    }
-
+    // PreCompute
+    sieve(lim);
     for (int i = 1; i <= lim; i++)
     {
-        NOD[i] = 1;
-        for (auto u : PrimePower[i])
-        {
-            NOD[i] *= u;
-        }
+        int div = NOD(i);
+        v.push_back({div, i});
     }
-
-    vector<pair<int, int>> v;
-
-    for (int i = 1; i <= lim; i++)
-    {
-        v.push_back({NOD[i], i});
-    }
-
     sort(all(v), cmp);
 
-    int t;
+    int t = 1;
     cin >> t;
     for (int i = 1; i <= t; i++)
     {
-        int n;
-        cin >> n;
-        cout << "Case " << i << ": " << v[n - 1].second << endl;
+        Boom(i);
     }
 
     return 0;
