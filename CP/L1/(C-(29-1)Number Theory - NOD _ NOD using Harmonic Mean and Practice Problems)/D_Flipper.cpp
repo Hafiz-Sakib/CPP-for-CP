@@ -44,8 +44,8 @@ typedef set<string> ss;
 #define vecSum(data) accumulate(data.begin(), data.end(), 0)
 
 #define ignore cin.ignore(numeric_limits<streamsize>::max(), '\n')
-#define stringLower(data) transform(data.begin(), data.end(), data.begin(), ::tolower)
-#define stringUpper(data) transform(data.begin(), data.end(), data.begin(), ::toupper)
+#define stringLower(data) trretform(data.begin(), data.end(), data.begin(), ::tolower)
+#define stringUpper(data) trretform(data.begin(), data.end(), data.begin(), ::toupper)
 
 const int mx = 1e8 + 123;
 const double eps = 1e-12;
@@ -60,15 +60,77 @@ const double eps = 1e-12;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-void Boom()
+void Boom(ll tc)
 {
-    ll n;
+    int n;
     cin >> n;
-    vi v(n);
-    for (auto &u : v)
+    vector<int> v(n + 1);
+    ll idx = 1, val = n;
+    bool t = 1;
+    for (int i = 1; i <= n; i++)
     {
-        cin >> u;
+        cin >> v[i];
+        if (v[i] == n)
+        {
+            idx = i;
+        }
     }
+    if (v[1] == n)
+    {
+        for (int i = 1; i <= n; i++)
+            if (v[i] == n - 1)
+            {
+                idx = i;
+            }
+    }
+    bool f = 0;
+    vi a;
+    for (int i = idx - 1; i >= 1; i--)
+    {
+        vi d;
+        for (int j = idx; j <= n; j++)
+        {
+            d.pb(v[j]);
+        }
+        for (int j = idx - 1; j >= i; j--)
+        {
+            d.pb(v[j]);
+        }
+        for (int j = 1; j < i; j++)
+        {
+            d.pb(v[j]);
+        }
+        if (a.size() == 0 || a < d)
+        {
+            a = d;
+        }
+        f = 1;
+    }
+    for (int i = idx; i <= n; i++)
+    {
+        vi d;
+        for (int j = i + 1; j <= n; j++)
+        {
+            d.pb(v[j]);
+        }
+        for (int j = i; j >= idx; j--)
+        {
+            d.pb(v[j]);
+        }
+        for (int j = 1; j < idx; j++)
+        {
+            d.pb(v[j]);
+        }
+        if (a < d)
+        {
+            a = d;
+        }
+    }
+    for (auto i : a)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
 }
 
 int main()
@@ -79,7 +141,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        Boom();
+        Boom(t);
     }
 
     return 0;
