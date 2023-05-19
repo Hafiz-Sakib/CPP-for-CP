@@ -58,13 +58,13 @@ void sieve(int n)
 
 bool cmp(pii a, pii b)
 {
-    if (a.first == b.first)
-    {
-        return a.second > b.second;
-    }
-    else if (a.first < b.first)
+    if (a.first < b.first)
     {
         return 1;
+    }
+    else if (a.first == b.first)
+    {
+        return a.second > b.second;
     }
     return 0;
 }
