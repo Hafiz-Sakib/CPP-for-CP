@@ -83,6 +83,7 @@ int NOD(ll n)
     }
     return ans;
 }
+
 void Boom(int t)
 {
     // Without Precompute
