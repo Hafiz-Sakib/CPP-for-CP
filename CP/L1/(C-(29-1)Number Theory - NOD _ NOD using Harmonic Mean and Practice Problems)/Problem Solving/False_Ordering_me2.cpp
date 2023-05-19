@@ -83,30 +83,25 @@ int NOD(ll n)
     }
     return ans;
 }
-
-vpii v;
-
 void Boom(int t)
 {
+    // Without Precompute
     int n, lim = 1e3;
     cin >> n;
-    cout << "Case " << t << ": " << -1 * v[n - 1].second << endl;
-}
-
-int main()
-{
-    Boost;
-    int lim = 1e3;
-
-    // PreCompute
-    sieve(lim);
+    vpii v;
     for (int i = 1; i <= lim; i++)
     {
         int div = NOD(i);
         v.push_back({div, -i});
     }
     sort(all(v));
+    cout << "Case " << t << ": " << -1 * v[n - 1].second << endl;
+}
 
+int main()
+{
+    Boost;
+    sieve(1000);
     int t = 1;
     cin >> t;
     for (int i = 1; i <= t; i++)
