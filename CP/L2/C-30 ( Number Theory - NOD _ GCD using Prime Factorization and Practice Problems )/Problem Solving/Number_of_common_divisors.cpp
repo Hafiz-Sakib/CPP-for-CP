@@ -1,4 +1,4 @@
-// https://www.spoj.com/problems/SINEGGS/
+// https://www.spoj.com/problems/COMDIV/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -7,6 +7,7 @@ typedef long long int ll;
 #define endl "\n"
 #define yes cout << "YES\n"
 #define no cout << "NO\n"
+
 const int mx = 1e8 + 123;
 #define gcd(a, b) __gcd(a, b)
 
@@ -78,12 +79,11 @@ int NOD(ll n)
 }
 void Boom()
 {
-    ll n, ans = 0;
-    cin >> n;
-    ans = sqrt(n);
-    ((ans * ans) == n) ? yes : no;
+    int a, b, ans = 0;
+    cin >> a >> b;
+    ans = NOD(gcd(a, b));
+    cout << ans << endl;
 }
-
 int main()
 {
     Boost;
