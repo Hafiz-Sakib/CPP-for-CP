@@ -50,6 +50,8 @@ void sieve(int n)
     }
 }
 
+// False Ordering using  NOD function
+
 int NOD(ll n)
 {
     // This function will return how many divisors in (n) using Prime Factorization
