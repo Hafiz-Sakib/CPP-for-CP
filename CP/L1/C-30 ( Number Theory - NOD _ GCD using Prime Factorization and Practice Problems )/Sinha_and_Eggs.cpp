@@ -85,9 +85,10 @@ int NOD(ll n)
 }
 void Boom()
 {
-    ll n;
-    scanf("%lld", &n);
-    (NOD(n) & 1) ? yes : no;
+    ll n, ans = 0;
+    cin >> n;
+    ans = sqrt(n);
+    ((ans * ans) == n) ? yes : no;
 }
 
 int main()
@@ -95,7 +96,7 @@ int main()
     Boost;
     sieve(1e6);
     int t = 1;
-    scanf("%d", &t);
+    cin >> t;
     while (t--)
     {
         Boom();
