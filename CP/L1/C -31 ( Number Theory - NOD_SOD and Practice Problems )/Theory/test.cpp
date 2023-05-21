@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define endl "\n";
+
 typedef long long int ll;
 const int mx = 1e8;
+#define endl "\n";
+
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -73,12 +75,12 @@ void Boom()
 {
     ll n;
     cin >> n;
-    cout << SODFormula(n) << endl;
+    cout << SODFormula(n) - 1 << endl;
 }
 
 int main()
 {
-    sieve(1e6);
+    sieve(1e8);
     Boost;
     int t;
     cin >> t;

@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define endl "\n";
 typedef long long int ll;
 const int mx = 1e8;
-#define endl "\n";
-
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -44,7 +42,7 @@ void sieve(int n)
     }
 }
 
-ll SOD(ll n)
+ll SODFormula(ll n)
 {
     ll ans = 1;
     for (auto p : primes)
@@ -55,14 +53,13 @@ ll SOD(ll n)
         }
         else if (n % p == 0)
         {
-            ll CurrentSum = 1, PowerOfPrime = 1;
+            ll CurrentSum = 1, PowerOfPrime = p;
             while (n % p == 0)
             {
                 PowerOfPrime *= p;
-                CurrentSum += PowerOfPrime;
                 n /= p;
             }
-            ans *= CurrentSum;
+            ans *= ((PowerOfPrime - 1) / (p - 1));
         }
     }
     if (n > 1)
@@ -74,13 +71,20 @@ ll SOD(ll n)
 
 void Boom()
 {
-    cout << SOD(12);
+    ll n;
+    cin >> n;
+    cout << SODFormula(n) - 1 << endl;
 }
 
 int main()
 {
-    sieve(100000);
+    sieve(1e8);
     Boost;
-    Boom();
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
     return 0;
 }
