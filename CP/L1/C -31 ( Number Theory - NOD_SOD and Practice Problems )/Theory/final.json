@@ -1,3 +1,4 @@
+
 "Comparator": {
     "prefix": "Comparator",
     "body": [
@@ -176,7 +177,7 @@
     "description": "SODFormula"
   },
 
- "isprime": {
+  "isprime": {
     "prefix": "isprime",
     "body": [
       "bool isPrime(int n)",
