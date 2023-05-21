@@ -1,3 +1,5 @@
+// https://www.spoj.com/status/ns=31387266
+
 #include <bits/stdc++.h>
 using namespace std;
 #define endl "\n";
