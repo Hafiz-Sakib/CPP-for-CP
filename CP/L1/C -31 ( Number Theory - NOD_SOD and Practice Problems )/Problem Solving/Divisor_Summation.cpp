@@ -67,7 +67,7 @@ ll SOD(ll n)
     }
     if (n > 1)
     {
-        ans *= (1 + n);
+        ans *= (n + 1);
     }
     return ans;
 }
@@ -81,7 +81,7 @@ void Boom()
 
 int main()
 {
-    sieve(1e6);
+    sieve(1e8);
     Boost;
     int t;
     cin >> t;

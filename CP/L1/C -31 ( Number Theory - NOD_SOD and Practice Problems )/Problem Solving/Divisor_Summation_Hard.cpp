@@ -68,7 +68,7 @@ ll SODFormula(ll n)
     }
     if (n > 1)
     {
-        ans *= (1 + n);
+        ans *= (n + 1);
     }
     return ans;
 }
