@@ -75,7 +75,7 @@ void Boom()
 {
     ll n;
     cin >> n;
-    cout << SODFormula(n) - 1 << endl;
+    cout << SODFormula(n) - n << endl;
 }
 
 int main()

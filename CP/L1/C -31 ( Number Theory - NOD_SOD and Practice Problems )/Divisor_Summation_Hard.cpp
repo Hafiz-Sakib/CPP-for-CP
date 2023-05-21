@@ -1,8 +1,12 @@
+// https://www.spoj.com/status/ns=31387363
+
 #include <bits/stdc++.h>
 using namespace std;
-#define endl "\n";
+
 typedef long long int ll;
 const int mx = 1e8;
+#define endl "\n";
+
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
