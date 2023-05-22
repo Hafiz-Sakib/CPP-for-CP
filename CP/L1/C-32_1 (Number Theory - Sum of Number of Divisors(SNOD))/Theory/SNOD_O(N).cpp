@@ -60,6 +60,8 @@ const double eps = 1e-12;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
+// SNOD in O(n) Complexity
+
 ll SNOD(ll n)
 {
     ll sum = 0;
