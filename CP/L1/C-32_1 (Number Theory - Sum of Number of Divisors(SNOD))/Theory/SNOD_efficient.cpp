@@ -31,7 +31,7 @@ ll SNOD(ll n)
 
 int main()
 {
-
     Boost;
+    cout << SNOD(120);
     return 0;
 }
