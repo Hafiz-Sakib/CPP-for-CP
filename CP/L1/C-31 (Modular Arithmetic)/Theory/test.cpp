@@ -54,7 +54,8 @@ const double eps = 1e-12;
 
 #define debug(x) cerr << x << endl;
 #define here fprintf(stderr, "====I am Here====\n");
-
+#define mod 1000000007
+#define MOD 1e9 + 7;
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
@@ -62,18 +63,12 @@ const double eps = 1e-12;
 
 void Boom()
 {
+    cout << mod / MOD;
 }
 
 int main()
 {
     Boost;
-
-    int t = 1;
-    cin >> t;
-    while (t--)
-    {
-        Boom();
-    }
-
+    Boom();
     return 0;
 }
