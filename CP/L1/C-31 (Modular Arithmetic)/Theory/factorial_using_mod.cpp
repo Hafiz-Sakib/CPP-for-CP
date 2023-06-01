@@ -63,7 +63,7 @@ const int mod = 1000000007;
 
 void Boom()
 {
-    int n, ans = 1;
+    ll n, ans = 1;
     cin >> n;
     for (int i = 1; i <= n; i++)
     {
