@@ -51,7 +51,7 @@ typedef set<string> ss;
 #define lcm(a, b) ((a * b) / gcd(a, b))
 const int mx = 1e8 + 123;
 const double eps = 1e-12;
-const int mod = 100000007;
+const int mod = 1000000007;
 
 #define debug(x) cerr << x << endl;
 #define here fprintf(stderr, "====I am Here====\n");
