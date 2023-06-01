@@ -67,6 +67,7 @@ void Boom()
     cin >> n;
     for (int i = 1; i <= n; i++)
     {
+        // ans *= ( i % mod );
         ans *= i;
         ans %= mod;
     }
