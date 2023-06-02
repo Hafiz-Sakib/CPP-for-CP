@@ -10,6 +10,7 @@ typedef long long int ll;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
+
 int BinaryExponentiation(int b, int p)
 {
     int ans = 1;
