@@ -55,8 +55,13 @@ int main()
     {
         int n, k;
         cin >> n >> k;
-        int ans = fact[n];
-        int den = (fact[n - k] * 1LL * fact[k]) % mod;
+        int ans = 1;
+        int a = fact[n];
+        int b = (fact[n - k] * 1LL * fact[k]) % mod;
+        int bInverse = BinaryExponentiation(b, mod - 2) % mod;
+        ans = (a * bInverse) % mod;
+        cout << ans << endl;
+
         /*
 
          So,Basically We Have to Just Print -->
@@ -68,16 +73,13 @@ int main()
         সো, আমাদেরকে বি এর মডুলার মাল্টিপ্লিকেটিভ ইনভার্স (B^-1) বের করা লাগবে ,যার সূত্র ফার্মেট লিটল থিওরেম অনুযায়ী -->
         ( B^M-2 % M) = B^-1
         আবার,এখানে ( B^M-2 ) বাইনারী এক্সপোনেন্সিয়েশন এর মাধ্যমে সল্ভ করা যায়।
-        সো,আমি (B^-1) বের করার জন্য বাইনারী এক্সপোনেন্সিয়েশন ফাংশনে
+        সো,আমি (B^-M-2) বের করার জন্য বাইনারী এক্সপোনেন্সিয়েশন ফাংশনে
         বেইস = B or (fact[n - k] * 1LL * fact[k]) কে পাঠিয়েছি এবং
         পাওয়ার = mod - 2 কে পাঠিয়েছি
         শেষে সূত্রানুযায়ী  ঃ (A / B ) % M = (A * B^-1 ) % M
         A এবং B^-1 কে গুন করে মড করে দিসি (watch right side of formula)
 
-         */
-
-        ans = (ans * 1LL * BinaryExponentiation(den, mod - 2)) % mod;
-        cout << ans << endl;
+        */
     }
 
     return 0;
