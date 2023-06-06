@@ -1,3 +1,5 @@
+// https://vjudge.net/problem/UVA-10299
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,7 +10,7 @@ typedef long long int ll;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
-const int mx = 1e6;
+const int mx = 1e6 + 123;
 bitset<mx> is_prime;
 vector<int> primes;
 
@@ -43,9 +45,9 @@ void Sieve(int n)
     }
 }
 
-int EulerPhi(int n)
+int EulerPhi(ll n)
 {
-    int ans = n;
+    ll ans = n;
     for (auto p : primes)
     {
         if (p * 1LL * p > n || n == 0)
@@ -75,7 +77,7 @@ int EulerPhi(int n)
 int main()
 {
     Boost;
-    Sieve(1e6);
+    Sieve(mx - 1);
     while (1)
     {
         ll n;
@@ -84,7 +86,10 @@ int main()
         {
             break;
         }
-        cout << EulerPhi(n) << endl;
+        else
+        {
+            cout << EulerPhi(n) << endl;
+        }
     }
     return 0;
 }
