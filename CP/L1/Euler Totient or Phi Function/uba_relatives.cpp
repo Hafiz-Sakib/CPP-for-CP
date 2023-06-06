@@ -43,9 +43,9 @@ void Sieve(int n)
     }
 }
 
-int EulerPhi(int n)
+int EulerPhi(ll n)
 {
-    int ans = n;
+    ll ans = n;
     for (auto p : primes)
     {
         if (p * 1LL * p > n || n == 0)
@@ -76,14 +76,9 @@ int main()
 {
     Boost;
     Sieve(1e6);
-    while (1)
+    ll n;
+    while (cin >> n)
     {
-        ll n;
-        cin >> n;
-        if (!n)
-        {
-            break;
-        }
         cout << EulerPhi(n) << endl;
     }
     return 0;
