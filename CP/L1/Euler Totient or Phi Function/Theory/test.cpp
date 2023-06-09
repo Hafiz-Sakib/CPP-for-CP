@@ -60,5 +60,8 @@ ll modDiv(ll a, ll b)
 int main()
 {
     Boost;
+    ll n;
+    cin >> n;
+    cout << modPow(2, n) << endl;
     return 0;
 }

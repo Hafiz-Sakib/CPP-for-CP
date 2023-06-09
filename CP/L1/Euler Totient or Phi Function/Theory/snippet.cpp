@@ -9,24 +9,24 @@ typedef long long int ll;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-inline void normal(ll &a)
+void normal(ll &a)
 {
     a %= mod;
     (a < 0) && (a += mod);
 }
-inline ll modMul(ll a, ll b)
+ll modMul(ll a, ll b)
 {
     a %= mod, b %= mod;
     normal(a), normal(b);
     return (a * b) % mod;
 }
-inline ll modAdd(ll a, ll b)
+ll modAdd(ll a, ll b)
 {
     a %= mod, b %= mod;
     normal(a), normal(b);
     return (a + b) % mod;
 }
-inline ll modSub(ll a, ll b)
+ll modSub(ll a, ll b)
 {
     a %= mod, b %= mod;
     normal(a), normal(b);
@@ -34,7 +34,7 @@ inline ll modSub(ll a, ll b)
     normal(a);
     return a;
 }
-inline ll modPow(ll b, ll p)
+ll modPow(ll b, ll p)
 {
     ll r = 1;
     while (p)
@@ -48,11 +48,11 @@ inline ll modPow(ll b, ll p)
     }
     return r;
 }
-inline ll modInverse(ll a)
+ll modInverse(ll a)
 {
     return modPow(a, mod - 2);
 }
-inline ll modDiv(ll a, ll b)
+ll modDiv(ll a, ll b)
 {
     return modMul(a, modInverse(b));
 }
@@ -60,5 +60,8 @@ inline ll modDiv(ll a, ll b)
 int main()
 {
     Boost;
+    ll n;
+    cin >> n;
+    cout << modPow(2, n) << endl;
     return 0;
 }
