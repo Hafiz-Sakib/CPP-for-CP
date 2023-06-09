@@ -12,6 +12,18 @@ const int mx = 1e6;
 bitset<mx> is_prime;
 vector<int> primes;
 
+/*
+
+inline void normal(ll &a) { a %= mod; (a < 0) && (a += mod); }
+inline ll modMul(ll a, ll b) { a %= mod, b %= mod; normal(a), normal(b); return (a*b)%mod; }
+inline ll modAdd(ll a, ll b) { a %= mod, b %= mod; normal(a), normal(b); return (a+b)%mod; }
+inline ll modSub(ll a, ll b) { a %= mod, b %= mod; normal(a), normal(b); a -= b; normal(a); return a; }
+inline ll modPow(ll b, ll p) { ll r = 1; while(p) { if(p&1) r = modMul(r, b); b = modMul(b, b); p >>= 1; } return r; }
+inline ll modInverse(ll a) { return modPow(a, mod-2); }
+inline ll modDiv(ll a, ll b) { return modMul(a, modInverse(b)); }
+
+ */
+
 void Sieve(int n)
 {
     for (int i = 3; i <= n; i += 2)
