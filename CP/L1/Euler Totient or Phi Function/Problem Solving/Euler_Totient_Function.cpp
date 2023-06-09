@@ -50,7 +50,7 @@ int EulerPhi(int n)
     int ans = n;
     for (auto p : primes)
     {
-        if (p * 1LL * p > n || n == 0)
+        if (p * 1LL * p > n)
         {
             break;
         }
