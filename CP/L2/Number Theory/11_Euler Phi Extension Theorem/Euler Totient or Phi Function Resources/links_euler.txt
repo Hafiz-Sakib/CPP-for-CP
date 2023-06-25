@@ -1,3 +1,0 @@
-https://forthright48.com/sum-of-coprime-numbers-of-integer/
-https://forthright48.com/euler-totient-or-phi-function
-cp-algorithms.com/algebra/phi-function
