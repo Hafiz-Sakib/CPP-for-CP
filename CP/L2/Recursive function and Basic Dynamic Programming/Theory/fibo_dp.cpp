@@ -18,7 +18,8 @@ int fibo(int n)
     }
     else
     {
-        return dp[n] = fibo(n - 1) + fibo(n - 2);
+        dp[n] = fibo(n - 1) + fibo(n - 2);
+        return dp[n];
     }
 }
 int main()
