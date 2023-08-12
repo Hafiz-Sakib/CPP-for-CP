@@ -67,15 +67,17 @@ int memo[MAXN];
 int fibonacciDP(int n)
 {
     if (n <= 0)
+    {
         return 0;
+    }
     if (n == 1)
+    {
         return 1;
-
+    }
     if (memo[n] != -1)
     {
         return memo[n]; // Return the already computed value
     }
-
     memo[n] = fibonacciDP(n - 1) + fibonacciDP(n - 2); // Store the value in memo
     return memo[n];
 }
