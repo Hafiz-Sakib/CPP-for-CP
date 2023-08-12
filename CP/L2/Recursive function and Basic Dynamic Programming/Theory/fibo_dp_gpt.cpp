@@ -62,9 +62,9 @@ const double eps = 1e-12;
     cout.tie(NULL)
 
 const int MAXN = 1000; // Maximum value of n
-int memo[MAXN];
+int dp[MAXN];
 
-int fibonacciDP(int n)
+int fibonaccidp(int n)
 {
     if (n <= 0)
     {
@@ -74,12 +74,12 @@ int fibonacciDP(int n)
     {
         return 1;
     }
-    if (memo[n] != -1)
+    if (dp[n] != -1)
     {
-        return memo[n]; // Return the already computed value
+        return dp[n]; // Return the already computed value
     }
-    memo[n] = fibonacciDP(n - 1) + fibonacciDP(n - 2); // Store the value in memo
-    return memo[n];
+    dp[n] = fibonaccidp(n - 1) + fibonaccidp(n - 2); // Store the value in dp
+    return dp[n];
 }
 
 int main()
@@ -87,10 +87,10 @@ int main()
     int n;
     cin >> n;
 
-    // Initialize the memoization array with -1
-    memset(memo, -1, sizeof(memo));
+    // Initialize the dpization array with -1
+    memset(dp, -1, sizeof(dp));
 
-    int result = fibonacciDP(n);
+    int result = fibonaccidp(n);
     cout << "Fibonacci(" << n << ") = " << result << endl;
 
     return 0;
