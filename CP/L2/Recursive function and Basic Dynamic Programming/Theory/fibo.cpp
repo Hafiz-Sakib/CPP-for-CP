@@ -3,7 +3,7 @@ using namespace std;
 
 /*
 
-                  fibo(4)
+                    fibo(4)
                  /            \
            fibo(3)           fibo(2)
          /         \         /         \
