@@ -13,6 +13,8 @@ int main()
             cin >> grid[i][j];
         }
     }
+    cout << "Your Grid is :" << endl
+         << endl;
     for (int i = 1; i <= r; i++)
     {
         for (int j = 1; j <= c; j++)
