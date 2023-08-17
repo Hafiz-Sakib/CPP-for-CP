@@ -61,9 +61,20 @@ const double eps = 1e-12;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
+void Boom()
+{
+}
+
 int main()
 {
     Boost;
-    string s;
-    cout << "The entered string is: " << s << endl;
+
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        Boom();
+    }
+
+    return 0;
 }
