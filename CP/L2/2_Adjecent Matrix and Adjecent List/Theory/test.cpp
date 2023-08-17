@@ -65,6 +65,5 @@ int main()
 {
     Boost;
     string s;
-
-    return 0;
+    cout << "The entered string is: " << s << endl;
 }
