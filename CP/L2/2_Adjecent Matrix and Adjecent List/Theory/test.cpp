@@ -61,28 +61,10 @@ const double eps = 1e-12;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-void Boom()
-{
-    int n;
-    cin >> n;
-    cout << n;
-    int i = 1;
-    while (i < n)
-    {
-        cout << " " << i;
-        i++;
-    }
-}
-
 int main()
 {
     Boost;
-
-    int t = 1;
-    while (t--)
-    {
-        Boom();
-    }
+    string s;
 
     return 0;
 }
