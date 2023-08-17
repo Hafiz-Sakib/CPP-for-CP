@@ -63,6 +63,8 @@ const double eps = 1e-12;
 
 void Boom()
 {
+    vector<vector<int>> grid(4, vector<int>(3));
+    vvi Grid(10, vi(4));
 }
 
 int main()

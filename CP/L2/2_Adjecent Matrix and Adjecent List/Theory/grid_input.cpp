@@ -3,7 +3,7 @@ using namespace std;
 int mx = 101;
 int main()
 {
-    vector<vector<char>> grid(mx);
+    vector<vector<char>> grid(mx, vector<char>(mx));
     int r, c;
     cin >> r >> c;
     for (int i = 1; i <= r; i++)
