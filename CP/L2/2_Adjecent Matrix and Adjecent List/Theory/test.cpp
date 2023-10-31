@@ -184,9 +184,17 @@ void faltu(T arg, const hello &...rest)
 
 void Boom()
 {
-    vector<vector<int>> grid(4, vector<int>(3));
-    vvi Grid(10, vi(4, 0));
-    debug(Grid);
+    vector<vector<pair<int, int>>> graph(10);
+    int n, e;
+    cin >> n >> e;
+    for (int i = 0; i < e; i++)
+    {
+        int v1, v2, wt;
+        cin >> v1 >> v2 >> wt;
+        graph[v1].push_back({v2, wt});
+        graph[v2].push_back({v1, wt});
+    }
+    debug(graph);
 }
 
 int main()
