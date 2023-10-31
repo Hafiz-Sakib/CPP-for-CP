@@ -4,9 +4,9 @@ const int mx = 101;
 int graph[mx][mx];
 int main()
 {
-    int n, m;
-    cin >> n >> m;
-    for (int i = 1; i <= n; i++)
+    int n, e;
+    cin >> n >> e;
+    for (int i = 1; i <= e; i++)
     {
         int v1, v2;
         cin >> v1 >> v2;
