@@ -3,6 +3,8 @@ using namespace std;
 int mx = 101;
 int main()
 {
+    vector<vector<int>> grid(4, vector<int>(3));
+    //  vvi Grid(10, vi(4, 0));
     vector<vector<int>> adjMat(mx);
     int n;
     cin >> n;
