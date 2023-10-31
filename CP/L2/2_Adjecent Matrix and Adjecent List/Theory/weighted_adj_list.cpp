@@ -15,12 +15,12 @@ int main()
     }
     for (int i = 1; i <= n; i++)
     {
-        cout << "Node " << i << " is connected to:";
-        for (const auto &edge : graph[i])
+        cout << "Node " << i << " is connected to : ";
+        for (auto edge : graph[i])
         {
             int v2 = edge.first;
             int wt = edge.second;
-            cout << " (" << v2 << ", " << wt << ")";
+            cout << " ( Node : " << v2 << " , Weight : " << wt << ")";
         }
         cout << endl;
     }
