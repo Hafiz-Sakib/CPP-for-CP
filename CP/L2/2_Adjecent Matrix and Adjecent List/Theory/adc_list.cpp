@@ -14,6 +14,16 @@ int main()
         graph[v2].push_back(v1);
     }
 
+    for (int i = 1; i <= n; i++)
+    {
+        cout << "Node " << i << " is connected to : ";
+        for (auto neighbor : graph[i])
+        {
+            cout << " " << neighbor;
+        }
+        cout << endl;
+    }
+
     // O(N + E) => Space Complexity
 
     return 0;
