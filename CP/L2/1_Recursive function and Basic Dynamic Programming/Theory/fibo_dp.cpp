@@ -34,6 +34,5 @@ int main()
     {
         cout << fibo(i) << ' ';
     }
-
     return 0;
 }
