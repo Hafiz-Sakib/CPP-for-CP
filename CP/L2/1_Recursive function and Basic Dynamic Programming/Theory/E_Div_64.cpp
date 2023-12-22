@@ -68,7 +68,11 @@ void Boom()
     cin >> s;
     for (int i = 0; i < s.size(); i++)
     {
-        if (s[i] == '0')
+        if (s[i] == '1')
+        {
+            ok = 1;
+        }
+        else if (s[i] == '0' && ok == 1)
         {
             zero++;
         }
