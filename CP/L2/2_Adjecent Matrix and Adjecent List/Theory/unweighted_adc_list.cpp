@@ -8,8 +8,8 @@ int main()
     cin >> n >> e;
     for (int i = 1; i <= e; i++)
     {
-        int v1, v2, wt;
-        cin >> v1 >> v2 >> wt;
+        int v1, v2;
+        cin >> v1 >> v2;
         graph[v1].push_back(v2);
         graph[v2].push_back(v1);
     }
