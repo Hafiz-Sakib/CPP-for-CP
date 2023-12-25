@@ -8,8 +8,8 @@ using namespace std;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-bool vis[1000];
-vector<vector<int>> adj(1110);
+bool vis[12345];
+vector<vector<int>> adj(1e5);
 void dfs(int v)
 {
     vis[v] = 1;

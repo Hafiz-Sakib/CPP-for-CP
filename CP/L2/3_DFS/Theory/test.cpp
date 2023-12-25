@@ -184,23 +184,25 @@ void faltu(T arg, const hello &...rest)
 
 // vector<vector<pair<int, int>>> graph(10, vector<pair<int, int>>(10, {0, 0}));
 vector<vector<pair<int, int>>> graph(mx);
+
+void one()
+{
+    cout << "Hafiz" << ' ';
+}
+void two()
+{
+    cout << "Sakib" << ' ';
+}
 void Boom()
 {
-    int n, e;
-    cin >> n >> e;
-    for (int i = 0; i < e; i++)
-    {
-        int v1, v2, wt;
-        cin >> v1 >> v2 >> wt;
-        graph[v1].push_back({v2, wt});
-        graph[v2].push_back({v1, wt});
-    }
-    debug(graph);
+    cout << ",Okay ?" << ' ';
 }
 
 int main()
 {
     Boost;
+    one();
+    two();
     Boom();
     return 0;
 }
