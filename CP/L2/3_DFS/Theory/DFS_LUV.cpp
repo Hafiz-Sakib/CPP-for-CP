@@ -17,7 +17,9 @@ void dfs(int vertex)
     {
         cout << "parent" << vertex << " ,child" << child << "\n";
         if (vis[child])
+        {
             continue;
+        }
         /* Take action on child before entering the child node */
         dfs(child);
         /* Take action on child after existing the child node */
