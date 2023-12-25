@@ -184,25 +184,27 @@ void faltu(T arg, const hello &...rest)
 
 // vector<vector<pair<int, int>>> graph(10, vector<pair<int, int>>(10, {0, 0}));
 vector<vector<pair<int, int>>> graph(mx);
-
-void one()
+bool vis[mx];
+vector<vector<int>> adj(mx);
+void dfs(int v)
 {
-    cout << "Hafiz" << ' ';
-}
-void two()
-{
-    cout << "Sakib" << ' ';
+    vis[v] = 1;
+    // cout << v << " -> ";
+    for (auto child : adj[v])
+    {
+        if (!vis[child])
+        {
+            dfs(child);
+        }
+    }
 }
 void Boom()
 {
-    cout << ",Okay ?" << ' ';
 }
 
 int main()
 {
     Boost;
-    one();
-    two();
     Boom();
     return 0;
 }
