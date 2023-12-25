@@ -10,19 +10,20 @@ int main()
     cin >> n >> e;
     for (int i = 1; i <= e; i++)
     {
-        int v1, v2, wt;
-        cin >> v1 >> v2 >> wt;
-        graph[v1].push_back({v2, wt});
-        graph[v2].push_back({v1, wt});
+        // "u" connected with "v" holding "wt" amount of weight.
+        int u, v, wt;
+        cin >> u >> v >> wt;
+        graph[u].push_back({v, wt});
+        graph[v].push_back({u, wt});
     }
     for (int i = 1; i <= n; i++)
     {
         cout << "Node " << i << " is connected to : ";
         for (auto edge : graph[i])
         {
-            int v2 = edge.first;
+            int v = edge.first;
             int wt = edge.second;
-            cout << " ( Node : " << v2 << " , Weight : " << wt << ")";
+            cout << " ( Node : " << v << " , Weight : " << wt << ")";
         }
         cout << endl;
     }
