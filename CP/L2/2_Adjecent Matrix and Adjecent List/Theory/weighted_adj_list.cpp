@@ -3,6 +3,8 @@ using namespace std;
 const int N = 1e3 + 10;
 int main()
 {
+    // { node,cost } => pair
+    //{ {(2,3),(3,5),(4,8)},{(1,5),(3,4)} } => ebhabe thakbe vector e
     vector<vector<pair<int, int>>> graph(N);
     int n, e;
     cin >> n >> e;

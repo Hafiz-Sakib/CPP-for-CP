@@ -182,9 +182,10 @@ void faltu(T arg, const hello &...rest)
 }
 // Debugger Ends
 
+// vector<vector<pair<int, int>>> graph(10, vector<pair<int, int>>(10, {0, 0}));
+vector<vector<pair<int, int>>> graph(mx);
 void Boom()
 {
-    vector<vector<pair<int, int>>> graph(10);
     int n, e;
     cin >> n >> e;
     for (int i = 0; i < e; i++)
