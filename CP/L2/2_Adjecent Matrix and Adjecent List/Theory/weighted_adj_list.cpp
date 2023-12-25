@@ -10,11 +10,11 @@ int main()
     cin >> n >> e;
     for (int i = 1; i <= e; i++)
     {
-        // "u" connected with "v" holding "wt" amount of weight.
-        int u, v, wt;
-        cin >> u >> v >> wt;
-        graph[u].push_back({v, wt});
-        graph[v].push_back({u, wt});
+        // "u" connected with "v" holding "cost" amount of weight.
+        int u, v, cost;
+        cin >> u >> v >> cost;
+        graph[u].push_back({v, cost});
+        graph[v].push_back({u, cost});
     }
     for (int i = 1; i <= n; i++)
     {
@@ -22,8 +22,8 @@ int main()
         for (auto edge : graph[i])
         {
             int v = edge.first;
-            int wt = edge.second;
-            cout << " ( Node : " << v << " , Weight : " << wt << ")";
+            int cost = edge.second;
+            cout << " ( Node : " << v << " , Weight : " << cost << ")";
         }
         cout << endl;
     }
