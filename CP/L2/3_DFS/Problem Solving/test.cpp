@@ -11,6 +11,11 @@ typedef long long int ll;
 
 void Boom()
 {
+    vector<string> v = {"😍", "😂", "👌", "❤️", "🥺"};
+    for (auto u : v)
+    {
+        cout << u << ' ';
+    }
 }
 
 int main()
