@@ -76,8 +76,8 @@ int main()
     // long handles upto 9 digit no
     // change to unsigned long long int to
     // handle more digit number
-    long n = 143;
-
+    long n = 1023221;
+    // ten lakh twenty three thousand two hundred and twenty one
     // convert given number in words
     cout << convertToWords(n) << endl;
 
