@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int n = 1e3;
-vector<int> parent(n);
-vector<int> size(n);
+const int mx = 1e7;
+vector<int> parent(mx);
+vector<int> set_size(mx);
 
 void make(int v)
 {
     parent[v] = v;
-    size[v] = 1;
+    set_size[v] = 1;
 }
 
 int find(int v)
@@ -30,13 +30,13 @@ void union_sets(int a, int b)
     b = find(b);
     if (a != b)
     {
-        // Union by size
-        if (size[a] < size[b])
+        // Union by set_size
+        if (set_size[a] < set_size[b])
         {
             swap(a, b);
         }
         parent[b] = a;
-        size[a] += size[b];
+        set_size[a] += set_size[b];
     }
 }
 
