@@ -11,11 +11,15 @@ void bfs(int source)
     queue<int> q;
     q.push(source);
     vis[source] = 1;
-    level[source] = 1;
+    level[source] = 0;
     while (!q.empty())
     {
         int current_vertex = q.front();
         q.pop();
+
+        // oreder print
+        //  cout << current_vertex << " ";
+
         for (auto child : g[current_vertex])
         {
             if (!vis[child])
@@ -38,6 +42,14 @@ int main()
         cin >> u >> v;
         g[u].push_back(v);
         g[v].push_back(u);
+    }
+
+    bfs(1);
+
+    // level print
+    for (int i = 1; i <= n; i++)
+    {
+        cout << i << " : " << level[i] << endl;
     }
 
     return 0;
