@@ -16,9 +16,10 @@ void bfs(int source)
     {
         int current_vertex = q.front();
         q.pop();
-
-        // oreder print
-        //  cout << current_vertex << " ";
+        /*
+         oreder print
+         cout << current_vertex << " ";
+        */
 
         for (auto child : g[current_vertex])
         {
