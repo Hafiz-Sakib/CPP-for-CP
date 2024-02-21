@@ -7,7 +7,7 @@ bool vis[5][5];
 
 bool valid(int x, int y)
 {
-    return x >= 0 and x < 5 and y >= 0 and y < 5 and !vis[x][y];
+    return (x >= 0 and x < 5 and y >= 0 and y < 5 and !vis[x][y]);
 }
 
 void dfs(int x, int y)
