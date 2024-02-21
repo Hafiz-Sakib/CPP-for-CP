@@ -33,6 +33,7 @@ void dfs(int x, int y)
 int main()
 {
     dfs(2, 2);
+
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)
