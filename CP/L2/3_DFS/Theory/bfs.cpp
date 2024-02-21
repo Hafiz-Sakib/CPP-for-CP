@@ -37,5 +37,7 @@ int main()
         g[v].push_back(u);
     }
 
+    bfs(1);
+
     return 0;
 }
