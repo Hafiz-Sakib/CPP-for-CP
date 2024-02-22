@@ -4,10 +4,11 @@ using namespace std;
 int dx[] = {-1, 1, 0, 0, -1, -1, 1, 1};
 int dy[] = {0, 0, -1, 1, -1, 1, -1, 1};
 bool vis[5][5];
+int row, column;
 
 bool valid(int x, int y)
 {
-    return (x >= 0 and x < 5 and y >= 0 and y < 5 and !vis[x][y]);
+    return (x >= 0 and x < row and y >= 0 and y < column and !vis[x][y]);
 }
 
 void dfs(int x, int y)
