@@ -1,30 +1,10 @@
-// Bismillahir Rahmanir Rahim
 
-#include <bits/stdc++.h>
-using namespace std;
-
-#define Boost                         \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);                    \
-    cout.tie(NULL)
-
-bool vis[12345];
-vector<vector<int>> adj(1e5);
-void dfs(int v)
+void clear_graph(int node)
 {
-    vis[v] = 1;
-    // cout << v << " -> ";
-    for (auto child : adj[v])
+    for (int i = 0; i < node; i++)
     {
-        if (!vis[child])
-        {
-            dfs(child);
-        }
+        g[i].clear();
+        vis[i] = 0;
+        // level[i] = 0;
     }
-}
-int main()
-{
-    Boost;
-
-    return 0;
 }
