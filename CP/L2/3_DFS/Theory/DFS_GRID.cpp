@@ -3,8 +3,8 @@ using namespace std;
 
 int dx[] = {-1, 1, 0, 0, -1, -1, 1, 1};
 int dy[] = {0, 0, -1, 1, -1, 1, -1, 1};
-bool vis[5][5];
 int row, column;
+bool vis[5][5];
 
 bool valid(int x, int y)
 {
