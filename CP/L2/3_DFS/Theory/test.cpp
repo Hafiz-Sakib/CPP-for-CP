@@ -123,7 +123,7 @@ int main()
     Boost;
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         // cout<<"Case "<<t<<" : ";
