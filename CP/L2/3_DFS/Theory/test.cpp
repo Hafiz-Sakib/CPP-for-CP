@@ -6,10 +6,7 @@ author = Hafiz_Sakib;
 
 */
 #include <bits/stdc++.h>
-#include <ext/pb_ds/tree_policy.hpp>
-#include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
-using namespace __gnu_pbds;
 
 typedef long long int ll;
 typedef unsigned long long ull;
@@ -39,19 +36,6 @@ typedef priority_queue<ll, vi, greater<ll>> pqg;
 
 typedef vector<int>::iterator vit;
 typedef set<int>::iterator sit;
-
-typedef tree<ll, null_type, less<ll>, rb_tree_tag,
-             tree_order_statistics_node_update>
-    ordered_set;
-typedef tree<ll, null_type, greater<ll>, rb_tree_tag,
-             tree_order_statistics_node_update>
-    greater_set;
-typedef tree<ll, null_type, less_equal<ll>, rb_tree_tag,
-             tree_order_statistics_node_update>
-    multi_set;
-typedef tree<ll, null_type, greater_equal<ll>, rb_tree_tag,
-             tree_order_statistics_node_update>
-    greater_multi_set;
 
 #define pb push_back
 #define mp make_pair
@@ -123,7 +107,7 @@ int main()
     Boost;
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--)
     {
         // cout<<"Case "<<t<<" : ";
