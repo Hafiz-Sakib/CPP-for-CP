@@ -92,6 +92,14 @@ const double eps = 1e-12;
 const int inf = 2000000000;
 const ll infLL = 9000000000000000000;
 
+/// Chess moves.........
+int dx[] = {+0, +0, -1, +1}; /// Up-down, Left-Right
+int dy[] = {+1, -1, +0, +0};
+int dx[] = {+0, +0, +1, -1, -1, +1, -1, +1}; /// King's Move
+int dy[] = {-1, +1, +0, +0, +1, +1, -1, -1};
+int dx[] = {-2, -2, -1, -1, 1, 1, 2, 2}; /// Knight's Move
+int dy[] = {-1, 1, -2, 2, -2, 2, -1, 1};
+
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
