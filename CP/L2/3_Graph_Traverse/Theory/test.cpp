@@ -30,7 +30,10 @@ typedef set<ll> si;
 typedef set<char> sc;
 typedef set<string> ss;
 typedef set<double> sd;
+typedef queue<ll> qu;
+typedef queue<pii> qupii;
 typedef priority_queue<ll> pq;
+typedef priority_queue<pii> pqpii;
 typedef priority_queue<string> pqs;
 typedef priority_queue<ll, vi, greater<ll>> pqg;
 
@@ -63,11 +66,6 @@ typedef set<int>::iterator sit;
 #define vecSum(data) accumulate(data.begin(), data.end(), 0)
 #define vecCount(data, key) count(data.begin(), data.end(), key)
 
-#define yes cout << "YES\n"
-#define no cout << "NO\n"
-#define YES cout << "Yes\n"
-#define NO cout << "No\n"
-
 #define setp(n) fixed << setprecision(n)
 #define fr(a, b) for (int i = a; i < b; i++)
 #define rep(i, a, b) for (int i = a; i < b; i++)
@@ -77,6 +75,8 @@ typedef set<int>::iterator sit;
 #define stringLower(data) transform(data.begin(), data.end(), data.begin(), ::tolower)
 #define stringUpper(data) transform(data.begin(), data.end(), data.begin(), ::toupper)
 
+#define yes cout << "YES\n"
+#define no cout << "NO\n"
 #define debug(x) cerr << x << endl;
 #define here fprintf(stderr, "====I am Here====\n");
 
@@ -92,22 +92,78 @@ const double eps = 1e-12;
 const int inf = 2000000000;
 const ll infLL = 9000000000000000000;
 
-/// Chess moves.........
-int dx[] = {+0, +0, -1, +1}; /// Up-down, Left-Right
+/*
+
+// Chess moves.........
+// Up-down, Left-Right
+
+int dx[] = {+0, +0, -1, +1};
 int dy[] = {+1, -1, +0, +0};
-int dx[] = {+0, +0, +1, -1, -1, +1, -1, +1}; /// King's Move
+
+// King's Move
+int dx[] = {+0, +0, +1, -1, -1, +1, -1, +1};
 int dy[] = {-1, +1, +0, +0, +1, +1, -1, -1};
-int dx[] = {-2, -2, -1, -1, 1, 1, 2, 2}; /// Knight's Move
+
+// Knight's Move
+int dx[] = {-2, -2, -1, -1, 1, 1, 2, 2};
 int dy[] = {-1, 1, -2, 2, -2, 2, -1, 1};
+
+*/
 
 #define Boost                         \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
+int dx[] = {-1, 1, 0, 0, -1, -1, 1, 1};
+int dy[] = {0, 0, -1, 1, -1, 1, -1, 1};
+bool vis[123][123];
+int row, column;
+bool valid(int x, int y)
+{
+    return (x >= 0 and x < row and y >= 0 and y < column and !vis[x][y]);
+}
+
+void bfs(int source_x, int source_y)
+{
+    queue<pair<int, int>> q;
+    q.push({source_x, source_y});
+    vis[source_x][source_y] = 1;
+
+    while (!q.empty())
+    {
+        int x = q.front().first;
+        int y = q.front().second;
+        q.pop();
+
+        for (int i = 0; i < 8; i++)
+        {
+            int next_x = x + dx[i];
+            int next_y = y + dy[i];
+            if (valid(next_x, next_y))
+            {
+                vis[next_x][next_y] = 1;
+                q.push({next_x, next_y});
+            }
+        }
+    }
+}
+
+void quuuuue()
+{
+    pqg q;
+    q.push(4);
+    q.push(40);
+    q.push(400);
+    while (!q.empty())
+    {
+        cout << q.top() << " ==> "
+             << " ";
+        q.pop();
+    }
+}
 void Boom()
 {
-    // Let's Move
 }
 
 int main()
@@ -115,7 +171,6 @@ int main()
     Boost;
 
     int t = 1;
-    cin >> t;
     while (t--)
     {
         // cout<<"Case "<<t<<" : ";
