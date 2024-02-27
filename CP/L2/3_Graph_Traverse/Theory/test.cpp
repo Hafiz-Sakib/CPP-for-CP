@@ -66,9 +66,6 @@ typedef set<int>::iterator sit;
 #define vecSum(data) accumulate(data.begin(), data.end(), 0)
 #define vecCount(data, key) count(data.begin(), data.end(), key)
 
-#define yes cout << "YES\n"
-#define no cout << "NO\n"
-
 #define setp(n) fixed << setprecision(n)
 #define fr(a, b) for (int i = a; i < b; i++)
 #define rep(i, a, b) for (int i = a; i < b; i++)
@@ -77,6 +74,11 @@ typedef set<int>::iterator sit;
 #define FOR(data) for (auto it = data.begin(); it != data.end(); it++)
 #define stringLower(data) transform(data.begin(), data.end(), data.begin(), ::tolower)
 #define stringUpper(data) transform(data.begin(), data.end(), data.begin(), ::toupper)
+
+#define yes cout << "YES\n"
+#define no cout << "NO\n"
+#define debug(x) cerr << x << endl;
+#define here fprintf(stderr, "====I am Here====\n");
 
 #define gcd(a, b) __gcd(a, b)
 #define lcm(a, b) ((a) / gcd(a, b) * (b))
@@ -94,194 +96,6 @@ const ll infLL = 9000000000000000000;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL)
-
-// Debugger Started
-#define here fprintf(stderr, "====I am Here====\n");
-template <typename F, typename S>
-ostream &operator<<(ostream &os, const pair<F, S> &p)
-{
-    return os << "(" << p.first << ", " << p.second << ")";
-}
-
-template <typename T>
-ostream &operator<<(ostream &os, const vector<T> &v)
-{
-    os << "{";
-    for (auto it = v.begin(); it != v.end(); ++it)
-    {
-        if (it != v.begin())
-            os << ", ";
-        os << *it;
-    }
-    return os << "}";
-}
-
-template <typename T>
-ostream &operator<<(ostream &os, const set<T> &v)
-{
-    os << "[";
-    for (auto it = v.begin(); it != v.end(); ++it)
-    {
-        if (it != v.begin())
-            os << ", ";
-        os << *it;
-    }
-    return os << "]";
-}
-
-template <typename T>
-ostream &operator<<(ostream &os, const multiset<T> &v)
-{
-    os << "[";
-    for (auto it = v.begin(); it != v.end(); ++it)
-    {
-        if (it != v.begin())
-            os << ", ";
-        os << *it;
-    }
-    return os << "]";
-}
-
-template <typename F, typename S>
-ostream &operator<<(ostream &os, const map<F, S> &v)
-{
-    os << "[";
-    for (auto it = v.begin(); it != v.end(); ++it)
-    {
-        if (it != v.begin())
-            os << ", ";
-        os << it->first << " = " << it->second;
-    }
-    return os << "]";
-}
-
-#define debug(args...)          \
-    do                          \
-    {                           \
-        cerr << #args << " : "; \
-        faltu(args);            \
-    } while (0)
-
-void faltu()
-{
-    cerr << endl;
-}
-
-template <typename T>
-void faltu(T a[], int n)
-{
-    for (int i = 0; i < n; ++i)
-        cerr << a[i] << ' ';
-    cerr << endl;
-}
-
-template <typename T, typename... hello>
-void faltu(T arg, const hello &...rest)
-{
-    cerr << arg << ' ';
-    faltu(rest...);
-}
-// Debugger Ends
-
-/*
-
-// Chess moves.........
-// Up-down, Left-Right
-
-int dx[] = {+0, +0, -1, +1};
-int dy[] = {+1, -1, +0, +0};
-
-// King's Move
-int dx[] = {+0, +0, +1, -1, -1, +1, -1, +1};
-int dy[] = {-1, +1, +0, +0, +1, +1, -1, -1};
-
-// Knight's Move
-int dx[] = {-2, -2, -1, -1, 1, 1, 2, 2};
-int dy[] = {-1, 1, -2, 2, -2, 2, -1, 1};
-
-*/
-
-int dx[] = {+0, +0, +1, -1, -1, +1, -1, +1};
-int dy[] = {-1, +1, +0, +0, +1, +1, -1, -1};
-bool vis[mx][mx];
-int row, column;
-bool valid(int x, int y)
-{
-    return (x >= 0 and x < row and y >= 0 and y < column and !vis[x][y]);
-}
-
-void bfs(int source_x, int source_y)
-{
-    queue<pair<int, int>> q;
-    q.push({source_x, source_y});
-    vis[source_x][source_y] = 1;
-
-    while (!q.empty())
-    {
-        int x = q.front().first;
-        int y = q.front().second;
-        q.pop();
-
-        for (int i = 0; i < 8; i++)
-        {
-            int next_x = x + dx[i];
-            int next_y = y + dy[i];
-            if (valid(next_x, next_y))
-            {
-                vis[next_x][next_y] = 1;
-                q.push({next_x, next_y});
-            }
-        }
-    }
-}
-
-/*
-
-// Chess moves.........
-// Up-down, Left-Right
-
-int dx[] = {+0, +0, -1, +1};
-int dy[] = {+1, -1, +0, +0};
-
-// King's Move
-int dx[] = {+0, +0, +1, -1, -1, +1, -1, +1};
-int dy[] = {-1, +1, +0, +0, +1, +1, -1, -1};
-
-// Knight's Move
-int dx[] = {-2, -2, -1, -1, 1, 1, 2, 2};
-int dy[] = {-1, 1, -2, 2, -2, 2, -1, 1};
-
-*/
-
-int dx[] = {+0, +0, +1, -1, -1, +1, -1, +1};
-int dy[] = {-1, +1, +0, +0, +1, +1, -1, -1};
-bool vis[mx][mx];
-int row, column;
-
-bool valid(int x, int y)
-{
-    return (x >= 0 and x < row and y >= 0 and y < column and !vis[x][y]);
-}
-
-void dfs(int x, int y)
-{
-    if (vis[x][y])
-    {
-        return;
-    }
-
-    vis[x][y] = 1;
-
-    for (int i = 0; i < 8; i++)
-    {
-        int next_x = x + dx[i];
-        int next_y = y + dy[i];
-        if (valid(next_x, next_y))
-        {
-            dfs(next_x, next_y);
-        }
-    }
-}
 
 void Boom()
 {
