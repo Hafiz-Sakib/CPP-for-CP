@@ -100,9 +100,6 @@ const ll infLL = 9000000000000000000;
 void Boom()
 {
     // Let's Move
-    ll n;
-    cin >> n;
-    cout << (1 << n * 1LL) << endl;
 }
 
 int main()
@@ -110,7 +107,7 @@ int main()
     Boost;
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--)
     {
         // cout<<"Case "<<t<<" : ";
