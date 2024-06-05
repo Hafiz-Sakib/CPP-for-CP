@@ -102,13 +102,13 @@ void Boom()
     int n, q;
     cin >> n >> q;
     map<int, int> mp;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
         int x;
         cin >> x;
         if (mp.find(q - x) != mp.end())
         {
-            cout << (mp[q - x] + 1) << ' ' << (i + 1) << endl;
+            cout << mp[q - x] << ' ' << i << endl;
             return;
         }
         mp[x] = i;
